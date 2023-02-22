@@ -7,7 +7,7 @@ function IncomeTax() {
 
               
                 
-        <div id="ct" className={incomeStyle['incomeStyleteam-container']}>
+        <div id="ct" className={incomeStyle['team-container']}>
           <div className={incomeStyle.container}>
             <div className={incomeStyle['top-section']}>
               <div className={incomeStyle['d-flex-space align-items-start']}>
@@ -21,9 +21,9 @@ function IncomeTax() {
                   <h3 className={incomeStyle['week']}>2023년 02월</h3>
                   <div title="다음월" className={incomeStyle['mt-1']}><i className={incomeStyle['ic-arrow-right ml-3']} /></div>
                 </div>
-                <div className={incomeStyle['content d-flex-space']}>
+                <div className={`${incomeStyle.content} ${incomeStyle.d_flex_space} `}>
                   <form className={incomeStyle['form-inline']} />
-                  <div className={incomeStyle['btn btn-primary cursor-pointer']} style={{'-ms-flex-item-align':'self-start','align-self':'self-start'}}>내 근태 현황 /
+                  <div className={`${incomeStyle.btn} ${incomeStyle.btn_primary} ${incomeStyle.cursor_pointer} `} style={{'-ms-flex-item-align':'self-start','align-self':'self-start'}}>내 근태 현황 /
                     신청</div>
                 </div>
               </div>
