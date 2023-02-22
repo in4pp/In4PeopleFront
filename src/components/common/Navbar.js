@@ -1,7 +1,6 @@
 import { NavLink } from "react-router-dom"
 import NavCSS from './Navbar.module.css';
 
-
 function Navbar() {
     return (
         <div className={NavCSS.bwzYVU}>
@@ -9,7 +8,7 @@ function Navbar() {
                 <div className={NavCSS.cAnmmb}>
                     <div className={NavCSS.jqVsbC}><a href="#">
                         <div style={{ width: '128px', height: '50px' }}>
-                            <img src="./images/INSA PEOPLE.png" alt="" width={128} height={60} />
+                            <img src="./images/INSA PEOPLE.png" alt="" width={150} height={60} />
                         </div>
                     </a></div>
                     <div className={NavCSS.lkOGXI}><a className={`${NavCSS.fEXmlR} ${NavCSS.kOVHNW}`} href="#">홈</a><a

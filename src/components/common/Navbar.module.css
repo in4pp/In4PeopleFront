@@ -32,7 +32,7 @@ div {
     -webkit-box-align: center;
     align-items: center;
     width: 100%;
-    padding: 20px 32px;
+    padding: 15px 32px;
     border-bottom: 1px solid rgb(239, 239, 239);
     background-color: var(--color-ws-white);
     color: var(--color-ws-gray-gray-800);
@@ -307,7 +307,7 @@ body {
 
 
 
-#wrap, .wrap {
+.wrap {
     overflow: hidden;
     display: flex;
     min-width: 1256px;
@@ -315,19 +315,19 @@ body {
     min-height: 100vh;
     width: 100%;
 }
-#wrapper, .id-wrapper {
+.wrapper {
     min-height: 100vh;
     padding: 80px 0 0 240px;
     transition: padding 0.3s ease;
     background: #fff;
 }
-#ct {
+.ct {
     position: relative;
     display: flex;
     flex: 1 0 auto;
     flex-direction: column;
 }
-#ct > .container {
+#ct > .container2 {
     width: 100%;
     min-width: 1024px;
     max-width: none;
