@@ -78,7 +78,7 @@ img {
     white-space: nowrap;
 }
 
-.lkOGXI .sc-fEXmlR {
+.lkOGXI .fEXmlR {
     margin-right: 24px;
 }
 
@@ -108,18 +108,18 @@ img {
     cursor: pointer;
 }
 
-.c-bfYjzh-ieRdlXN-css {
+.ieRdlXN {
     width: 40px;
     height: 40px;
     padding: 0px;
     border-color: var(--colors-gray200);
 }
 
-.c-bfYjzh-gmZOLP-rounded-full {
+.gmZOLP {
     border-radius: 9999px;
 }
 
-.c-bfYjzh-kyAoKz-variant-text {
+.kyAoKz {
     border-color: var(--colors-gray400);
     background-color: var(--colors-white);
     color: var(--colors-gray800);
@@ -164,7 +164,7 @@ button {
     color: white;
 }
 
-.c-bfYjzh {
+.bfYjzh {
     display: inline-flex;
     justify-content: center;
     align-items: center;

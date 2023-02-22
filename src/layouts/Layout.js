@@ -8,7 +8,7 @@ function Layout(){
         <>
             <Navbar />
 
-            <Sidebar />
+            {/* <Sidebar /> */}
         </>
     )
 }
