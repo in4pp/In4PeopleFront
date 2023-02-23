@@ -1,5 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import IncomeTax from './pages/IncomeTax';
+import Layout from './layouts/Layout';
+
 
 
 
@@ -10,10 +12,14 @@ function App() {
     <BrowserRouter>
       <Routes>
 
+
         <Route path="/" element={ <IncomeTax /> }>
          
         </Route>
         
+
+        <Route path="/" element={ <Layout /> } /> 
+
       </Routes>
     </BrowserRouter>
   );
