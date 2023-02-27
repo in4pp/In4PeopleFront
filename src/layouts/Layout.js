@@ -2,7 +2,6 @@ import { Outlet } from "react-router-dom";
 import Navbar from "../components/common/Navbar";
 import Sidebar from "../components/common/Sidebar";
 import LayoutCSS from "../components/common/Navbar.module.css";
-import Test from "../components/common/DateRangePicker";
 function Layout() {
 
     return (
