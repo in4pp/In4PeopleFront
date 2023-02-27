@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bfc94496-cc97-4090-903f-6f07c7c218d9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/.idea/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/Layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/Layout.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +15,19 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="5471bb9f-4824-46c0-b239-ef54f5d1f900" />
+        <option name="url" value="https://github.com/in4pp/In4PeopleFront.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="ProjectId" id="2M4QLVoPrZD9qmgrHPIA10GPfNv" />
   <component name="ProjectViewState">
@@ -67,6 +79,9 @@
       <workItem from="1677121141582" duration="79000" />
       <workItem from="1677138949699" duration="7000" />
       <workItem from="1677466259871" duration="16000" />
+      <workItem from="1677466459068" duration="167000" />
+      <workItem from="1677466727167" duration="110000" />
+      <workItem from="1677466851924" duration="478000" />
     </task>
     <servers />
   </component>
