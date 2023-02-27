@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="bfc94496-cc97-4090-903f-6f07c7c218d9" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -10,23 +13,38 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="5471bb9f-4824-46c0-b239-ef54f5d1f900" />
+        <option name="url" value="https://github.com/in4pp/In4PeopleFront.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="ProjectId" id="2M4QLVoPrZD9qmgrHPIA10GPfNv" />
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/DEV/04_project/In4People-front",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "nodejs_interpreter_path": "node",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/DEV/04_project/In4People-front&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="npm.npm start">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
@@ -52,6 +70,16 @@
       <updated>1677024319403</updated>
       <workItem from="1677024320789" duration="157000" />
       <workItem from="1677024599866" duration="66000" />
+      <workItem from="1677115990080" duration="125000" />
+      <workItem from="1677116155944" duration="1957000" />
+      <workItem from="1677118714638" duration="15000" />
+      <workItem from="1677121141582" duration="79000" />
+      <workItem from="1677138949699" duration="7000" />
+      <workItem from="1677466259871" duration="16000" />
+      <workItem from="1677466459068" duration="167000" />
+      <workItem from="1677466727167" duration="110000" />
+      <workItem from="1677466851924" duration="478000" />
+      <workItem from="1677467361418" duration="137000" />
     </task>
     <servers />
   </component>
