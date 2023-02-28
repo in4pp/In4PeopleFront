@@ -63,7 +63,7 @@ function WorkSetting() {
         <div className={`${WorkSetCSS["content1"]}`}>근무시간</div>
         <div
           className={`${WorkSetCSS["basicWorkTime"]}`}
-          onChange={printWorkTime}
+          // onChange={printWorkTime}
         >
           <input id="basicWorkTime1" type="time" /> -
           <input id="basicWorkTime2" type="time" />
