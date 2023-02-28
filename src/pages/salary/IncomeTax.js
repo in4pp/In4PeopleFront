@@ -5,7 +5,11 @@ function IncomeTax() {
 
        return(
 
+<<<<<<< HEAD
         //
+=======
+              //
+>>>>>>> origin/Minjae
         // {`${incomeStyle.}`}
         //
         <div id="ct" className={incomeStyle['team_container']}>
