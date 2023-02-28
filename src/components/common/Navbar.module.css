@@ -265,9 +265,18 @@ ul {
     margin-inline-end: 0px;
     padding-inline-start: 40px;
 }
-
-
-
+body {
+    margin: 0;
+    font-family: var(--bs-body-font-family);
+    font-size: var(--bs-body-font-size);
+    font-weight: var(--bs-body-font-weight);
+    line-height: var(--bs-body-line-height);
+    color: var(--bs-body-color);
+    text-align: var(--bs-body-text-align);
+    background-color: var(--bs-body-bg);
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+}
 .ebDIkT {
     display: flex;
     -webkit-box-align: center;
@@ -307,39 +316,8 @@ body {
 
 
 
-.wrap {
-    overflow: hidden;
-    display: flex;
-    min-width: 1256px;
-    flex-direction: column;
-    min-height: 100vh;
-    width: 100%;
-}
-.wrapper {
-    min-height: 100vh;
-    padding: 80px 0 0 240px;
-    transition: padding 0.3s ease;
-    background: #fff;
-}
-.ct {
-    position: relative;
-    display: flex;
-    flex: 1 0 auto;
-    flex-direction: column;
-}
-#ct > .container2 {
-    width: 100%;
-    min-width: 1024px;
-    max-width: none;
-    padding: 32px;
-}
-.container {
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-}
+
+
 .bread-title {
     display: flex;
     align-items: center;

@@ -1,42 +1,121 @@
-import registCSS from './Regist.module.css';
+import NavCSS from './Content.module.css';
+import PlainStar from '../icon/PlainStar';
+import BlueStar from '../icon/BlueStar';
 
-function Content(){
+function Content() {
 
-    return(
+    return (
         <>
-<table className={`${registCSS.ppinsa}`}>
-    <tr>
-        <th>사진</th>
-        <td><input type="file" id="image" accept="image/*" /></td>
-        {/* 이미지 미리보기 */}
-        <img alt="메인사진" ></img>
-    </tr>
-    <tr>
-        <th>사원번호</th>
-        <td>
-            <input type="text" placeholder="6자리를 입력해주세요"/>
-        </td>
-    </tr>
-    <tr>
-        <th>성명</th>
-        <td>
-            <input type="text"/>
-        </td>
-    </tr>
-    <tr>
-        <th>주민등록번호</th>
-        <td>
-            <input type="text" placeholder="000000-0000000"/>
-        </td>
-    </tr>
-    <tr>
-        <th>휴대폰번호</th>
-        <td>
+            <div></div>
+            <div>
+                <div className={NavCSS.wrap}>
+                    <div></div>
+                    <div className={NavCSS.wrapper} >
+                        <div className={NavCSS.ct}>
+                            <div className={NavCSS.container}>
 
-        </td>
-    </tr>
-</table>
 
+
+                                <div>
+                                    <div className={`${NavCSS["d-flex-space"]} ${NavCSS["bread-title"]}`}>
+                                        <div className={`${NavCSS["title"]}`}>
+                                            <span className={`${NavCSS["breadcrumb"]}`}>결재 /</span>
+                                            <h2 className={`${NavCSS["h3"]}`}>내가 올린 결재(4)</h2>
+                                        </div>
+                                    </div>
+                                    <div></div>
+                                    <div className={`${NavCSS["commute-manage"]}`}>
+                                        <div className={`${NavCSS["sc-djTcra"]} ${NavCSS["laubHy"]}`}>
+                                            <div className={`${NavCSS["form-group"]}`}>
+                                                <span className={`${NavCSS["control-label"]}`}>시작일</span>
+                                                <div className={`${NavCSS["position-relative"]}`}>
+                                                    <input type="text" className={`${NavCSS["sc-fWHiwC"]} ${NavCSS["jtuvXR"]} ${NavCSS["form-control"]} ${NavCSS["input-datepicker"]}`} placeholder="시작일" readOnly="" value="2023-02-01" />
+                                                </div>
+                                            </div>
+                                            <div className={`${NavCSS["form-group"]}`}>
+                                                <span className={`${NavCSS["control-label"]}`}>종료일</span>
+                                                <div className={`${NavCSS["position-relative"]}`}>
+                                                    <input type="text" className={`${NavCSS["sc-fWHiwC"]} ${NavCSS["jtuvXR"]} ${NavCSS["form-control"]} ${NavCSS["input-datepicker"]}`} placeholder="종료일" readOnly="" value="2023-02-23" />
+                                                </div>
+                                            </div>
+                                            <button class="btn btn-primary mt-3">조회</button>
+                                        </div>
+                                    </div>
+                                    <div className={`${NavCSS["d-flex-space"]}`}>
+                                        <div className={`${NavCSS["d-flex-space"]}`}>
+                                            <select className={`${["form-select"]} ${["form-select-sm"]}`} aria-label=".form-select-sm example">
+                                                <option selected>전체</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
+                                        </div>
+                                        <div className={`${["display-flex"]}`}>
+                                            <button className={`${["btn"]} ${["btn-primary"]}`} style={{ alignSelf: "self-start" }}>결재 작성하기</button>
+                                        </div>
+                                    </div>
+                                    <div className={`${NavCSS.iLLwYh}`}>
+                                        <table className={`${NavCSS.table} ${"mt-3"}`}>
+                                            <caption className={`${NavCSS.srOnly}`}></caption>
+                                            <thead className={`${NavCSS.dXdqfk}`}>
+                                                <tr>
+                                                    <th className={`${NavCSS.bGDZWn}`}>
+                                                        <div className={`${NavCSS.formCheck}`}>
+                                                            <input className={`${NavCSS.formCheckInput}`} type="checkbox" value=""
+                                                                id="flexCheckDefault" />
+                                                            <label className={`${NavCSS.formCheckLabel}`} htmlFor="flexCheckDefault">
+                                                            </label>
+                                                        </div>
+                                                    </th>
+                                                    <th className={`${NavCSS.bGDZWl}`}>북마크</th>
+                                                    <th className={`${NavCSS.bGDZRZ}`}>종류</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <input className={`${["form-check-input"]}`} type="checkbox" value=""
+                                                            id="flexCheckDefault" />
+                                                        <label className={`${["form-check-label"]}`} htmlFor="flexCheckDefault"></label>
+                                                    </td>
+                                                    <td><button><PlainStar /></button></td>
+                                                    <td>일반</td>
+                                                    <td>2023-02-07-1564656</td>
+                                                    <td>업무결재3</td>
+                                                    <td><span className={`${NavCSS["badge"]} ${NavCSS["badge-green"]}`}>승인</span></td>
+                                                    <td>0개</td>
+                                                    <td>O</td>
+                                                    <td>0개</td>
+                                                    <td>2023.02.07, 화 07:23</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input className={`${["form-check-input"]}`} type="checkbox" value=""
+                                                            id="flexCheckDefault" />
+                                                        <label className={`${["form-check-label"]}`} htmlFor="flexCheckDefault"></label>
+                                                    </td>
+                                                    <td><button><BlueStar /></button></td>
+                                                    <td>일반</td>
+                                                    <td>2023-02-07-1564653</td>
+                                                    <td>업무결제3</td>
+                                                    <td><span className={`${NavCSS["badge"]} ${NavCSS["badge-green"]}`}>승인</span></td>
+                                                    <td>0개</td>
+                                                    <td>X</td>
+                                                    <td>0개</td>
+                                                    <td>2023.02.07, 화 07:22</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </>
     )
 }
