@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import IncomeTax from './pages/IncomeTax';
-import Layout from './layouts/Layout';
+// import SalaryInfo from './pages/SalaryInformation'
+// import Layout from './layouts/Layout';
 
 
 
@@ -18,7 +19,7 @@ function App() {
         </Route>
         
 
-        <Route path="/" element={ <Layout /> } /> 
+        {/* <Route path="/" element={ <Layout /> } />  */}
 
       </Routes>
     </BrowserRouter>
