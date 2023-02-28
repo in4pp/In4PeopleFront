@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom"
 import NavCSS from './Navbar.module.css';
+import Alarm from "../icon/Alarm";
 function Navbar() {
     return (
         <div className={NavCSS.bwzYVU}>
@@ -24,6 +25,8 @@ function Navbar() {
             <div className={NavCSS.cAnmmb}>
                 <div className={NavCSS.ePumqH}><span className={NavCSS.fcykKi}><button data-active="false"
                     className={`${NavCSS.bfYjzh} ${NavCSS.kyAoKz} ${NavCSS.gmZOLP} ${NavCSS.ieRdlXN}`}>
+
+                        <Alarm />
                 </button></span><span className={NavCSS.fcykKi}><a
                     className={`${NavCSS.bfYjzh} ${NavCSS.kyAoKz}`} >
                     <div className={NavCSS.kGKtTY}>
