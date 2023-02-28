@@ -1,0 +1,36 @@
+th {
+    text-align: left;
+    background-color: #fbb9c538;
+}
+
+table {
+    /* width: 100%; */
+    border-top: 1px solid #444444;
+    border-collapse: collapse;
+  }
+  th, td {
+    border-bottom: 1px solid #444444;
+    padding: 10px;
+  }
+
+.ppinsa
+{
+    float: left;
+    margin: 50px 50px 50px 50px;
+}
+
+.ppwork
+{
+    display: inline-block;
+    margin: 50px 50px 20px 50px;
+}
+
+button
+{
+  margin-left: 50px;
+  width: 311px;
+  height: 30px;
+  background-color: #fbb9c538;
+  border: hidden;
+  border-radius: 5px;
+}
