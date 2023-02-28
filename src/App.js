@@ -1,9 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-// import IncomeTax from './pages/IncomeTax';
-import SalaryInfo from './pages/SalaryInformation'
-// import Layout from './layouts/Layout';
-
-
+import Layout from './layouts/Layout';
+import ApprovalSidebar from './sidebars/ApprovalSidebar';
+import TaskSubmit from './pages/task/TaskSubmit'
 
 
 function App() {
@@ -12,15 +10,12 @@ function App() {
 
     <BrowserRouter>
       <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route path="/taskApproval" element={<ApprovalSidebar />}>
+            <Route index element={<TaskSubmit />}/>
+          </Route>
 
-
-        <Route path="/" element={ <SalaryInfo /> }>
-          {/* <Route index element={<IncomeTax />} /> */}
-         
         </Route>
-        
-
-        {/* <Route path="/" element={ <Layout /> } />  */}
 
       </Routes>
     </BrowserRouter>
