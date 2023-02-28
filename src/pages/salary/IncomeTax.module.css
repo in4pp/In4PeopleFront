@@ -145,15 +145,15 @@ label {
        min-width: 1024px;
        max-width: none;
        
-       padding: 80px 0 0 240px;
+       padding: 0px 0 0 0px;
    }
 
-   /* .team-container {
+   .team_container {
     position: relative;
     min-height: 100vh;
-    padding: 80px 0px 0px 240px;
+    padding: 0px 0px 0px 0px;
     line-height: 1;
-  } */
+  }
 
 
 
@@ -334,6 +334,7 @@ h6 {
 .team_container .row {
   display: flex;
   padding: 8px 4px;
+  
 }
 
 .list_group_item {
@@ -370,7 +371,7 @@ h6 {
 .ePUqqs {
   position: relative;
   min-height: 100vh;
-  padding: 80px 0px 0px 240px;
+  padding: 0px 0px 0px 240px;
   background: rgb(249, 249, 249);
   line-height: 1;
 }

@@ -12,6 +12,7 @@ function IncomeTax() {
 
         // {`${incomeStyle.}`}
         //
+        <div className={`${incomeStyle["ePUqqs"]}`}>
         <div id="ct" className={incomeStyle['team_container']}>
           
           <div className={incomeStyle.container}>
@@ -131,7 +132,7 @@ function IncomeTax() {
           </div>
           
         </div>
-      
+        </div>
        );
 }
 
