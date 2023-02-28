@@ -4,6 +4,7 @@ function Main() {
 
     return(
         <>
+        <div>
             <div className={`${MainCSS["one"]}`}>
             <div className={`${MainCSS["left"]}`}>
                 <div className={`${MainCSS["ppbox"]}`}>
@@ -34,6 +35,7 @@ function Main() {
                 </div>
             </div>
             </div>
+        </div>
         </>
     )
 }

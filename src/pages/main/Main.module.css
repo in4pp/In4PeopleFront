@@ -25,7 +25,9 @@
     background-color: #FCFBFB;
     box-shadow : 2px 4px 10px 1px rgba(211, 211, 211, 0.699);
 }
-
+div {
+    display: block;
+}
 .pplist
 {
     padding-right: 20px;
