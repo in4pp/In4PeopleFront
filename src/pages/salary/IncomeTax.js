@@ -13,6 +13,7 @@ function IncomeTax() {
         // {`${incomeStyle.}`}
         //
         <div id="ct" className={incomeStyle['team_container']}>
+          
           <div className={incomeStyle.container}>
             <div className={incomeStyle['top_section']}>
               <div className={`{${incomeStyle.d_flex_space} ${incomeStyle.align_items_start}}`}>
@@ -128,6 +129,7 @@ function IncomeTax() {
               <hr />
             </div>
           </div>
+          
         </div>
       
        );

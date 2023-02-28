@@ -13,10 +13,11 @@ function SalaryInfo() {
               // 
 
               <div id="root">
+                <div className={salaryStyle['ePUqqs']}>
         <div className={salaryStyle['iIajZC']}>
           <h1 className={salaryStyle['eyVfFY']}>
             <div className={salaryStyle['khtcvx']}>
-              <p>직원별 급여 정보</p> <button>급여 정보 엑셀 업로드</button>
+              <p>직원별 급여 정보</p> 
             </div>
           </h1>
           <div className={salaryStyle['hBCNCB']}>
@@ -64,6 +65,7 @@ function SalaryInfo() {
               <ul className={salaryStyle['KvHzc']}><button className={salaryStyle['kQVKYn']}>1</button></ul>
             </div>
           </div>
+        </div>
         </div>
       </div>
 

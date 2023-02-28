@@ -5,7 +5,7 @@ import TaskSubmit from './pages/task/TaskSubmit'
 import IncomeTax from './pages/salary/IncomeTax';
 import SalarySidebar from './sidebars/SalarySidebar';
 import SalaryInfo from './pages/salary/SalaryInformation';
-
+import SalarySettlement from './pages/salary/SalarySettlement';
 
 
 
@@ -26,6 +26,10 @@ function App() {
 
           <Route path="/incomeTax" element={<SalarySidebar />}>
             <Route index element={<IncomeTax />}/>
+          </Route>
+
+          <Route path="/salset" element={<SalarySidebar />}>
+            <Route index element={<SalarySettlement />}/>
           </Route>
           
 
