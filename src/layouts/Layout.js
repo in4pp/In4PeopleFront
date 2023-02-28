@@ -11,13 +11,8 @@ function Layout() {
 
         <Sidebar />
 
-
-
-                <Content />
-                {/* <Outlet /> */}
-            </div>
-          </div>
-        </div>
+        <Content />
+        {/* <Outlet /> */}
       </div>
     </>
   );

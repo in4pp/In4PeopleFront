@@ -261,22 +261,12 @@ h6 {
 .cYDzyY ul {
   margin: 16px 0px 0px;
 }
-
-.bEaXSR {
-  font-size: 16px;
-  font-weight: 500;
-  margin: 12px 0px 0px;
-  word-break: keep-all;
-  color: #a282f1;
-  cursor: pointer;
-}
-
 .fcngae {
   font-size: 16px;
   font-weight: 500;
   margin: 12px 0px 0px;
   word-break: keep-all;
-  color: rgb(130, 132, 137);
+  color: rgb(85, 94, 127);
   cursor: pointer;
 }
 li {
@@ -308,7 +298,7 @@ body {
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
 }
-.ebDIkT {
+=========>>>>>>>>>Temporary merge branch 2 .ebDIkT {
   display: flex;
   -webkit-box-align: center;
   align-items: center;
@@ -368,7 +358,7 @@ body {
   color: rgb(0, 0, 0);
 }
 
-.wrap {
+<<<<<<<<< Temporary merge branch 1 ========= .wrap {
   overflow: hidden;
   display: flex;
   min-width: 1256px;
@@ -401,7 +391,7 @@ body {
   margin-right: auto;
   margin-left: auto;
 }
-.bread-title {
+>>>>>>>>>Temporary merge branch 2 .bread-title {
   display: flex;
   align-items: center;
   justify-content: space-between;
