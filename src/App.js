@@ -1,5 +1,9 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Layout from "./layouts/Layout";
+// import IncomeTax from './pages/IncomeTax';
+import SalaryInfo from './pages/SalaryInformation'
+// import Layout from './layouts/Layout';
+
+
 
 
 function App() {
@@ -9,7 +13,14 @@ function App() {
     <BrowserRouter>
       <Routes>
 
-        <Route path="/" element={ <Layout /> } />
+
+        <Route path="/" element={ <SalaryInfo /> }>
+          {/* <Route index element={<IncomeTax />} /> */}
+         
+        </Route>
+        
+
+        {/* <Route path="/" element={ <Layout /> } />  */}
 
       </Routes>
     </BrowserRouter>
