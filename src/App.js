@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import IncomeTax from './pages/IncomeTax';
+// import IncomeTax from './pages/IncomeTax';
 import SalaryInfo from './pages/SalaryInformation'
-import Layout from './layouts/Layout';
+// import Layout from './layouts/Layout';
 
 
 
