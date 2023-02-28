@@ -1,6 +1,6 @@
 import NavCSS from './Content.module.css';
-import PlainStar from '../icon/PlainStar';
-import BlueStar from '../icon/BlueStar';
+import PlainStar from '../../components/icon/PlainStar';
+import BlueStar from '../../components/icon/BlueStar';
 
 function Content() {
 

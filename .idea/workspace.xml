@@ -4,11 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bfc94496-cc97-4090-903f-6f07c7c218d9" name="Changes" comment="" />
+    <list default="true" id="bfc94496-cc97-4090-903f-6f07c7c218d9" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Content.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Content.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Navbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Sidebar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/Layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/Layout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/IncomeTax.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/salary/IncomeTax.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/IncomeTax.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/salary/IncomeTax.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/SalaryInformation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/salary/SalaryInformation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/SalaryInformation.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/salary/SalaryInformation.module.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="In4PeopleFront/성일" />
   </component>
   <component name="Git.Merge.Settings">
     <option name="BRANCH" value="In4PeopleFront/성일" />
@@ -113,7 +128,6 @@
       <workItem from="1677466727167" duration="110000" />
       <workItem from="1677466851924" duration="478000" />
       <workItem from="1677467361418" duration="137000" />
-      <workItem from="1677558153989" duration="810000" />
     </task>
     <servers />
   </component>
