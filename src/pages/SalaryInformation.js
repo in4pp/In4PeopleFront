@@ -10,7 +10,7 @@ function SalaryInfo() {
 
               // {salaryStyle['']}
               // {`${salaryStyle}`}
-              //
+              // 
 
               <div id="root">
         <div className={salaryStyle['iIajZC']}>
