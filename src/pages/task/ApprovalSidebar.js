@@ -1,7 +1,8 @@
 import { Outlet } from "react-router-dom";
-import Side from '../components/common/Navbar.module.css';
-function Sidebar() {
+import Side from '../../components/common/Navbar.module.css';
+import { NavLink } from "react-router-dom";
 
+function ApprovalSidebar() {
     return (
         <>
             <div className={Side.cYDzyY}>
@@ -10,11 +11,9 @@ function Sidebar() {
                         <div className={Side.pbheK}>
                             <h1>결재</h1>
                             <ul>
-                                <li className={Side.bEaXSR}>상신함</li>
+                                <li className={Side.bEaXSR}><NavLink to="approval">상신함</NavLink></li>
                                 <li className={Side.fcngae}>수신함</li>
-                                <li className={Side.fcngae}>북마크</li>
-                                <li className={Side.fcngae}>템플릿</li>
-                                <li className={Side.fcngae}>임시 저장</li>
+                                <li className={Side.fcngae}><NavLink to="bookMark">북마크</NavLink></li>
                             </ul>
                         </div>
                         <div className={Side.pbheK}>
@@ -31,4 +30,4 @@ function Sidebar() {
     )
 }
 
-export default Sidebar;
+export default ApprovalSidebar;

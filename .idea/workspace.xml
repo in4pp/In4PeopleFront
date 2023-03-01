@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bfc94496-cc97-4090-903f-6f07c7c218d9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,7 +14,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="In4PeopleFront/master" />
+    <option name="BRANCH" value="In4PeopleFront/hyeeun" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -55,6 +56,9 @@
         <option name="url" value="https://github.com/in4pp/In4PeopleFront.git" />
       </UrlAndAccount>
     </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2M4QLVoPrZD9qmgrHPIA10GPfNv" />
   <component name="ProjectViewState">
@@ -115,6 +119,7 @@
       <workItem from="1677466727167" duration="110000" />
       <workItem from="1677466851924" duration="478000" />
       <workItem from="1677467361418" duration="137000" />
+      <workItem from="1677565921180" duration="297000" />
     </task>
     <servers />
   </component>

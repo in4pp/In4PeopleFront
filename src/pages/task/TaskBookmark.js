@@ -2,7 +2,7 @@ import NavCSS from './Content.module.css';
 import PlainStar from '../../components/icon/PlainStar';
 import BlueStar from '../../components/icon/BlueStar';
 
-function TaskSubmit() {
+function TaskBookmark() {
 
     return (
         <>
@@ -18,26 +18,11 @@ function TaskSubmit() {
                                     <div className={`${NavCSS["d-flex-space"]} ${NavCSS["bread-title"]}`}>
                                         <div className={`${NavCSS["title"]}`}>
                                             <span className={`${NavCSS["breadcrumb"]}`}>결재 /</span>
-                                            <h2 className={`${NavCSS["h3"]}`}>내가 올린 결재(4)</h2>
+                                            <h2 className={`${NavCSS["h3"]}`}>북마크(4)</h2>
                                         </div>
                                     </div>
                                     <div></div>
                                     <div className={`${NavCSS["commute-manage"]}`}>
-                                        <div className={`${NavCSS["sc-djTcra"]} ${NavCSS["laubHy"]}`}>
-                                            <div className={`${NavCSS["form-group"]}`}>
-                                                <span className={`${NavCSS["control-label"]}`}>시작일</span>
-                                                <div className={`${NavCSS["position-relative"]}`}>
-                                                    <input type="text" className={`${NavCSS["sc-fWHiwC"]} ${NavCSS["jtuvXR"]} ${NavCSS["form-control"]} ${NavCSS["input-datepicker"]}`} placeholder="시작일" readOnly="" value="2023-02-01" />
-                                                </div>
-                                            </div>
-                                            <div className={`${NavCSS["form-group"]}`}>
-                                                <span className={`${NavCSS["control-label"]}`}>종료일</span>
-                                                <div className={`${NavCSS["position-relative"]}`}>
-                                                    <input type="text" className={`${NavCSS["sc-fWHiwC"]} ${NavCSS["jtuvXR"]} ${NavCSS["form-control"]} ${NavCSS["input-datepicker"]}`} placeholder="종료일" readOnly="" value="2023-02-23" />
-                                                </div>
-                                            </div>
-                                            <button className="btn btn-primary mt-3">조회</button>
-                                        </div>
                                     </div>
                                     <div className={`${NavCSS["d-flex-space"]}`}>
                                         <div className={`${NavCSS["d-flex-space"]}`}>
@@ -125,4 +110,4 @@ function TaskSubmit() {
     )
 }
 
-export default TaskSubmit;
+export default TaskBookmark;
