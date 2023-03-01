@@ -1,5 +1,10 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './layouts/Layout';
+import ApprovalSidebar from './sidebars/ApprovalSidebar';
+import TaskSubmit from './pages/task/TaskSubmit'
+import IncomeTax from './pages/salary/IncomeTax';
+import SalarySidebar from './sidebars/SalarySidebar';
+import SalaryInfo from './pages/salary/SalaryInformation';
 import TaskSidebar from './pages/task/TaskSidebar';
 import ApprovalSubmit from './pages/task/taskApproval/ApprovalSubmit'
 import Main from './pages/main/Main';
@@ -18,6 +23,16 @@ function App() {
             <Route path="bookMark" element={<ApprovalBookmark />} />
             <Route path="approval" element={<ApprovalSubmit />} />
           </Route>
+
+          <Route path="/salary" element={<SalarySidebar />}>
+            <Route index element={<SalaryInfo />}/>
+          </Route>
+
+          <Route path="/incomeTax" element={<SalarySidebar />}>
+            <Route index element={<IncomeTax />}/>
+          </Route>
+
+
         </Route>
     </Routes>
     </BrowserRouter >
