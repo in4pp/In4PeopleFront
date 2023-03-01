@@ -13,16 +13,15 @@ function Navbar() {
                             <NavLink to="/"><img src="./images/INSA PEOPLE.png" alt="" width={150} height={70} /></NavLink>
                         </div>
                     </a></div>
-                    <div className={NavCSS.lkOGXI}><a className={`${NavCSS.fEXmlR} ${NavCSS.kOVHNW}`} >홈</a><a
-                        className={`${NavCSS.fEXmlR} ${NavCSS.kOVHNW}`} >조직도</a><a className={`${NavCSS.fEXmlR} ${NavCSS.kOVHNW}`}
-                        >구성원</a><a className={`${NavCSS.fEXmlR} ${NavCSS.kOVHNW}`}
-                        ><NavLink to="/task" >결재</NavLink></a>
+                    <div className={NavCSS.lkOGXI}><a className={`${NavCSS.fEXmlR} ${NavCSS.kOVHNW}`} >HOME</a><a
+                        className={`${NavCSS.fEXmlR} ${NavCSS.kOVHNW}`} >인사</a><a className={`${NavCSS.fEXmlR} ${NavCSS.kOVHNW}`}
+                        >근무/휴가</a><a className={`${NavCSS.fEXmlR} ${NavCSS.kOVHNW}`}
+                        >급여</a>
                         <a className={`${NavCSS.fEXmlR} ${NavCSS.kOVHNW}`}
-                        >근무/휴가</a><a className={`${NavCSS.fEXmlR} ${NavCSS.kOVHNW}`} >분석</a><a
-                            className={`${NavCSS.fEXmlR} ${NavCSS.kOVHNW}`} >조직
+                        >일용직</a><a className={`${NavCSS.fEXmlR} ${NavCSS.kOVHNW}`} ><NavLink to="/task" >업무</NavLink></a><a
+                            className={`${NavCSS.fEXmlR} ${NavCSS.kOVHNW}`} >게시판
                         </a>
-                        <a className={`${NavCSS.fEXmlR} ${NavCSS.kOVHNW}`}
-                        >전자계약</a><a className={`${NavCSS.fEXmlR} ${NavCSS.kOVHNW}`} >설문</a></div>
+      </div>
                 </div>
                 <div className={NavCSS.cAnmmb}>
                     <div className={NavCSS.ePumqH}><span className={NavCSS.fcykKi}><button data-active="false"

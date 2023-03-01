@@ -555,7 +555,7 @@ select.form-control-xs, .bootstrap-select .selectpicker-xs + .btn {
     line-height: 1.33;
     color: rgb(118, 118, 118);
     margin: 1rem 0px 0px;
-}
+} 
 thead {
     display: table-header-group;
     vertical-align: middle;

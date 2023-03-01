@@ -248,9 +248,7 @@ svg:not(:root) {
     color: rgb(85, 94, 127);
     cursor: pointer;
 }
-li {
-    list-style: none;
-}
+
 li {
     display: list-item;
     text-align: -webkit-match-parent;
@@ -330,3 +328,4 @@ body {
     justify-content: space-between;
     align-items: center;
 }
+

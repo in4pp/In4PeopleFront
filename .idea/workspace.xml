@@ -5,8 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bfc94496-cc97-4090-903f-6f07c7c218d9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/pages/task/TaskBookmark.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Navbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/main/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/main/Main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/main/Main.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/main/Main.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/task/TaskSubmit.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/task/TaskSubmit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sidebars/ApprovalSidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/task/ApprovalSidebar.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,6 +126,7 @@
       <workItem from="1677466851924" duration="478000" />
       <workItem from="1677467361418" duration="137000" />
       <workItem from="1677565921180" duration="297000" />
+      <workItem from="1677658614785" duration="12000" />
     </task>
     <servers />
   </component>
