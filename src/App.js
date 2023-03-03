@@ -7,6 +7,7 @@ import SalarySidebar from './sidebars/SalarySidebar';
 import SalaryInfo from './pages/salary/SalaryInformation';
 import SalarySettlement from './pages/salary/SalarySettlement';
 import HourlyWageSetting from './pages/salary/HourlyWageSetting';
+import WorkInquiry from './pages/salary/WorkInquiry';
 
 
 
@@ -36,6 +37,10 @@ function App() {
 
           <Route path="/hourlySet" element={<SalarySidebar />}>
             <Route index element={<HourlyWageSetting />}/>
+          </Route>
+
+          <Route path="/workInquiry" element={<SalarySidebar />}>
+            <Route index element={<WorkInquiry />}/>
           </Route>
           
 
