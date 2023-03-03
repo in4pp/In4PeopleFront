@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./layouts/Layout";
 import ApprovalSidebar from "./sidebars/ApprovalSidebar";
 import TaskSubmit from "./pages/task/TaskSubmit";
-import WorkManageSidebar from "./pages/workManagement/components/WorkManageSidebar";
+import WorkManageSidebar from "./pages/workManagement/WorkManageSidebar";
 
 function App() {
   return (
