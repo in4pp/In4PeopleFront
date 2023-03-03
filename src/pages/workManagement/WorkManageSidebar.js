@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 import Side from "../../components/common/Navbar.module.css";
-import { NavLink } from "react-router-dom";
+
 import SlideToggle1 from "./components/SlideToggle1";
 import SlideToggle2 from "./components/SlideToggle2";
 import SlideToggle3 from "./components/SlideToggle3";
