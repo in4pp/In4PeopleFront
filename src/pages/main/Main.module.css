@@ -28,6 +28,9 @@
 div {
     display: block;
 }
+.one{
+    padding : 80px 100px 0px 100px;
+}
 .pplist
 {
     padding-right: 20px;

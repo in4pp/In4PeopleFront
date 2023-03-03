@@ -11,7 +11,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
-
+        <Route index element={<Main />}/>
           <Route path="/taskApproval" element={<ApprovalSidebar />}>
             <Route index element={<TaskSubmit />}/>
           </Route>
