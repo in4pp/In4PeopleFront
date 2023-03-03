@@ -6,6 +6,8 @@ import IncomeTax from './pages/salary/IncomeTax';
 import SalarySidebar from './sidebars/SalarySidebar';
 import SalaryInfo from './pages/salary/SalaryInformation';
 import SalarySettlement from './pages/salary/SalarySettlement';
+import HourlyWageSetting from './pages/salary/HourlyWageSetting';
+
 
 
 
@@ -28,8 +30,12 @@ function App() {
             <Route index element={<IncomeTax />}/>
           </Route>
 
-          <Route path="/salset" element={<SalarySidebar />}>
+          <Route path="/salSet" element={<SalarySidebar />}>
             <Route index element={<SalarySettlement />}/>
+          </Route>
+
+          <Route path="/hourlySet" element={<SalarySidebar />}>
+            <Route index element={<HourlyWageSetting />}/>
           </Route>
           
 
