@@ -5,7 +5,7 @@ function Alarm() {
 
     return ( 
         <>
-            <FontAwesomeIcon icon={faBell} color="blue"/>
+            <FontAwesomeIcon icon={faBell}/>
         </>
     )
 }
