@@ -322,12 +322,6 @@ table {
     border-color: inherit;
     border-collapse: collapse;
 }
-*, ::before, ::after {
-    box-sizing: border-box;
-    border-width: 0px;
-    border-style: solid;
-    border-color: currentcolor;
-}
 table {
     border-collapse: separate;
     text-indent: initial;
@@ -342,11 +336,23 @@ table {
     line-height: 1.33;
     color: #767676;
 }
+*, ::before, ::after {
+    box-sizing: border-box;
+    border-width: 0px;
+    border-style: solid;
+    border-color: currentcolor;
+}
+
 .bGDZWn {
     min-width: 25px;
 }
 th {
     text-align: inherit;
+}
+
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
 }
 th {
     display: table-cell;
@@ -354,14 +360,10 @@ th {
     font-weight: bold;
     text-align: -internal-center;
 }
-
-.table thead th {
-    vertical-align: bottom;
-    border-bottom: 2px solid #dee2e6;
-}
 .bGDZWl {
     min-width: 45px;
 }
+
 .table tbody > tr > * {
     height: 44px;
     max-height: 44px;
@@ -373,7 +375,6 @@ th {
     vertical-align: middle;
     color: #484848;
 }
-
 table {
     display: table;
     border-collapse: separate;
@@ -554,7 +555,7 @@ select.form-control-xs, .bootstrap-select .selectpicker-xs + .btn {
     line-height: 1.33;
     color: rgb(118, 118, 118);
     margin: 1rem 0px 0px;
-}
+} 
 thead {
     display: table-header-group;
     vertical-align: middle;

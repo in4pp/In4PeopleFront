@@ -1,8 +1,8 @@
-import NavCSS from './Content.module.css';
-import PlainStar from '../../components/icon/PlainStar';
-import BlueStar from '../../components/icon/BlueStar';
+import NavCSS from '../taskCSS/Content.module.css';
+import PlainStar from '../../../components/icon/PlainStar';
+import BlueStar from '../../../components/icon/BlueStar';
 
-function Content() {
+function ApprovalSubmit() {
 
     return (
         <>
@@ -13,8 +13,6 @@ function Content() {
                     <div className={NavCSS.wrapper} >
                         <div className={NavCSS.ct}>
                             <div className={NavCSS.container}>
-
-
 
                                 <div>
                                     <div className={`${NavCSS["d-flex-space"]} ${NavCSS["bread-title"]}`}>
@@ -38,7 +36,7 @@ function Content() {
                                                     <input type="text" className={`${NavCSS["sc-fWHiwC"]} ${NavCSS["jtuvXR"]} ${NavCSS["form-control"]} ${NavCSS["input-datepicker"]}`} placeholder="종료일" readOnly="" value="2023-02-23" />
                                                 </div>
                                             </div>
-                                            <button class="btn btn-primary mt-3">조회</button>
+                                            <button className="btn btn-primary mt-3">조회</button>
                                         </div>
                                     </div>
                                     <div className={`${NavCSS["d-flex-space"]}`}>
@@ -55,8 +53,8 @@ function Content() {
                                         </div>
                                     </div>
                                     <div className={`${NavCSS.iLLwYh}`}>
-                                        <table className={`${NavCSS.table} ${"mt-3"}`}>
-                                            <caption className={`${NavCSS.srOnly}`}></caption>
+                                        <table className={`${[NavCSS.table]} ${["table-hover"]} ${"mt-3"}`}>
+                                            <caption></caption>
                                             <thead className={`${NavCSS.dXdqfk}`}>
                                                 <tr>
                                                     <th className={`${NavCSS.bGDZWn}`}>
@@ -67,8 +65,15 @@ function Content() {
                                                             </label>
                                                         </div>
                                                     </th>
-                                                    <th className={`${NavCSS.bGDZWl}`}>북마크</th>
-                                                    <th className={`${NavCSS.bGDZRZ}`}>종류</th>
+                                                    <th className={`${NavCSS["bGDZWl"]}`}>북마크</th>
+                                                    <th className={`${NavCSS["bGDZRZ"]}`}>종류</th>
+                                                    <th className={`${NavCSS["iztiXy"]}`}>문서번호</th>
+                                                    <th className={`${NavCSS["iztiWO"]}`}>제목</th>
+                                                    <th className={`${NavCSS["bGDZRX"]}`}>상태</th>
+                                                    <th className={`${NavCSS["bGDZRX"]}`}>댓글</th>
+                                                    <th className={`${NavCSS["bGDZRW"]}`}>첨부파일</th>
+                                                    <th className={`${NavCSS["bGDZRX"]}`}>결재의견</th>
+                                                    <th className={`${NavCSS["iztiWO"]}`}>작성일</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -120,4 +125,4 @@ function Content() {
     )
 }
 
-export default Content;
+export default ApprovalSubmit;

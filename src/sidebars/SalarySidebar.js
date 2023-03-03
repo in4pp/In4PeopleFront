@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 import Side from '../components/common/Navbar.module.css';
-function Sidebar() {
+function SalarySidebar() {
 
     return (
         <>
@@ -31,4 +31,4 @@ function Sidebar() {
     )
 }
 
-export default Sidebar;
+export default SalarySidebar;
