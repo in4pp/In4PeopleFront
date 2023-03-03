@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import "../../task/taskCSS/SlideToggle.css";
 
-function SlideToggle3() {
+function SlideToggle1() {
   const [show, setShow] = useState(false);
 
   const handleClick = () => {
@@ -11,14 +11,14 @@ function SlideToggle3() {
 
   return (
     <div>
-      <button onClick={handleClick}>휴가관리</button>
+      <button onClick={handleClick}>근무계획(스케줄)</button>
       <TransitionGroup>
         {show && (
           <CSSTransition classNames="slide" timeout={200}>
             <div>
-              <div className="mt-2">연차 생성</div>
-              <div className="mt-2">휴가신청</div>
-              <div className="mt-2">휴가사용현황</div>
+              <div className="mt-2">근무 기본 설정</div>
+              <div className="mt-2">근무 스케줄 관리</div>
+              <div className="mt-2">근무 스케줄 신청</div>
             </div>
           </CSSTransition>
         )}
@@ -27,4 +27,4 @@ function SlideToggle3() {
   );
 }
 
-export default SlideToggle3;
+export default SlideToggle1;
