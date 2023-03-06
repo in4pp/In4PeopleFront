@@ -4,21 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bfc94496-cc97-4090-903f-6f07c7c218d9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/Navbar.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Navbar.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/task/TaskSidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/task/TaskSidebar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/task/components/SlideToggle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/task/components/SlideToggle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/task/taskApproval/ApprovalNeed.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/task/taskApproval/ApprovalNeed.js" afterDir="false" />
-    </list>
+    <list default="true" id="bfc94496-cc97-4090-903f-6f07c7c218d9" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="In4PeopleFront/hyeeun" />
+    <option name="BRANCH" value="In4PeopleFront/master" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -127,7 +120,7 @@
       <workItem from="1677658614785" duration="12000" />
       <workItem from="1677667307908" duration="24000" />
       <workItem from="1677801188546" duration="30000" />
-      <workItem from="1678066896563" duration="23000" />
+      <workItem from="1678066896563" duration="361000" />
     </task>
     <servers />
   </component>
