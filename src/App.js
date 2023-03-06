@@ -1,3 +1,4 @@
+
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './layouts/Layout';
 // import ApprovalSidebar from './sidebars/ApprovalSidebar';
@@ -13,19 +14,22 @@ import WorkInquiry from './pages/salary/WorkInquiry';
 
 
 
+
 function App() {
+
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
+
           <Route path="/salary" element={<SalarySidebar />}>
             <Route index element={<SalaryInfo />} />
             
           </Route>
-
           <Route path="/incomeTax" element={<SalarySidebar />}>
             <Route index element={<IncomeTax />} />
           </Route>
+
 
 
           <Route path="/salSet" element={<SalarySidebar />}>
@@ -40,12 +44,14 @@ function App() {
             <Route index element={<WorkInquiry />}/>
           </Route>
         
+
         </Route>
           
 
      
       </Routes>
     </BrowserRouter>
+
   );
 }
 
