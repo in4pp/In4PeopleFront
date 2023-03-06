@@ -9,7 +9,8 @@ import Main from "./pages/main/Main";
 import ApprovalBookmark from "./pages/task/taskApproval/ApprovalBookmark";
 import WorkManageSidebar from "./pages/workManagement/WorkManageSidebar";
 import PersonnelSidebar from "./pages/personnel/PersonnelSidebar";
-
+import TabContent from "./pages/personnel/HR/HRRegist";
+import Orgchart from "./pages/personnel/HR/Orgchart";
 function App() {
   return (
     <BrowserRouter>
@@ -32,7 +33,8 @@ function App() {
           <Route path="/workManage" element={<WorkManageSidebar />}></Route>
           
           <Route path="/personnel" element={<PersonnelSidebar />}>
-
+            <Route index element={<TabContent />}></Route>
+            <Route path="orgchart" element={<Orgchart />} />
           </Route>
         </Route>
       </Routes>
