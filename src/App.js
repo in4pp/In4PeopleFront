@@ -9,6 +9,7 @@ import Main from "./pages/main/Main";
 import ApprovalBookmark from "./pages/task/taskApproval/ApprovalBookmark";
 import WorkManageSidebar from "./pages/workManagement/WorkManageSidebar";
 import PersonnelSidebar from "./pages/personnel/PersonnelSidebar";
+import DailyWorkerSidebar from "./pages/dailyWorker/DailyWorkerSidebar";  
 
 function App() {
   return (
@@ -31,12 +32,16 @@ function App() {
           </Route>
           <Route path="/workManage" element={<WorkManageSidebar />}></Route>
           
-          <Route path="/personnel" element={<PersonnelSidebar />}>
+          <Route path="/personnel" element={<PersonnelSidebar />}></Route>
 
-          </Route>
+          <Route path="/dailyWorker" element={<DailyWorkerSidebar />}></Route>
+
+
+          
         </Route>
       </Routes>
     </BrowserRouter>
+
   );
 }
 
