@@ -175,7 +175,7 @@ button {
     font-weight: 400;
     font-size: 25px;
     line-height: 20px;
-    background-color: var(--colors-blue400);
+    /* background-color: var(--colors-blue400); */
     text-decoration: none;
     white-space: nowrap;
     vertical-align: top;
