@@ -13,6 +13,7 @@ import ApprovalRefered from './pages/task/taskApproval/ApprovalRefered';
 import SettlementGeneration from './pages/task/taskApproval/SettlementGeneration';
 import WorkManageSidebar from "./pages/workManagement/WorkManageSidebar";
 import PersonnelSidebar from "./pages/personnel/PersonnelSidebar";
+import DailyWorkerSidebar from "./pages/dailyWorker/DailyWorkerSidebar";  
 import Login from './pages/login/Login';
 
 function App() {
@@ -34,18 +35,24 @@ function App() {
           <Route path="/salary" element={<SalarySidebar />}>
             <Route index element={<SalaryInfo />} />
           </Route>
-
           <Route path="/incomeTax" element={<SalarySidebar />}>
             <Route index element={<IncomeTax />} />
           </Route>
           <Route path="/workManage" element={<WorkManageSidebar />}></Route>
+          
+          <Route path="/personnel" element={<PersonnelSidebar />}></Route>
 
           <Route path="/personnel" element={<PersonnelSidebar />}></Route>
+          <Route path="/dailyWorker" element={<DailyWorkerSidebar />}></Route>
+
+
+          
         </Route>
 
         <Route path="/login" element={<Login />} />
       </Routes>
     </BrowserRouter>
+
   );
 }
 
