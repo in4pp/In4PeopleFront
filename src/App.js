@@ -34,7 +34,6 @@ function App() {
           <Route path="/salary" element={<SalarySidebar />}>
             <Route index element={<SalaryInfo />} />
           </Route>
-
           <Route path="/incomeTax" element={<SalarySidebar />}>
             <Route index element={<IncomeTax />} />
           </Route>

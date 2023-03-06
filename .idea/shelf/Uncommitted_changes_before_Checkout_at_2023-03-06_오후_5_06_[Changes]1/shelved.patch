@@ -1,0 +1,44 @@
+Index: src/App.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import { BrowserRouter, Routes, Route } from \"react-router-dom\";\r\nimport Layout from \"./layouts/Layout\";\r\nimport IncomeTax from \"./pages/salary/IncomeTax\";\r\nimport SalarySidebar from \"./sidebars/SalarySidebar\";\r\nimport SalaryInfo from \"./pages/salary/SalaryInformation\";\r\nimport TaskSidebar from \"./pages/task/TaskSidebar\";\r\nimport ApprovalSubmit from \"./pages/task/taskApproval/ApprovalSubmit\";\r\nimport Main from \"./pages/main/Main\";\r\nimport ApprovalBookmark from \"./pages/task/taskApproval/ApprovalBookmark\";\r\nimport WorkManageSidebar from \"./pages/workManagement/WorkManageSidebar\";\r\nimport PersonnelSidebar from \"./pages/personnel/PersonnelSidebar\";\r\n\r\nfunction App() {\r\n  return (\r\n    <BrowserRouter>\r\n      <Routes>\r\n        <Route path=\"/\" element={<Layout />}>\r\n          <Route index element={<Main />} />\r\n          <Route path=\"task\" element={<TaskSidebar />}>\r\n            <Route index element={<ApprovalSubmit />} />\r\n            <Route path=\"bookMark\" element={<ApprovalBookmark />} />\r\n            <Route path=\"approval\" element={<ApprovalSubmit />} />\r\n          </Route>\r\n\r\n          <Route path=\"/salary\" element={<SalarySidebar />}>\r\n            <Route index element={<SalaryInfo />} />\r\n          </Route>\r\n\r\n          <Route path=\"/incomeTax\" element={<SalarySidebar />}>\r\n            <Route index element={<IncomeTax />} />\r\n          </Route>\r\n          <Route path=\"/workManage\" element={<WorkManageSidebar />}></Route>\r\n          \r\n          <Route path=\"/personnel\" element={<PersonnelSidebar />}>\r\n\r\n          </Route>\r\n        </Route>\r\n      </Routes>\r\n    </BrowserRouter>\r\n  );\r\n}\r\n\r\nexport default App;\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/App.js b/src/App.js
+--- a/src/App.js	
++++ b/src/App.js	
+@@ -25,7 +25,6 @@
+           <Route path="/salary" element={<SalarySidebar />}>
+             <Route index element={<SalaryInfo />} />
+           </Route>
+-
+           <Route path="/incomeTax" element={<SalarySidebar />}>
+             <Route index element={<IncomeTax />} />
+           </Route>
+Index: .idea/git_toolbox_prj.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/git_toolbox_prj.xml b/.idea/git_toolbox_prj.xml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/git_toolbox_prj.xml	
+@@ -0,0 +1,15 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="GitToolBoxProjectSettings">
++    <option name="commitMessageIssueKeyValidationOverride">
++      <BoolValueOverride>
++        <option name="enabled" value="true" />
++      </BoolValueOverride>
++    </option>
++    <option name="commitMessageValidationEnabledOverride">
++      <BoolValueOverride>
++        <option name="enabled" value="true" />
++      </BoolValueOverride>
++    </option>
++  </component>
++</project>
+\ No newline at end of file

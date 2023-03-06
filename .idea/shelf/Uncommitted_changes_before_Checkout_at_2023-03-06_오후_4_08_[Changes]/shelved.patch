@@ -1,0 +1,18 @@
+Index: src/App.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import ApprovalNeed from './pages/task/taskApproval/ApprovalNeed';\r\nimport ApprovalCompleted from './pages/task/taskApproval/ApprovalCompleted';\r\nimport ApprovalRefered from './pages/task/taskApproval/ApprovalRefered';\r\nimport SettlementGeneration from './pages/task/taskApproval/SettlementGeneration';\r\nimport { BrowserRouter, Routes, Route } from \"react-router-dom\";\r\nimport Layout from \"./layouts/Layout\";\r\nimport IncomeTax from \"./pages/salary/IncomeTax\";\r\nimport SalarySidebar from \"./sidebars/SalarySidebar\";\r\nimport SalaryInfo from \"./pages/salary/SalaryInformation\";\r\nimport TaskSidebar from \"./pages/task/TaskSidebar\";\r\nimport ApprovalSubmit from \"./pages/task/taskApproval/ApprovalSubmit\";\r\nimport Main from \"./pages/main/Main\";\r\nimport ApprovalBookmark from \"./pages/task/taskApproval/ApprovalBookmark\";\r\nimport WorkManageSidebar from \"./pages/workManagement/WorkManageSidebar\";\r\nimport PersonnelSidebar from \"./pages/personnel/PersonnelSidebar\";\r\nimport DailyWorkerSidebar from \"./pages/dailyWorker/DailyWorkerSidebar\";  \r\n\r\nfunction App() {\r\n\r\n  return (\r\n    <BrowserRouter>\r\n      <Routes>\r\n        <Route path=\"/\" element={<Layout />}>\r\n          <Route index element={<Main />} />\r\n          <Route path=\"task\" element={<TaskSidebar />}>\r\n            <Route index element={<ApprovalSubmit />} />\r\n            <Route path=\"bookMark\" element={<ApprovalBookmark />} />\r\n            <Route path=\"submit\" element={<ApprovalSubmit />} />\r\n            <Route path=\"needed\" element={<ApprovalNeed />} />\r\n            <Route path=\"completed\" element={<ApprovalCompleted />} />\r\n            <Route path=\"refered\" element={<ApprovalRefered />} />\r\n          </Route>\r\n\r\n          <Route path=\"/salary\" element={<SalarySidebar />}>\r\n            <Route index element={<SalaryInfo />} />\r\n          </Route>\r\n\r\n          <Route path=\"/incomeTax\" element={<SalarySidebar />}>\r\n            <Route index element={<IncomeTax />} />\r\n          </Route>\r\n          <Route path=\"/workManage\" element={<WorkManageSidebar />}></Route>\r\n          \r\n          <Route path=\"/personnel\" element={<PersonnelSidebar />}></Route>\r\n\r\n          <Route path=\"/dailyWorker\" element={<DailyWorkerSidebar />}></Route>\r\n\r\n\r\n          \r\n        </Route>\r\n      </Routes>\r\n    </BrowserRouter>\r\n\r\n  );\r\n}\r\n\r\nexport default App;\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/App.js b/src/App.js
+--- a/src/App.js	(revision 539795f6f762018318a80e9a976f5b81a82e86c2)
++++ b/src/App.js	(date 1678086382417)
+@@ -34,7 +34,6 @@
+           <Route path="/salary" element={<SalarySidebar />}>
+             <Route index element={<SalaryInfo />} />
+           </Route>
+-
+           <Route path="/incomeTax" element={<SalarySidebar />}>
+             <Route index element={<IncomeTax />} />
+           </Route>
