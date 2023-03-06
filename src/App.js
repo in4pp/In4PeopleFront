@@ -1,12 +1,3 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Layout from './layouts/Layout';
-import IncomeTax from './pages/salary/IncomeTax';
-import SalarySidebar from './sidebars/SalarySidebar';
-import SalaryInfo from './pages/salary/SalaryInformation';
-import TaskSidebar from './pages/task/TaskSidebar';
-import ApprovalSubmit from './pages/task/taskApproval/ApprovalSubmit'
-import Main from './pages/main/Main';
-import ApprovalBookmark from './pages/task/taskApproval/ApprovalBookmark';
 import ApprovalNeed from './pages/task/taskApproval/ApprovalNeed';
 import ApprovalCompleted from './pages/task/taskApproval/ApprovalCompleted';
 import ApprovalRefered from './pages/task/taskApproval/ApprovalRefered';
