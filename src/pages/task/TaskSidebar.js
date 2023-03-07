@@ -22,7 +22,7 @@ function TaskSidebar() {
                             <hr style={{ marginTop: 30, marginBottom: 10 }} /><hr style={{ marginTop: 5 }} />
                             <h1>전자결재</h1>
                             <ul>
-                                <li className={Side.fcngae}><NavLink to="approval">상신함</NavLink></li>
+                                <li className={Side.fcngae}><NavLink to="submit">상신함</NavLink></li>
                                 <li className={Side.fcngae}><SlideToggle /></li>
                                 <li className={Side.fcngae}><NavLink to="bookMark">북마크</NavLink></li>
                             </ul>

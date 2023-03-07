@@ -15,9 +15,7 @@
     display: flex;
     /* border-radius: 10px; */
 }
-.one {
-    padding : 80px;
-}
+
 .ppbox
 {
     padding: 10px 10px 10px 10px;
@@ -29,6 +27,9 @@
 }
 div {
     display: block;
+}
+.one{
+    padding : 80px 100px 0px 100px;
 }
 .pplist
 {
