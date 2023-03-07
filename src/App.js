@@ -8,6 +8,7 @@ import ApprovalSubmit from "./pages/task/taskApproval/ApprovalSubmit";
 import Main from "./pages/main/Main";
 import ApprovalBookmark from "./pages/task/taskApproval/ApprovalBookmark";
 import WorkManageSidebar from "./pages/workManagement/WorkManageSidebar";
+import WorkSetting from "./pages/workManagement/Schedule/WorkSetting";
 
 function App() {
   return (
@@ -28,7 +29,10 @@ function App() {
           <Route path="/incomeTax" element={<SalarySidebar />}>
             <Route index element={<IncomeTax />} />
           </Route>
-          <Route path="/workManage" element={<WorkManageSidebar />}></Route>
+          <Route path="/workManage" element={<WorkManageSidebar />}>
+            <Route index element={<ApprovalSubmit />} />
+            <Route path="setting" element={<WorkSetting />} />
+          </Route>
         </Route>
       </Routes>
     </BrowserRouter>

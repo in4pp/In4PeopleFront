@@ -35,7 +35,7 @@ div {
   width: 100%;
   padding: 15px 32px;
   border-bottom: 1px solid rgb(239, 239, 239);
-  background-color: var(--color-ws-white);
+  background-color: white;
   color: var(--color-ws-gray-gray-800);
 }
 .cAnmmb {
