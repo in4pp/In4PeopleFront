@@ -2,7 +2,7 @@ import NavCSS from '../taskCSS/Content.module.css';
 import PlainStar from '../../../components/icon/PlainStar';
 import BlueStar from '../../../components/icon/BlueStar';
 
-function ApprovalNeed() {
+function ApprovalCompleted() {
 
     return (
         <>
@@ -18,10 +18,12 @@ function ApprovalNeed() {
                                     <div className={`${NavCSS["d-flex-space"]} ${NavCSS["bread-title"]}`}>
                                         <div className={`${NavCSS["title"]}`}>
                                             <span className={`${NavCSS["breadcrumb"]}`}>결재 /</span>
-                                            <h2 className={`${NavCSS["h3"]}`}>결재 할 것(1)</h2>
+                                            <h2 className={`${NavCSS["h3"]}`}>결재 완료(4)</h2>
                                         </div>
                                     </div>
                                     <div></div>
+                                    <div className={`${NavCSS["commute-manage"]}`}>
+                                    </div>
                                     <div className={`${NavCSS["d-flex-space"]}`}>
                                         <div className={`${NavCSS["d-flex-space"]}`}>
                                             <select className={`${["form-select"]} ${["form-select-sm"]}`} aria-label=".form-select-sm example">
@@ -108,4 +110,4 @@ function ApprovalNeed() {
     )
 }
 
-export default ApprovalNeed;
+export default ApprovalCompleted;

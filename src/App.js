@@ -1,3 +1,7 @@
+import ApprovalNeed from './pages/task/taskApproval/ApprovalNeed';
+import ApprovalCompleted from './pages/task/taskApproval/ApprovalCompleted';
+import ApprovalRefered from './pages/task/taskApproval/ApprovalRefered';
+import SettlementGeneration from './pages/task/taskApproval/SettlementGeneration';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./layouts/Layout";
 import IncomeTax from "./pages/salary/IncomeTax";
@@ -9,9 +13,11 @@ import Main from "./pages/main/Main";
 import ApprovalBookmark from "./pages/task/taskApproval/ApprovalBookmark";
 import WorkManageSidebar from "./pages/workManagement/WorkManageSidebar";
 import PersonnelSidebar from "./pages/personnel/PersonnelSidebar";
+import DailyWorkerSidebar from "./pages/dailyWorker/DailyWorkerSidebar";  
 import TabContent from "./pages/personnel/HR/HRRegist";
 import Orgchart from "./pages/personnel/HR/Orgchart";
 function App() {
+
   return (
     <BrowserRouter>
       <Routes>
@@ -20,13 +26,15 @@ function App() {
           <Route path="task" element={<TaskSidebar />}>
             <Route index element={<ApprovalSubmit />} />
             <Route path="bookMark" element={<ApprovalBookmark />} />
-            <Route path="approval" element={<ApprovalSubmit />} />
+            <Route path="submit" element={<ApprovalSubmit />} />
+            <Route path="needed" element={<ApprovalNeed />} />
+            <Route path="completed" element={<ApprovalCompleted />} />
+            <Route path="refered" element={<ApprovalRefered />} />
           </Route>
 
           <Route path="/salary" element={<SalarySidebar />}>
             <Route index element={<SalaryInfo />} />
           </Route>
-
           <Route path="/incomeTax" element={<SalarySidebar />}>
             <Route index element={<IncomeTax />} />
           </Route>
@@ -36,9 +44,13 @@ function App() {
             <Route index element={<TabContent />}></Route>
             <Route path="orgchart" element={<Orgchart />} />
           </Route>
+
+          <Route path="/dailyWorker" element={<DailyWorkerSidebar />}></Route>
+
         </Route>
       </Routes>
     </BrowserRouter>
+
   );
 }
 
