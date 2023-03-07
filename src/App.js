@@ -15,7 +15,8 @@ import WorkManageSidebar from "./pages/workManagement/WorkManageSidebar";
 import PersonnelSidebar from "./pages/personnel/PersonnelSidebar";
 import DailyWorkerSidebar from "./pages/dailyWorker/DailyWorkerSidebar";  
 import Login from './pages/login/Login';
-
+import TabContent from "./pages/personnel/HR/HRRegist";
+import Orgchart from "./pages/personnel/HR/Orgchart";
 function App() {
 
   return (
@@ -40,13 +41,13 @@ function App() {
           </Route>
           <Route path="/workManage" element={<WorkManageSidebar />}></Route>
           
-          <Route path="/personnel" element={<PersonnelSidebar />}></Route>
+          <Route path="/personnel" element={<PersonnelSidebar />}>
+            <Route index element={<TabContent />}></Route>
+            <Route path="orgchart" element={<Orgchart />} />
+          </Route>
 
-          <Route path="/personnel" element={<PersonnelSidebar />}></Route>
           <Route path="/dailyWorker" element={<DailyWorkerSidebar />}></Route>
 
-
-          
         </Route>
 
         <Route path="/login" element={<Login />} />
