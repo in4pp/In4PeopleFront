@@ -1,20 +1,22 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Layout from './layouts/Layout';
+import IncomeTax from './pages/salary/IncomeTax';
+import SalarySidebar from './sidebars/SalarySidebar';
+import SalaryInfo from './pages/salary/SalaryInformation';
+import TaskSidebar from './pages/task/TaskSidebar';
+import ApprovalSubmit from './pages/task/taskApproval/ApprovalSubmit'
+import Main from './pages/main/Main';
+import ApprovalBookmark from './pages/task/taskApproval/ApprovalBookmark';
 import ApprovalNeed from './pages/task/taskApproval/ApprovalNeed';
 import ApprovalCompleted from './pages/task/taskApproval/ApprovalCompleted';
 import ApprovalRefered from './pages/task/taskApproval/ApprovalRefered';
 import SettlementGeneration from './pages/task/taskApproval/SettlementGeneration';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Layout from "./layouts/Layout";
-import IncomeTax from "./pages/salary/IncomeTax";
-import SalarySidebar from "./sidebars/SalarySidebar";
-import SalaryInfo from "./pages/salary/SalaryInformation";
-import TaskSidebar from "./pages/task/TaskSidebar";
-import ApprovalSubmit from "./pages/task/taskApproval/ApprovalSubmit";
-import Main from "./pages/main/Main";
-import ApprovalBookmark from "./pages/task/taskApproval/ApprovalBookmark";
 import WorkManageSidebar from "./pages/workManagement/WorkManageSidebar";
 import PersonnelSidebar from "./pages/personnel/PersonnelSidebar";
 import DailyWorkerSidebar from "./pages/dailyWorker/DailyWorkerSidebar";  
-
+import Login from './pages/login/Login';
+import TabContent from "./pages/personnel/HR/HRRegist";
+import Orgchart from "./pages/personnel/HR/Orgchart";
 function App() {
 
   return (
@@ -39,13 +41,16 @@ function App() {
           </Route>
           <Route path="/workManage" element={<WorkManageSidebar />}></Route>
           
-          <Route path="/personnel" element={<PersonnelSidebar />}></Route>
+          <Route path="/personnel" element={<PersonnelSidebar />}>
+            <Route index element={<TabContent />}></Route>
+            <Route path="orgchart" element={<Orgchart />} />
+          </Route>
 
           <Route path="/dailyWorker" element={<DailyWorkerSidebar />}></Route>
 
-
-          
         </Route>
+
+        <Route path="/login" element={<Login />} />
       </Routes>
     </BrowserRouter>
 
