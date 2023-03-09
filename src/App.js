@@ -56,7 +56,8 @@ function App() {
           </Route>
 
           <Route path="/dailyWorkerSide" element={<DailyWorkerSidebar />}>
-          <Route path="dailyWorker" element={<DWorker />} />
+          <Route index element={<DWorker />} />
+          <Route path="DWInsert" element={<DWorker/>}/>
           </Route>
 
         </Route>

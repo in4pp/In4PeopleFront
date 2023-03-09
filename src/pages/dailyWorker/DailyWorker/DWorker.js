@@ -3,6 +3,7 @@ import DWorkerStyle from './DWorker.module.css';
 function DWorker(){
     return(
      <div>
+        <div className={`${DWorkerStyle["registone"]}`}>
         <div className={`${DWorkerStyle['titlee']}`}>
             <h3>인사 정보 등록</h3>
             </div>
@@ -142,6 +143,7 @@ function DWorker(){
                     <button type="submit">저장</button>
                 </div>
             </div>
+        </div>
         </div>
     )
 }
