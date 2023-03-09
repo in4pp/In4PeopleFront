@@ -1,7 +1,6 @@
-// import HRRegistCSS from './HRRegist.module.css'
-// import { Nav } from 'react-bootstrap'
-// import React, { useState } from 'react';
+import HRRegistCSS from './HRRegist.module.css'
 
+    function HRRegist() {
 
 // function Tabpersonnel() {
 
