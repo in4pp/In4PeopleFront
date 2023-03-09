@@ -1,10 +1,10 @@
-import "./orgchart.css";
+import "./Orgchart.css";
 
 function Orgchart(){
 
     return (
 
-        <div>
+        <>
           <div className="orgone">
             <div className="ceo">
               <b>CEO</b>
@@ -58,7 +58,7 @@ function Orgchart(){
               <li>가나다</li>
             </div>
           </div>
-        </div>
+        </>
       );
     }
 

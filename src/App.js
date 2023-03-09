@@ -15,8 +15,12 @@ import WorkManageSidebar from "./pages/workManagement/WorkManageSidebar";
 import PersonnelSidebar from "./pages/personnel/PersonnelSidebar";
 import DailyWorkerSidebar from "./pages/dailyWorker/DailyWorkerSidebar";  
 import Login from './pages/login/Login';
-import TabContent from "./pages/personnel/HR/HRRegist";
+import HRRegist from "./pages/personnel/HR/HRRegist";
 import Orgchart from "./pages/personnel/HR/Orgchart";
+import HRAuth from './pages/personnel/HR/HRAuth';
+import HRlist from './pages/personnel/HR/HRlist';
+import HRApplist from './pages/personnel/HR/HRApplist';
+import HRApplication from './pages/personnel/HR/HRApplication';
 function App() {
 
   return (
@@ -42,7 +46,11 @@ function App() {
           <Route path="/workManage" element={<WorkManageSidebar />}></Route>
           
           <Route path="/personnel" element={<PersonnelSidebar />}>
-            <Route index element={<TabContent />}></Route>
+            <Route index element={<HRRegist />}></Route>
+            <Route path="list" element={<HRlist />} />
+            <Route path="auth" element={<HRAuth />} />
+            <Route path="applist" element={<HRApplist />} />
+            <Route path="application" element={<HRApplication />} />
             <Route path="orgchart" element={<Orgchart />} />
           </Route>
 
