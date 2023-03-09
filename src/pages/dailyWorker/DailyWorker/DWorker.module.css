@@ -1,0 +1,93 @@
+.titlee{
+    margin-left: 5%;
+    margin-top: 2%;
+}
+
+.pptap
+{
+    padding-left: 15%;
+    /* padding-top: 3%; */
+}
+
+
+.box {
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-bottom: 60px;
+
+    height: auto;
+    border-top: 2px solid black;
+    /* border-bottom: 1px solid #999; */
+}
+
+.ppth {
+    text-align: left;
+    background-color: #fbb9c528;
+}
+
+/* table {
+    width: 100%;
+    border-top: 1px solid #999;
+    border-collapse: collapse;
+} */
+.ppth {
+    border-bottom: 1px solid #999;
+    padding: 10px;
+}
+.pptd {
+    border-bottom: 1px solid #999;
+    padding: 10px;
+}
+
+.commonInfo
+{
+    flex-flow: row-reverse wrap;
+    display: block;
+    margin-top: 50px;
+    /* margin-right: 5%; */
+    /* display: flex; */
+
+}
+
+.ppinsa
+{
+    float: left;
+    width: 40%;
+    /* margin-left: 10%; */
+    margin-right: 10%;
+}
+
+.ppwork
+{
+    width: 25%;
+    display: inline-block;
+}
+
+.ppbutton
+{
+    text-align: center;
+    margin-left: 50%;
+    margin-top: 2%;
+    width: 311px;
+    height: 30px;
+    background-color: #fbb9c528;
+    border-style: hidden;
+    border-radius: 5px;
+}
+
+.pppbutton
+{
+    text-align: center;
+    margin-left: 5%;
+    margin-top: 2%;
+    width: 311px;
+    height: 30px;
+    background-color: #fbb9c528;
+    border-style: hidden;
+    border-radius: 5px;
+}
+
+.pptr
+{
+    padding-right: 30%;
+}

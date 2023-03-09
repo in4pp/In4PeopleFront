@@ -17,9 +17,10 @@ import DailyWorkerSidebar from "./pages/dailyWorker/DailyWorkerSidebar";
 import Login from './pages/login/Login';
 import TabContent from "./pages/personnel/HR/HRRegist";
 import Orgchart from "./pages/personnel/HR/Orgchart";
+import DWorker from './pages/dailyWorker/DailyWorker/DWorker';
 function App() {
 
-  return (
+  return (  
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
@@ -46,7 +47,9 @@ function App() {
             <Route path="orgchart" element={<Orgchart />} />
           </Route>
 
-          <Route path="/dailyWorker" element={<DailyWorkerSidebar />}></Route>
+          <Route path="/dailyWorkerSide" element={<DailyWorkerSidebar />}>
+          <Route path="dailyWorker" element={<DWorker />} />
+          </Route>
 
         </Route>
 
