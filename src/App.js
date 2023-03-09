@@ -15,7 +15,12 @@ import WorkManageSidebar from "./pages/workManagement/WorkManageSidebar";
 import PersonnelSidebar from "./pages/personnel/PersonnelSidebar";
 import DailyWorkerSidebar from "./pages/dailyWorker/DailyWorkerSidebar";  
 import Login from './pages/login/Login';
-
+import HRRegist from "./pages/personnel/HR/HRRegist";
+import Orgchart from "./pages/personnel/HR/Orgchart";
+import HRAuth from './pages/personnel/HR/HRAuth';
+import HRlist from './pages/personnel/HR/HRlist';
+import HRApplist from './pages/personnel/HR/HRApplist';
+import HRApplication from './pages/personnel/HR/HRApplication';
 function App() {
 
   return (
@@ -40,13 +45,17 @@ function App() {
           </Route>
           <Route path="/workManage" element={<WorkManageSidebar />}></Route>
           
-          <Route path="/personnel" element={<PersonnelSidebar />}></Route>
+          <Route path="/personnel" element={<PersonnelSidebar />}>
+            <Route index element={<HRRegist />}></Route>
+            <Route path="list" element={<HRlist />} />
+            <Route path="auth" element={<HRAuth />} />
+            <Route path="applist" element={<HRApplist />} />
+            <Route path="application" element={<HRApplication />} />
+            <Route path="orgchart" element={<Orgchart />} />
+          </Route>
 
-          <Route path="/personnel" element={<PersonnelSidebar />}></Route>
           <Route path="/dailyWorker" element={<DailyWorkerSidebar />}></Route>
 
-
-          
         </Route>
 
         <Route path="/login" element={<Login />} />
