@@ -1,65 +1,59 @@
-// import "./Orgchart.css";
+import OrgCSS from "./Orgchart.module.css";
 
-// function Orgchart(){
+function Orgchart(){
 
-//     return (
+    return (
 
-//         <>
-//           <div className="orgone">
-//             <div className="ceo">
-//               <b>CEO</b>
-//             </div>
-//             <div className="ppdept">
-//               <button>
-//                 게임프로그래밍
-//               </button>
-//             </div>
-//             <div className="ppdept">
-//               <button>
-//                 기업/게임디자인
-//               </button>
-//             </div>
-//             <div className="ppdept">
-//               <button>
-//                 게임사업
-//               </button>
-//             </div>
-//             <div className="ppdept">
-//               <button>
-//                 해외사업
-//               </button>
-//             </div>
-//             <div className="ppdept">
-//               <button>
-//                 IT엔지니어
-//               </button>
-//             </div>
-//             <div className="ppdept">
-//               <button>
-//                 경영지원
-//               </button>
-//             </div>
-//             <div className="ppemployee">
-//               <li>가나다</li>
-//             </div>
-//             <div className="ppemployee">
-//               <li>가나다</li>
-//             </div>
-//             <div className="ppemployee">
-//               <li>가나다</li>
-//             </div>
-//             <div className="ppemployee">
-//               <li>가나다</li>
-//             </div>
-//             <div className="ppemployee">
-//               <li>가나다</li>
-//             </div>
-//             <div className="ppemployee">
-//               <li>가나다</li>
-//             </div>
-//           </div>
-//         </>
-//       );
-//     }
+            <>
+              <div className={`${OrgCSS["orgone"]}`}>
+                <div className={`${OrgCSS["ceo"]}`}>
+                  <b>CEO</b>
+                </div>
+                <div className={`${OrgCSS["ppdept"]}`}>
+                  <button>
+                    게임프로그래밍
+                  </button>
+                </div>
+                <div className={`${OrgCSS["ppdept"]}`}>
+                  <button>
+                    기업/게임디자인
+                  </button>
+                </div>
+                <div className={`${OrgCSS["ppdept"]}`}>
+                  <button>
+                    게임사업
+                  </button>
+                </div>
+                <div className={`${OrgCSS["ppdept"]}`}>
+                  <button>
+                    해외사업
+                  </button>
+                </div>
+                <div className={`${OrgCSS["ppdept"]}`}>
+                  <button>
+                    IT엔지니어
+                  </button>
+                </div>
+                <div className={`${OrgCSS["ppdept"]}`}>
+                  <button>
+                    경영지원
+                  </button>
+                </div>
+                <div className={`${OrgCSS["ppemployee"]}`}>
+                  <li>가나다</li>
+                </div>
+                <div className={`${OrgCSS["ppemployee"]}`}>
+                  <li>가나다</li>
+                </div>
+                <div className={`${OrgCSS["ppemployee"]}`}>
+                  <li>가나다</li>
+                </div>
+                <div className={`${OrgCSS["ppemployee"]}`}>
+                  <li>가나다</li>
+                </div>
+              </div>
+            </>
+          );
+        }
 
-// export default Orgchart;
+export default Orgchart;
