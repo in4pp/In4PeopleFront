@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bfc94496-cc97-4090-903f-6f07c7c218d9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/pages/login/Login.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/login/Login.js" afterDir="false" />
+    <list default="true" id="eb5e74b7-47b9-4927-85f5-ec546fbe7dc7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,7 +13,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="In4PeopleFront/성일" />
+    <option name="BRANCH" value="In4PeopleFront/Minjae" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -27,6 +24,7 @@
   }
 }</component>
   <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
     <option name="recentBranches">
       <RecentBranches>
         <option name="branchesForRepo">
@@ -36,11 +34,11 @@
                 <list>
                   <RecentBranch>
                     <option name="branchName" value="master" />
-                    <option name="lastUsedInstant" value="1678067370" />
+                    <option name="lastUsedInstant" value="1678102002" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="성일" />
-                    <option name="lastUsedInstant" value="1677561330" />
+                    <option name="lastUsedInstant" value="1678101495" />
                   </RecentBranch>
                 </list>
               </option>
@@ -74,7 +72,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/DEV/04_project/In4PeopleFront--&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/DEV/04_project/In4People-back&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -107,7 +105,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="bfc94496-cc97-4090-903f-6f07c7c218d9" name="Changes" comment="" />
+      <changelist id="eb5e74b7-47b9-4927-85f5-ec546fbe7dc7" name="Changes" comment="" />
       <created>1677024319403</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -132,6 +130,8 @@
       <workItem from="1678067951702" duration="1094000" />
       <workItem from="1678069059564" duration="541000" />
       <workItem from="1678070973214" duration="958000" />
+      <workItem from="1678101399786" duration="678000" />
+      <workItem from="1678102218560" duration="21000" />
     </task>
     <servers />
   </component>

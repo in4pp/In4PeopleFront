@@ -25,9 +25,7 @@
     background-color: #FCFBFB;
     box-shadow : 2px 4px 10px 1px rgba(211, 211, 211, 0.699);
 }
-div {
-    display: block;
-}
+
 .one{
     padding : 80px 100px 0px 100px;
 }

@@ -2,9 +2,13 @@
 #root {
   width: 100%;
 }
+<<<<<<< HEAD
 *, ::after, ::before {
   box-sizing: border-box;
 }
+=======
+
+>>>>>>> 1bf1fcf0706b0d6eaca65fb617208885633baa2e
 div {
   display: block;
 }
@@ -12,7 +16,7 @@ div {
 .mSgFN {
   position: relative;
   min-width: 1060px;
-  min-height: 100vh;
+  min-height: 2000px;
   background-color: rgb(255, 255, 255);
 }
 .bwzYVU {
