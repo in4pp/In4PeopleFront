@@ -1,11 +1,7 @@
 #root {
   width: 100%;
 }
-*,
-::after,
-::before {
-  box-sizing: border-box;
-}
+
 div {
   display: block;
 }
@@ -13,7 +9,7 @@ div {
 .mSgFN {
   position: relative;
   min-width: 1060px;
-  min-height: 100vh;
+  min-height: 2000px;
   background-color: rgb(255, 255, 255);
 }
 .bwzYVU {

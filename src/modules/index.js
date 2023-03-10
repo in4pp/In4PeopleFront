@@ -1,8 +1,9 @@
 import { combineReducers } from "redux";
+import memberReducer from './MemberModule'
 import orderInfoReducer from '../modules/PersonnelModule';
 
 const rootReducer = combineReducers({
-    orderInfoReducer
+    memberReducer  ,  orderInfoReducer
 });
 
 export default rootReducer;
