@@ -1,7 +1,27 @@
 import incomeStyle from './IncomeTax.module.css';
+import { callIncomeTaxListAPI } from '../../apis/SalaryAPICalls'
+import { useSelector, useDispatch } from 'react-redux';
+import { GET_INCOMETAX } from '../../modules/SalaryModule';
+import { useNavigate } from 'react-router-dom';
+
+import { useEffect } from 'react';
 
 
-function IncomeTax() {
+function IncomeTax({ }) {
+
+
+      const navigate = useNavigate();
+
+      const dispatch = useDispatch();
+      const incomTaxList = useSelector(state => state.incomeTaxReducer)
+
+      useEffect(
+        () => {
+            dispatch(callIncomeTaxListAPI());
+        }
+        , [] 
+      );
+
 
        return(
 

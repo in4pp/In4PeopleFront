@@ -1,4 +1,4 @@
-import { createAction, handleActions } from "redux-action";
+import { createActions, handleActions } from "redux-actions";
 
 /* 초기값 */
 const initialState = [];
@@ -7,7 +7,7 @@ const initialState = [];
 export const GET_INCOMETAX                = 'salary/GET_INCOMETAX';
 
 
-const action = createAction({
+const action = createActions({
 
        [GET_INCOMETAX]: () => {}
 });
