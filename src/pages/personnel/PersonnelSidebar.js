@@ -1,10 +1,10 @@
 import { Outlet } from "react-router-dom";
 import Side from "../../components/common/Navbar.module.css";
+import { NavLink } from "react-router-dom";
 
 import SlideTog1 from "./components/SlideTog1";
 import SlideTog2 from "./components/SlideTog2";
 import SlideTog3 from "./components/SlideTog3";
-import SlideTog4 from "./components/SlideTog4";
 
 
 function PersonnelSidebar() {
@@ -30,8 +30,7 @@ function PersonnelSidebar() {
                   <SlideTog3 />
                 </li>
                 <li className={Side.fcngae}>
-                  <SlideTog4 />
-                </li>
+                <NavLink to="orgchart">조직도</NavLink></li>
               </ul>
             </div>
             <div className={Side.pbheK}>

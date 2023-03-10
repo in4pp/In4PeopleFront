@@ -100,7 +100,7 @@ img {
   justify-content: center;
   -webkit-box-align: center;
   align-items: center;
-  width: 40px;
+  width: 50px;
   height: 40px;
 }
 
@@ -332,3 +332,4 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+

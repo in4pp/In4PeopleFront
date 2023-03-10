@@ -1,4 +1,5 @@
 
+
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './layouts/Layout';
 // import ApprovalSidebar from './sidebars/ApprovalSidebar';
@@ -14,13 +15,13 @@ import WorkInquiry from './pages/salary/WorkInquiry';
 
 
 
-
 function App() {
 
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
+
 
         <Route path="salary" element={<SalarySidebar />}>
           <Route path="salinfo" element={<SalaryInfo />} />
@@ -37,6 +38,7 @@ function App() {
           
 
      
+
       </Routes>
     </BrowserRouter>
 
