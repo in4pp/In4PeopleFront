@@ -52,19 +52,6 @@ table {
   flex-direction: column;
 }
 
-*, ::after, ::before {
-  box-sizing: border-box;
-}
-
-div {
-  display: block;
-  
-}
-
-div {
-  display: block;
-}
-
 body {
   color: rgb(0, 0, 0);
 }
