@@ -21,7 +21,7 @@ import HRAuth from './pages/personnel/HR/HRAuth';
 import HRlist from './pages/personnel/HR/HRlist';
 import HRApplist from './pages/personnel/HR/HRApplist';
 import HRApplication from './pages/personnel/HR/HRApplication';
-import DWorker from './pages/dailyWorker/DailyWorker/DWorker';
+import DWorkerInsert from './pages/dailyWorker/DWorker/DWorkerInsert';
 function App() {
 
   return (  
@@ -55,9 +55,8 @@ function App() {
             <Route path="orgchart" element={<Orgchart />} />
           </Route>
 
-          <Route path="/dailyWorkerSide" element={<DailyWorkerSidebar />}>
-          <Route index element={<DWorker />} />
-          <Route path="DWInsert" element={<DWorker/>}/>
+          <Route path="/dailyWorker" element={<DailyWorkerSidebar />}>
+          <Route index element={<DWorkerInsert />} />
           </Route>
 
         </Route>

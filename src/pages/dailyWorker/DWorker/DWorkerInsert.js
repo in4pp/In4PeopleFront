@@ -1,11 +1,11 @@
-import DWorkerStyle from './DWorker.module.css';
+import DWorkerStyle from './DWorkerInsert.module.css';
 
-function DWorker(){
+function DWorkerInsert(){
     return(
      <div>
         <div className={`${DWorkerStyle["registone"]}`}>
         <div className={`${DWorkerStyle['titlee']}`}>
-            <h3>인사 정보 등록</h3>
+            <h3>일용직사원 정보 등록</h3>
             </div>
                 <div className={`${DWorkerStyle['box']}`}>
                     <div className={`${DWorkerStyle['commonInfo']}`}>
@@ -148,4 +148,4 @@ function DWorker(){
     )
 }
 
-export default DWorker;
+export default DWorkerInsert;
