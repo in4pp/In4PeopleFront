@@ -18,7 +18,7 @@ function DWorkerInsert(){
                                     {/* <td><img alt="메인사진" src={mainImg} /></td> */}
                                 </tr>
                                 <tr>
-                                    <th className={`${DWorkerStyle["ppth"]}`}>사원번호</th>
+                                    <th className={`${DWorkerStyle["ppth"]}`}>일용직사원 번호</th>
                                     <td className={`${DWorkerStyle["pptd"]}`}>
                                         <input type="text" placeholder="6자리를 입력해주세요" />
                                     </td>
@@ -45,26 +45,6 @@ function DWorkerInsert(){
                                     <th className={`${DWorkerStyle["ppth"]}`}>이메일</th>
                                     <td className={`${DWorkerStyle["pptd"]}`}>
                                         <input type="text" />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th className={`${DWorkerStyle["ppth"]}`}>국적</th>
-                                    <td className={`${DWorkerStyle["pptd"]}`}>
-                                        <input type="text" value="내국인" />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th className={`${DWorkerStyle["ppth"]}`}>성별</th>
-                                    <td className={`${DWorkerStyle["pptd"]}`} colSpan="2">
-                                        <input type='radio' name='gender' value='female' />남
-                                        <input type='radio' name='gender' value='male' />여
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th className={`${DWorkerStyle["ppth"]}`}>결혼유무</th>
-                                    <td className={`${DWorkerStyle["pptd"]}`} colSpan="2">
-                                        <input type='radio' name='marry' value='single' />미혼
-                                        <input type='radio' name='marry' value='married' />기혼
                                     </td>
                                 </tr>
                                 <tr>
@@ -98,20 +78,7 @@ function DWorkerInsert(){
                                     <input type="date" name="retire" />
                                     </td>
                                 </tr>
-                                <tr>
-                                    <th className={`${DWorkerStyle["ppth"]}`}>직급</th>
-                                    <td className={`${DWorkerStyle["pptd"]}`}>
-                                        <select name="pos">
-                                            <option value=""></option>
-                                            <option value="employee">사원</option>
-                                            <option value="seniority">선임</option>
-                                            <option value="top">수석</option>
-                                            <option value="leader">팀장</option>
-                                            <option value="director">이사</option>
-                                            <option value="CEO">사장</option>
-                                        </select>
-                                    </td>
-                                </tr>
+                       
                                 <tr>
                                     <th className={`${DWorkerStyle["ppth"]}`}>부서</th>
                                     <td className={`${DWorkerStyle["pptd"]}`}>
@@ -129,13 +96,7 @@ function DWorkerInsert(){
                                         </select>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <th className={`${DWorkerStyle["ppth"]}`}>연차생성기준</th>
-                                    <td className={`${DWorkerStyle["pptd"]}`} colSpan={2}>
-                                        <input type='radio' name='Annual' value='month' defaultChecked/>연차기준월
-                                        <input type='radio' name='Annual' value='day' disabled/>입사일
-                                    </td>
-                                </tr>
+                           
                             </table>
                         </form>
                     </div>
