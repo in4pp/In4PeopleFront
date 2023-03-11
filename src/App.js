@@ -49,7 +49,7 @@ function App() {
             <Route index element={<HRRegist />}></Route>
             <Route path="list" element={<HRlist />} />
             <Route path="auth" element={<HRAuth />} />
-            <Route path="applist" element={<HRApplist />} />
+            <Route path="orderInfo" element={<HRApplist />} />
             <Route path="application" element={<HRApplication />} />
             <Route path="orgchart" element={<Orgchart />} />
           </Route>

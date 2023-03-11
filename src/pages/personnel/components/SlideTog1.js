@@ -20,7 +20,7 @@ function SlideTog1() {
               <div className="mt-2"><NavLink to="orgchart">인사 정보</NavLink></div>
               <div className="mt-2"><NavLink to="orgchart">인사 정보 등록</NavLink></div>
               <div className="mt-2"><NavLink to="list">사원 명부</NavLink></div>
-              <div className="mt-2"><NavLink to="applist">인사 발령</NavLink></div>
+              <div className="mt-2"><NavLink to="orderInfo">인사 발령</NavLink></div>
               <div className="mt-2"><NavLink to="application">인사 발령 신청</NavLink></div>
               <div className="mt-2"><NavLink to="application">인사 발령 관리</NavLink></div>
               <div className="mt-2"><NavLink to="auth">인사 권한 설정</NavLink></div>
