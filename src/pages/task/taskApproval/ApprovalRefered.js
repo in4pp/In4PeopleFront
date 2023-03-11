@@ -34,11 +34,11 @@ function ApprovalRefered() {
                                             </select>
                                         </div>
                                         <div className={`${["display-flex"]}`}>
-                                            <button className={`${["btn"]} ${["btn-primary"]}`} style={{ alignSelf: "self-start" }}>결재 작성하기</button>
+                                            <button className={`${["btn"]}  ${["btn-primary"]}`} style={{ alignSelf: "self-start" }}>결재 작성하기</button>
                                         </div>
                                     </div>
                                     <div className={`${NavCSS.iLLwYh}`}>
-                                        <table className={`${[NavCSS.table]} ${["table-hover"]} ${"mt-3"}`}>
+                                        <table className={`${[NavCSS.table]} ${["table"]}  ${["table-hover"]} ${"mt-3"}`}>
                                             <caption></caption>
                                             <thead className={`${NavCSS.dXdqfk}`}>
                                                 <tr>
