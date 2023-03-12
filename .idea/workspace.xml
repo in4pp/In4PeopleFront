@@ -11,10 +11,6 @@
       <change beforePath="$PROJECT_DIR$/src/pages/task/taskApproval/ApprovalRefered.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/task/taskApproval/ApprovalRefered.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/task/taskApproval/ApprovalSubmit.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/task/taskApproval/ApprovalSubmit.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/task/taskCSS/Content.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/task/taskCSS/Content.module.css" afterDir="false" />
-    <list default="true" id="157a9ff8-984d-469a-9e6e-88a6df584dac" name="Changes" comment="최신화">
-      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/DWorkerModule.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,6 +137,7 @@
       <workItem from="1678070973214" duration="958000" />
       <workItem from="1678101399786" duration="678000" />
       <workItem from="1678102218560" duration="21000" />
+      <workItem from="1678437456329" duration="746000" />
     </task>
     <servers />
   </component>
