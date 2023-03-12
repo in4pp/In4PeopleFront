@@ -38,7 +38,7 @@ function ApprovalBookmark() {
                                         </div>
                                     </div>
                                     <div className={`${NavCSS.iLLwYh}`}>
-                                        <table className={`${[NavCSS.table]} ${["table-hover"]} ${"mt-3"}`}>
+                                        <table className={`${[NavCSS.table]} ${["table"]} ${["table-hover"]} ${"mt-3"}`}>
                                             <caption></caption>
                                             <thead className={`${NavCSS.dXdqfk}`}>
                                                 <tr>
