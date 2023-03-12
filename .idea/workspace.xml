@@ -4,134 +4,64 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eb5e74b7-47b9-4927-85f5-ec546fbe7dc7" name="Changes" comment="">
+    <list default="true" id="157a9ff8-984d-469a-9e6e-88a6df584dac" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/In4PeopleFront.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/dailyWorker/DWorker/DWorkerSelect.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/dailyWorker/DWorker/DWorkerSelect.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/dailyWorker/DWorker/DWorkerUpdate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/dailyWorker/DWorker/DWorkerUpdate.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/In4People-front.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dailyWorker/components/SlideToggleWorker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dailyWorker/components/SlideToggleWorker.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="In4PeopleFront/Minjae" />
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;
-  }
-}</component>
-  <component name="GitToolBoxStore">
-    <option name="projectConfigVersion" value="5" />
-    <option name="recentBranches">
-      <RecentBranches>
-        <option name="branchesForRepo">
-          <list>
-            <RecentBranchesForRepo>
-              <option name="branches">
-                <list>
-                  <RecentBranch>
-                    <option name="branchName" value="master" />
-                    <option name="lastUsedInstant" value="1678102002" />
-                  </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="성일" />
-                    <option name="lastUsedInstant" value="1678101495" />
-                  </RecentBranch>
-                </list>
-              </option>
-              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
-            </RecentBranchesForRepo>
-          </list>
-        </option>
-      </RecentBranches>
-    </option>
-  </component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="selectedUrlAndAccountId">
-      <UrlAndAccount>
-        <option name="accountId" value="5471bb9f-4824-46c0-b239-ef54f5d1f900" />
-        <option name="url" value="https://github.com/in4pp/In4PeopleFront.git" />
-      </UrlAndAccount>
-    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2M4QLVoPrZD9qmgrHPIA10GPfNv" />
+  <component name="ProjectId" id="2MoarCWqmaPYDkj6n71O9l6ADZA" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/DEV/04_project/In4People-back&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/dev/04_project/finalProject/final4jo/In4PeopleFront",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\DEV\04_project\In4PeopleFront--\src\pages\salary" />
-    </key>
-  </component>
-  <component name="RunManager" selected="npm.npm start">
-    <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
-      <method v="2" />
-    </configuration>
-    <configuration name="npm start" type="js.build_tools.npm">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="start" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-  </component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="eb5e74b7-47b9-4927-85f5-ec546fbe7dc7" name="Changes" comment="" />
-      <created>1677024319403</created>
+      <changelist id="157a9ff8-984d-469a-9e6e-88a6df584dac" name="Changes" comment="" />
+      <created>1678436585343</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1677024319403</updated>
-      <workItem from="1677024320789" duration="157000" />
-      <workItem from="1677024599866" duration="66000" />
-      <workItem from="1677115990080" duration="125000" />
-      <workItem from="1677116155944" duration="1957000" />
-      <workItem from="1677118714638" duration="15000" />
-      <workItem from="1677121141582" duration="79000" />
-      <workItem from="1677138949699" duration="7000" />
-      <workItem from="1677466259871" duration="16000" />
-      <workItem from="1677466459068" duration="167000" />
-      <workItem from="1677466727167" duration="110000" />
-      <workItem from="1677466851924" duration="478000" />
-      <workItem from="1677467361418" duration="137000" />
-      <workItem from="1677565921180" duration="297000" />
-      <workItem from="1677658614785" duration="12000" />
-      <workItem from="1677667307908" duration="24000" />
-      <workItem from="1677801188546" duration="30000" />
-      <workItem from="1678066896563" duration="568000" />
-      <workItem from="1678067951702" duration="1094000" />
-      <workItem from="1678069059564" duration="541000" />
-      <workItem from="1678070973214" duration="958000" />
-      <workItem from="1678101399786" duration="678000" />
-      <workItem from="1678102218560" duration="21000" />
+      <updated>1678436585343</updated>
+      <workItem from="1678436586560" duration="3922000" />
     </task>
     <servers />
   </component>
@@ -143,7 +73,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="rami" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>

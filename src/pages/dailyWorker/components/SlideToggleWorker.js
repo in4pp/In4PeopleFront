@@ -17,9 +17,9 @@ function SlideToggleWorker() {
         {show && (
           <CSSTransition classNames="slide" timeout={200}>
             <div>
-              <div className="mt-2"><NavLink to="DWInsert">사원등록</NavLink></div>
-              <div className="mt-2">정보수정 / 삭제</div>
-              <div className="mt-2">고용이력 조회</div>
+              <div className="mt-2"><NavLink to="insert">사원등록</NavLink></div>
+              <div className="mt-2"><NavLink to="update">정보수정 / 삭제</NavLink></div>
+              <div className="mt-2"><NavLink to="select">고용이력 조회</NavLink></div>
             </div>
           </CSSTransition>
         )}

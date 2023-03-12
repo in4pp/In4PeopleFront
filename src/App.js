@@ -57,6 +57,9 @@ function App() {
 
           <Route path="/dailyWorker" element={<DailyWorkerSidebar />}>
           <Route index element={<DWorkerInsert />} />
+            <Route path="insert" element={<DWorkerInsert />} />
+            <Route path="update" element={<DWorkerInsert />} />
+            <Route path="select" element={<DWorkerInsert />} />
           </Route>
 
         </Route>
