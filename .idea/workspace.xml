@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eb5e74b7-47b9-4927-85f5-ec546fbe7dc7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/pages/task/taskApproval/ApprovalBookmark.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/task/taskApproval/ApprovalBookmark.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/task/taskApproval/ApprovalCompleted.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/task/taskApproval/ApprovalCompleted.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/task/taskApproval/ApprovalNeed.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/task/taskApproval/ApprovalNeed.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/task/taskApproval/ApprovalRefered.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/task/taskApproval/ApprovalRefered.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/task/taskApproval/ApprovalSubmit.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/task/taskApproval/ApprovalSubmit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/task/taskCSS/Content.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/task/taskCSS/Content.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,9 +13,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="In4PeopleFront/Minjae" />
+    <option name="BRANCH" value="In4PeopleFront/master" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -38,12 +38,12 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="master" />
-                    <option name="lastUsedInstant" value="1678102002" />
+                    <option name="branchName" value="성일" />
+                    <option name="lastUsedInstant" value="1678519084" />
                   </RecentBranch>
                   <RecentBranch>
-                    <option name="branchName" value="성일" />
-                    <option name="lastUsedInstant" value="1678101495" />
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1678102002" />
                   </RecentBranch>
                 </list>
               </option>
@@ -72,21 +72,21 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/DEV/04_project/In4People-back&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/DEV/04_project/In4PeopleFront--",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "node",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\DEV\04_project\In4PeopleFront--\src\pages\salary" />
