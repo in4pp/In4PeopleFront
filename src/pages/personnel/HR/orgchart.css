@@ -1,67 +1,59 @@
-body 
-{ 
-    padding: 50px; 
-    width: 1500px;
-    background: #fafafa;
+body {
+  padding: 50px;
+  width: 1500px;
+  background: #fafafa;
 }
 
-.ceo
-{  
-    display:table; 
-    width: 318px; 
-    height: 68px; 
-    border: 1px solid #d3d3d3;
-    border-radius: 10px;
-    background: #fff;
-    margin:0 300px 60px 415px;
+.ceo {
+  display: table;
+  width: 318px;
+  height: 68px;
+  border: 1px solid #d3d3d3;
+  border-radius: 10px;
+  background: #fff;
+  margin: 0 300px 60px 415px;
 }
 
-.ceo > b
-{
-    display: table-cell; 
-    vertical-align: middle; 
-    text-align: center; 
+.ceo > b {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
 }
 
-.ppdept > button
-{
-    border-style: none;
+.ppdept > button {
+  border-style: none;
 }
 
-.ppdept
-{ 
-    display: inline;
-    display: block; 
-    width: 150px; 
-    height: 48px; 
-    line-height: 48px; 
-    border: 1px solid #d3d3d3; 
-    border-radius: 10px;
-    background: #ededed; 
-    text-align: center;
-    margin: 20px 20px 20px 20px;
-    float: left;
+.ppdept {
+  display: inline;
+  display: block;
+  width: 150px;
+  height: 48px;
+  line-height: 48px;
+  border: 1px solid #d3d3d3;
+  border-radius: 10px;
+  background: #ededed;
+  text-align: center;
+  margin: 20px 20px 20px 20px;
+  float: left;
 }
 
-.ppemployee
-{
-    float: left;
-    width: 150px; 
-    margin: 20px 20px 20px 20px;
-    text-align: center; 
-    border: 1px solid #d3d3d3;
-    border-radius: 10px;
-    background: #fff;
+.ppemployee {
+  float: left;
+  width: 150px;
+  margin: 20px 20px 20px 20px;
+  text-align: center;
+  border: 1px solid #d3d3d3;
+  border-radius: 10px;
+  background: #fff;
 }
 
-.ppemployee > li
-{
-    list-style: none;
-    margin: 15px 10px 20px 10px;
+.ppemployee > li {
+  list-style: none;
+  margin: 15px 10px 20px 10px;
 }
 
-.orgone
-{
-    margin-left: 15%;
-    margin-top: 2.5%;
+.orgone {
+  margin-left: 15%;
+  margin-top: 2.5%;
 }

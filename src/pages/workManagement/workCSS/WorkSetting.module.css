@@ -1,5 +1,5 @@
 .title1 {
-  margin-top: 150px;
+  padding-top: 150px;
   margin-left: 23%;
   margin-right: 10%;
 }
@@ -60,12 +60,28 @@
 .day {
   width: 60px;
   height: 60px;
-  /* background-color: #b9ddff35;
-  color: rgb(83, 80, 80); */
+  /* background-color: #b9ddff35; */
+  color: rgb(83, 80, 80);
   border-radius: 50%;
   text-align: center;
   display: table-cell;
   vertical-align: middle;
+  margin-left: 3px;
+}
+.active3 {
+  width: 60px;
+  height: 60px;
+  color: blue;
+  background-color: #b9ddff;
+  border-radius: 50%;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+  margin-left: 3px;
+}
+
+.bcontainer {
+  float: left;
 }
 
 .content5 {
@@ -115,7 +131,7 @@
 }
 
 .content6 {
-  padding-top: 20px;
+  padding-top: 27px;
   font-size: large;
   padding-right: 30px;
 
@@ -125,7 +141,7 @@
 
 .result {
   display: inline-block;
-  padding-top: 25px;
+  padding-top: 27px;
   color: red;
 }
 

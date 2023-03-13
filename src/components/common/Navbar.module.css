@@ -13,7 +13,7 @@ div {
 .mSgFN {
   position: relative;
   min-width: 1060px;
-  min-height: 100vh;
+  min-height: 2000px;
   background-color: rgb(255, 255, 255);
 }
 .bwzYVU {
@@ -175,22 +175,22 @@ button {
 }
 
 .bfYjzh {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    padding: 9px 20px;
-    border: 1px solid transparent;
-    border-radius: 4px;
-    font-family: inherit;
-    font-weight: 400;
-    font-size: 25px;
-    line-height: 20px;
-    /* background-color: var(--colors-blue400); */
-    text-decoration: none;
-    white-space: nowrap;
-    vertical-align: top;
-    cursor: pointer;
-    color: var(--colors-white);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 9px 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 20px;
+  /* background-color: var(--colors-blue400); */
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: top;
+  cursor: pointer;
+  color: var(--colors-white);
 }
 svg {
   overflow: hidden;
@@ -401,4 +401,3 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-

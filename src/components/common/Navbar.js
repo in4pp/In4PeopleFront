@@ -1,33 +1,48 @@
-import { NavLink } from "react-router-dom"
-import NavCSS from './Navbar.module.css';
+import { NavLink } from "react-router-dom";
+import NavCSS from "./Navbar.module.css";
 import Alarm from "../icon/Alarm";
 
 function Navbar() {
-    return (
-        <>
-            <div className={NavCSS.bwzYVU}>
-                <div className={NavCSS.bReTMH}>
-                    <div className={NavCSS.cAnmmb}>
-                        <div className={NavCSS.jqVsbC}><a >
-                            <div style={{ width: '128px', height: '50px' }}>
-                                <NavLink to="/"><img src="./images/INSA PEOPLE.png" alt="" width={150} height={70} /></NavLink>
-                            </div>
-                        </a></div>
-                        <div className={NavCSS.lkOGXI}><a className={`${NavCSS.fEXmlR} ${NavCSS.kOVHNW}`} >HOME</a><a
-                            className={`${NavCSS.fEXmlR} ${NavCSS.kOVHNW}`} >인사</a><a className={`${NavCSS.fEXmlR} ${NavCSS.kOVHNW}`}
-                            >근무/휴가</a><a className={`${NavCSS.fEXmlR} ${NavCSS.kOVHNW}`}
-                            >급여</a>
-                            <a className={`${NavCSS.fEXmlR} ${NavCSS.kOVHNW}`}
-                            >일용직</a><a className={`${NavCSS.fEXmlR} ${NavCSS.kOVHNW}`} ><NavLink to="/task" >업무</NavLink></a><a
-                                className={`${NavCSS.fEXmlR} ${NavCSS.kOVHNW}`} >게시판
-                            </a>
-                        </div>
-                    </div>
-                    <div className={NavCSS.cAnmmb}>
-                        <div className={NavCSS.ePumqH}>
-                            <span className={NavCSS.fcykKi}>
-                                <NavLink to="/login" className={`${NavCSS.kOVHNW}`}>로그인</NavLink>
-                                {/* <button data-active="false"
+  return (
+    <>
+      <div className={NavCSS.bwzYVU}>
+        <div className={NavCSS.bReTMH}>
+          <div className={NavCSS.cAnmmb}>
+            <div className={NavCSS.jqVsbC}>
+              <a>
+                <div style={{ width: "128px", height: "50px" }}>
+                  <NavLink to="/">
+                    <img
+                      src="./images/INSA PEOPLE.png"
+                      alt=""
+                      width={150}
+                      height={70}
+                    />
+                  </NavLink>
+                </div>
+              </a>
+            </div>
+            <div className={NavCSS.lkOGXI}>
+              <a className={`${NavCSS.fEXmlR} ${NavCSS.kOVHNW}`}>HOME</a>
+              <a className={`${NavCSS.fEXmlR} ${NavCSS.kOVHNW}`}>인사</a>
+              <a className={`${NavCSS.fEXmlR} ${NavCSS.kOVHNW}`}>
+                <NavLink to="/workmanage">근무/휴가</NavLink>
+              </a>
+              <a className={`${NavCSS.fEXmlR} ${NavCSS.kOVHNW}`}>급여</a>
+              <a className={`${NavCSS.fEXmlR} ${NavCSS.kOVHNW}`}>일용직</a>
+              <a className={`${NavCSS.fEXmlR} ${NavCSS.kOVHNW}`}>
+                <NavLink to="/task">업무</NavLink>
+              </a>
+              <a className={`${NavCSS.fEXmlR} ${NavCSS.kOVHNW}`}>게시판</a>
+            </div>
+          </div>
+          <div className={NavCSS.cAnmmb}>
+            <div className={NavCSS.ePumqH}>
+              <span className={NavCSS.fcykKi}>
+                <NavLink to="/login" className={`${NavCSS.kOVHNW}`}>
+                  로그인
+                </NavLink>
+                {/* <button data-active="false"
                                     className={`${NavCSS.bfYjzh} ${NavCSS.kyAoKz} ${NavCSS.gmZOLP} ${NavCSS.ieRdlXN}`}>
 
                                     <Alarm />
@@ -44,15 +59,13 @@ function Navbar() {
                                         </div>
                                     </div>
                                 </a> */}
-                            </span>
-                        </div>
-                    </div>
-                </div>
+              </span>
             </div>
-
-        </>
-    )
+          </div>
+        </div>
+      </div>
+    </>
+  );
 }
 
 export default Navbar;
-
