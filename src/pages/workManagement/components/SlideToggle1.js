@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import "../../task/taskCSS/SlideToggle.css";
+import { NavLink } from "react-router-dom";
 
 function SlideToggle1() {
   const [show, setShow] = useState(false);
@@ -16,7 +17,9 @@ function SlideToggle1() {
         {show && (
           <CSSTransition classNames="slide" timeout={200}>
             <div>
-              <div className="mt-2">근무 기본 설정</div>
+              <div className="mt-2">
+                <NavLink to="setting">근무 기본 설정</NavLink>
+              </div>
               <div className="mt-2">근무 스케줄 관리</div>
               <div className="mt-2">근무 스케줄 신청</div>
             </div>
