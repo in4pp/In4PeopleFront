@@ -2,34 +2,55 @@ import NavCSS from '../taskCSS/Content.module.css';
 import { useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { decodeJwt } from '../../../utils/tokenUtils';
-import { useEffect } from 'react';
-
-
-
+import { useEffect, useState, useRef } from 'react';
 import ApprovalRow from './ApprovalRow';
 
 import { callGetApprovalAPI } from '../../../apis/ApprovalAPICalls';
 
 function ApprovalSubmit() {
 
+    // const [isCalendar, setIsCalendar] = useState(false);
+    const [form, setForm] = useState({
+        startDate: '',
+        endDate: ''
+    });
+    const startDate = useRef();
+    const endDate = useRef();
+
     const navigate = useNavigate();
     const dispatch = useDispatch();
-    const member = useSelector(state => state.memberReducer);
     const token = decodeJwt(window.localStorage.getItem("accessToken"));
 
     const approvalList = useSelector(state => state.approvalReducer);
 
+    const onChangeCalendarHandler = (e) => {
+
+        if(endDate.current.value !== '' && endDate.current.value < startDate.current.value) {
+            alert('종료일이 더 작을 수 없습니다.')
+        } else {
+            setForm({
+                ...form,
+                [e.target.name]: e.target.value,
+            });
+        }
+
+    };
+
+    const onClickSearchHandler = () => {
+        
+    }
+
     useEffect(
         () => {
             console.log('token', token.sub);
-            if(token !== null){
+            if (token !== null) {
                 dispatch(callGetApprovalAPI({
-                    memCode : token.sub
+                    memCode: token.sub
                 }));
             }
         }
-        ,[]
-    ); 
+        , []
+    );
 
     return (
         <>
@@ -54,16 +75,17 @@ function ApprovalSubmit() {
                                             <div className={`${NavCSS["form-group"]}`}>
                                                 <span className={`${NavCSS["control-label"]}`}>시작일</span>
                                                 <div className={`${NavCSS["position-relative"]}`}>
-                                                    <input type="text" className={`${NavCSS["sc-fWHiwC"]} ${NavCSS["jtuvXR"]} ${NavCSS["form-control"]} ${NavCSS["input-datepicker"]}`} placeholder="시작일" readOnly="" value="2023-02-01" />
+                                                    <input value={form.startDate}ref={startDate} type="date" name="startDate" className={`${NavCSS["sc-fWHiwC"]} ${NavCSS["jtuvXR"]} ${NavCSS["form-control"]} ${NavCSS["input-datepicker"]}`} placeholder="시작일" onChange={onChangeCalendarHandler} />
                                                 </div>
                                             </div>
+                                            <h1>-</h1>
                                             <div className={`${NavCSS["form-group"]}`}>
                                                 <span className={`${NavCSS["control-label"]}`}>종료일</span>
                                                 <div className={`${NavCSS["position-relative"]}`}>
-                                                    <input type="text" className={`${NavCSS["sc-fWHiwC"]} ${NavCSS["jtuvXR"]} ${NavCSS["form-control"]} ${NavCSS["input-datepicker"]}`} placeholder="종료일" readOnly="" value="2023-02-23" />
+                                                    <input value={form.endDate} ref={endDate} type="date" name="endDate" className={`${NavCSS["sc-fWHiwC"]} ${NavCSS["jtuvXR"]} ${NavCSS["form-control"]} ${NavCSS["input-datepicker"]}`} placeholder="시작일" onChange={onChangeCalendarHandler} />
                                                 </div>
                                             </div>
-                                            <button className="btn btn-primary mt-3">조회</button>
+                                            <button className="btn btn-primary mt-3" onClick={ onClickSearchHandler } >조회</button>
                                         </div>
                                     </div>
                                     <div className={`${NavCSS["d-flex-space"]}`}>
@@ -92,6 +114,7 @@ function ApprovalSubmit() {
                                                             </label>
                                                         </div>
                                                     </th>
+
                                                     <th className={`${NavCSS["bGDZWl"]}`}>북마크</th>
                                                     <th className={`${NavCSS["bGDZRZ"]}`}>종류</th>
                                                     <th className={`${NavCSS["iztiXy"]}`}>문서번호</th>
@@ -104,7 +127,7 @@ function ApprovalSubmit() {
                                             </thead>
                                             <tbody>
                                                 {
-                                                    approvalList.length > 0 && approvalList.map(( approval ) => (<ApprovalRow key={ approval.docCode } approval = { approval }/>) )
+                                                    approvalList.length > 0 && approvalList.map((approval) => (<ApprovalRow key={approval.docCode} approval={approval} memCode={token.sub} />))
                                                 }
                                             </tbody>
                                         </table>
