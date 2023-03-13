@@ -93,7 +93,6 @@ function Navbar() {
               <a className={`${NavCSS.fEXmlR} ${NavCSS.kOVHNW}`}>HOME</a>
               <a className={`${NavCSS.fEXmlR} ${NavCSS.kOVHNW}`}>인사</a>
               <a className={`${NavCSS.fEXmlR} ${NavCSS.kOVHNW}`}>
-                {" "}
                 <NavLink to="/workmanage">근무/휴가</NavLink>
               </a>
               <a className={`${NavCSS.fEXmlR} ${NavCSS.kOVHNW}`}>급여</a>

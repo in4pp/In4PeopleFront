@@ -20,7 +20,9 @@ function SlideToggle1() {
               <div className="mt-2">
                 <NavLink to="setting">근무 기본 설정</NavLink>
               </div>
-              <div className="mt-2">근무 스케줄 관리</div>
+              <div className="mt-2">
+                <NavLink to="scheduleApprove">근무 스케줄 관리</NavLink>
+              </div>
               <div className="mt-2">근무 스케줄 신청</div>
             </div>
           </CSSTransition>

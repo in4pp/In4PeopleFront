@@ -22,6 +22,7 @@ import HRlist from "./pages/personnel/HR/HRlist";
 import HRApplist from "./pages/personnel/HR/HRApplist";
 import HRApplication from "./pages/personnel/HR/HRApplication";
 import WorkSetting from "./pages/workManagement/Schedule/WorkSetting";
+import SchedulManage from "./pages/workManagement/Schedule/ScheduleManage";
 
 function App() {
   return (
@@ -47,6 +48,7 @@ function App() {
           <Route path="/workManage" element={<WorkManageSidebar />}>
             <Route index element={<ApprovalSubmit />} />
             <Route path="setting" element={<WorkSetting />} />
+            <Route path="scheduleApprove" element={<SchedulManage />}></Route>
           </Route>
 
           <Route path="/personnel" element={<PersonnelSidebar />}>
