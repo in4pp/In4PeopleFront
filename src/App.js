@@ -47,6 +47,7 @@ function App() {
           
           <Route path="/personnel" element={<PersonnelSidebar />}>
             <Route index element={<HRRegist />}></Route>
+            <Route path="memberRegist" element={<HRRegist />} />
             <Route path="list" element={<HRlist />} />
             <Route path="auth" element={<HRAuth />} />
             <Route path="orderInfo" element={<HRApplist />} />

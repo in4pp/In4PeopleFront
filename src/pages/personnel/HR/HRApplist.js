@@ -6,7 +6,7 @@ import {callOrderInfoListAPI} from '../../../apis/PersonnelAPICalls';
 function HRApplist() {
 
     const dispatch = useDispatch();
-    const hrApplist = useSelector(state => state.orderInfoReducer); // modules/index.js 안에 선언한 store목록 중에서 orderInfoReducer를 가져오겠다.
+    const hrApplist = useSelector(state => state.personnelReducer); // modules/index.js 안에 선언한 store목록 중에서 personnelReducer 가져오겠다.
     const [currentPage, setCurrentPage] = useState(1);
     console.log('hrApplist', hrApplist);
     // 페이징이 필요한면 useState를 통해서 상태값을 추가 -> currentPage참조
@@ -64,26 +64,17 @@ function HRApplist() {
                                 <tbody>
                                     { Array.isArray(list) && list.map (
                                         (hrApp, index) => (
-                                            <tr className={`${HRApplistCSS["appltr"]}`}>
-                                                <td className={`${HRApplistCSS["appltd"]}`}>{hrApp.orderNumber}</td>
-                                                <td className={`${HRApplistCSS["appltd"]}`}>{hrApp.orderDetails}</td>
-                                                <td className={`${HRApplistCSS["appltd"]}`}>{hrApp.perOrderAppList[0].orderDetails}</td>
+                                            <tr key={index}
+                                            className={`${HRApplistCSS["appltr"]}`}>
+                                                <td className={`${HRApplistCSS["appltd"]}`}>{hrApp.perOrderAppList[0].idNum}</td>
+                                                <td className={`${HRApplistCSS["appltd"]}`}>{hrApp.perOrderAppList[0].perOrder.perName}</td>
+                                                <td className={`${HRApplistCSS["appltd"]}`}>{hrApp.perOrderAppList[0].orderDate}</td>
                                                 <td className={`${HRApplistCSS["appltd"]}`}>{hrApp.memCode.memCode}</td>
                                                 <td className={`${HRApplistCSS["appltd"]}`}>{hrApp.memCode.memName}</td>
-                                                <td className={`${HRApplistCSS["appltd"]}`}>{hrApp.orderNumber}</td>
+                                                <td className={`${HRApplistCSS["appltd"]}`}>{hrApp.perOrderAppList[0].orderDetails}</td>
                                                 <td className={`${HRApplistCSS["appltd"]}`}>{hrApp.orderNumber}</td>
                                             </tr>
-                                        )
-                                        )}
-                                    {/* <tr className={`${HRApplistCSS["appltr"]}`}>
-                                        <td className={`${HRApplistCSS["appltd"]}`}>1</td>
-                                        <td className={`${HRApplistCSS["appltd"]}`}>승진</td>
-                                        <td className={`${HRApplistCSS["appltd"]}`}>220202</td>
-                                        <td className={`${HRApplistCSS["appltd"]}`}>200101</td>
-                                        <td className={`${HRApplistCSS["appltd"]}`}>가나다</td>
-                                        <td className={`${HRApplistCSS["appltd"]}`}>차장-부장</td>
-                                        <td className={`${HRApplistCSS["appltd"]}`}></td>
-                                    </tr> */}
+                                        ))}
                                 </tbody>  
                             </table>
                         </div>
