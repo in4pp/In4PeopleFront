@@ -25,7 +25,7 @@ function ApprovalNeed() {
                                     <div className={`${NavCSS["d-flex-space"]}`}>
                                         <div className={`${NavCSS["d-flex-space"]}`}>
                                             <select className={`${["form-select"]} ${["form-select-sm"]}`} aria-label=".form-select-sm example">
-                                                <option selected>전체</option>
+                                                <option defaultValue>전체</option>
                                                 <option value="1">One</option>
                                                 <option value="2">Two</option>
                                                 <option value="3">Three</option>
@@ -36,7 +36,7 @@ function ApprovalNeed() {
                                         </div>
                                     </div>
                                     <div className={`${NavCSS.iLLwYh}`}>
-                                        <table className={`${[NavCSS.table]} ${["table-hover"]} ${"mt-3"}`}>
+                                        <table className={`${[NavCSS.table]} ${["table"]} ${["table-hover"]} ${"mt-3"}`}>
                                             <caption></caption>
                                             <thead className={`${NavCSS.dXdqfk}`}>
                                                 <tr>
@@ -48,12 +48,10 @@ function ApprovalNeed() {
                                                             </label>
                                                         </div>
                                                     </th>
-                                                    <th className={`${NavCSS["bGDZWl"]}`}>북마크</th>
                                                     <th className={`${NavCSS["bGDZRZ"]}`}>종류</th>
                                                     <th className={`${NavCSS["iztiXy"]}`}>문서번호</th>
                                                     <th className={`${NavCSS["iztiWO"]}`}>제목</th>
-                                                    <th className={`${NavCSS["bGDZRX"]}`}>상태</th>
-                                                    <th className={`${NavCSS["bGDZRX"]}`}>댓글</th>
+                                                    <th className={`${NavCSS["bGDZRX"]}`}>작성자</th>
                                                     <th className={`${NavCSS["bGDZRW"]}`}>첨부파일</th>
                                                     <th className={`${NavCSS["bGDZRX"]}`}>결재의견</th>
                                                     <th className={`${NavCSS["iztiWO"]}`}>작성일</th>
@@ -66,12 +64,10 @@ function ApprovalNeed() {
                                                             id="flexCheckDefault" />
                                                         <label className={`${["form-check-label"]}`} htmlFor="flexCheckDefault"></label>
                                                     </td>
-                                                    <td><button><PlainStar /></button></td>
                                                     <td>일반</td>
                                                     <td>2023-02-07-1564656</td>
                                                     <td>업무결재3</td>
-                                                    <td><span className={`${NavCSS["badge"]} ${NavCSS["badge-green"]}`}>승인</span></td>
-                                                    <td>0개</td>
+                                                    <td>조성일</td>
                                                     <td>O</td>
                                                     <td>0개</td>
                                                     <td>2023.02.07, 화 07:23</td>
@@ -82,12 +78,10 @@ function ApprovalNeed() {
                                                             id="flexCheckDefault" />
                                                         <label className={`${["form-check-label"]}`} htmlFor="flexCheckDefault"></label>
                                                     </td>
-                                                    <td><button><BlueStar /></button></td>
                                                     <td>일반</td>
                                                     <td>2023-02-07-1564653</td>
                                                     <td>업무결제3</td>
-                                                    <td><span className={`${NavCSS["badge"]} ${NavCSS["badge-green"]}`}>승인</span></td>
-                                                    <td>0개</td>
+                                                    <td>꽃돌이</td>
                                                     <td>X</td>
                                                     <td>0개</td>
                                                     <td>2023.02.07, 화 07:22</td>
