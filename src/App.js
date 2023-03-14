@@ -1,5 +1,3 @@
-
-
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './layouts/Layout';
 // import ApprovalSidebar from './sidebars/ApprovalSidebar';
@@ -23,9 +21,9 @@ function App() {
         <Route path="/" element={<Layout />}>
 
 
-        <Route path="api/v1" element={<SalarySidebar />}>
+        <Route path="salary" element={<SalarySidebar />}>
           <Route path="salinfo" element={<SalaryInfo />} />
-          <Route path="incomeTax" element={<IncomeTax  />} />
+          <Route path="incometax" element={<IncomeTax  />} />
           <Route path="salSet" element={<SalarySettlement />} />
           <Route path="hourlySet" element={<HourlyWageSetting />} />
           <Route path="workInquiry" element={<WorkInquiry />} />

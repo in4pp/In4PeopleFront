@@ -4,7 +4,9 @@ import {
 
 export const callIncomeTaxListAPI = () => {
 
-       const requestURL = `http://${process.env.REACT_APP_RESTAPI_IP}:7777/api/v1/incomeTax`;
+       console.log('[SalaryAPICalls] callIncomeTaxListAPI Call')
+
+       const requestURL = `http://${process.env.REACT_APP_RESTAPI_IP}:7777/api/v1/salary/incometax`;
 
        return async (dispatch, getState) => {
 

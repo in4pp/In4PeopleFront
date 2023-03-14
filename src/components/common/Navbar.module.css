@@ -2,13 +2,13 @@
 #root {
   width: 100%;
 }
-<<<<<<< HEAD
+
 *, ::after, ::before {
   box-sizing: border-box;
 }
-=======
 
->>>>>>> 1bf1fcf0706b0d6eaca65fb617208885633baa2e
+
+
 div {
   display: block;
 }
@@ -169,7 +169,7 @@ button {
 }
 
 .bfYjzh {
-<<<<<<< HEAD
+
 
     display: inline-flex;
     justify-content: center;
@@ -188,24 +188,7 @@ button {
     cursor: pointer;
     color: var(--colors-white);
 
-=======
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  padding: 9px 20px;
-  border: 1px solid transparent;
-  border-radius: 4px;
-  font-family: inherit;
-  font-weight: 400;
-  font-size: 25px;
-  line-height: 20px;
-  /* background-color: var(--colors-blue400); */
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: top;
-  cursor: pointer;
-  color: var(--colors-white);
->>>>>>> origin/master
+
 }
 svg {
   overflow: hidden;
