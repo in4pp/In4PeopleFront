@@ -4,13 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eb5e74b7-47b9-4927-85f5-ec546fbe7dc7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/pages/task/taskApproval/ApprovalBookmark.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/task/taskApproval/ApprovalBookmark.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/task/taskApproval/ApprovalCompleted.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/task/taskApproval/ApprovalCompleted.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/task/taskApproval/ApprovalNeed.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/task/taskApproval/ApprovalNeed.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/task/taskApproval/ApprovalRefered.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/task/taskApproval/ApprovalRefered.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/task/taskApproval/ApprovalSubmit.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/task/taskApproval/ApprovalSubmit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/task/taskCSS/Content.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/task/taskCSS/Content.module.css" afterDir="false" />
+    <list default="true" id="8b483081-ba65-40ae-aaaf-f0b81a7d472e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apis/DailyWorkerAPICalls.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/apis/DailyWorkerAPICalls.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/DWorkerModule.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/DWorkerModule.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dailyWorker/DWorker/DWorkerInsert.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dailyWorker/DWorker/DWorkerInsert.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dailyWorker/DWorker/DWorkerSelect.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dailyWorker/DWorker/DWorkerSelect.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dailyWorker/DWorker/DWorkerSelect.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dailyWorker/DWorker/DWorkerSelect.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dailyWorker/components/SlideToggleWorker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dailyWorker/components/SlideToggleWorker.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +80,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/DEV/04_project/In4People-back&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/dev/04_project/finalProject/final4jo/In4PeopleFront&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -110,7 +113,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="eb5e74b7-47b9-4927-85f5-ec546fbe7dc7" name="Changes" comment="" />
+      <changelist id="8b483081-ba65-40ae-aaaf-f0b81a7d472e" name="Changes" comment="" />
       <created>1677024319403</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -138,6 +141,7 @@
       <workItem from="1678101399786" duration="678000" />
       <workItem from="1678102218560" duration="21000" />
       <workItem from="1678437456329" duration="746000" />
+      <workItem from="1678786597227" duration="18000" />
     </task>
     <servers />
   </component>

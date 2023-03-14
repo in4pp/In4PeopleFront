@@ -22,6 +22,10 @@ import HRlist from './pages/personnel/HR/HRlist';
 import HRApplist from './pages/personnel/HR/HRApplist';
 import HRApplication from './pages/personnel/HR/HRApplication';
 import DWorkerInsert from './pages/dailyWorker/DWorker/DWorkerInsert';
+import DWorkerSelect from "./pages/dailyWorker/DWorker/DWorkerSelect";
+import DWorkerUpdate from "./pages/dailyWorker/DWorker/DWorkerUpdate";
+
+
 function App() {
 
   return (  
@@ -58,8 +62,8 @@ function App() {
           <Route path="/dailyWorker" element={<DailyWorkerSidebar />}>
           <Route index element={<DWorkerInsert />} />
             <Route path="insert" element={<DWorkerInsert />} />
-            <Route path="update" element={<DWorkerInsert />} />
-            <Route path="select" element={<DWorkerInsert />} />
+            <Route path="update" element={<DWorkerUpdate />} />
+            <Route path="workers" element={<DWorkerSelect />} />
           </Route>
 
         </Route>

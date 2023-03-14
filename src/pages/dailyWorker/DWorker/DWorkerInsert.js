@@ -1,6 +1,10 @@
 import DWorkerStyle from './DWorkerInsert.module.css';
+import { useEffect } from "react";
+import { useSelector, useDispatch } from 'react-redux';
+
 
 function DWorkerInsert(){
+
     return(
      <div>
         <div className={`${DWorkerStyle["registone"]}`}>
@@ -20,7 +24,7 @@ function DWorkerInsert(){
                                 <tr>
                                     <th className={`${DWorkerStyle["ppth"]}`}>일용직사원 번호</th>
                                     <td className={`${DWorkerStyle["pptd"]}`}>
-                                        <input type="text" placeholder="6자리를 입력해주세요" />
+                                        <input type="text" placeholder="" />
                                     </td>
                                 </tr>
                                 <tr>
@@ -56,16 +60,7 @@ function DWorkerInsert(){
                             </table>
 
                             <table className={`${DWorkerStyle["ppwork"]}`}>
-                                <tr>
-                                    <th className={`${DWorkerStyle["ppth"]}`}>재직구분</th>
-                                    <td className={`${DWorkerStyle["pptd"]}`}>
-                                    <select name="ppwork">
-                                        <option value="tenure">재직</option>
-                                        <option value="leave">휴직</option>
-                                        <option value="retirement">퇴직</option>
-                                    </select>
-                                    </td>
-                                </tr>
+                             
                                 <tr>
                                     <th className={`${DWorkerStyle["ppth"]}`}>입사일자</th>
                                     <td className={`${DWorkerStyle["pptd"]}`}>
