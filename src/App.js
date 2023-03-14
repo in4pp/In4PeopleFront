@@ -23,7 +23,7 @@ function App() {
         <Route path="/" element={<Layout />}>
 
 
-        <Route path="salary" element={<SalarySidebar />}>
+        <Route path="api/v1" element={<SalarySidebar />}>
           <Route path="salinfo" element={<SalaryInfo />} />
           <Route path="incomeTax" element={<IncomeTax  />} />
           <Route path="salSet" element={<SalarySettlement />} />

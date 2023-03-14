@@ -7,19 +7,23 @@ import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 
 
-function IncomeTax({ }) {
-
+function IncomeTax() {
+  // { incomeTax: {incomeTaxCode, lowerTaxBaseLimit, upperTaxBaseLimit, taxRate, deductionAmount }}
 
       const navigate = useNavigate();
 
       const dispatch = useDispatch();
       const incomTaxList = useSelector(state => state.incomeTaxReducer)
 
+      const onClickIncomeTaxHandler = (incomeTaxCode) => {
+
+      }
+
       useEffect(
         () => {
             dispatch(callIncomeTaxListAPI());
         }
-        , [] 
+        ,[] 
       );
 
 
@@ -79,75 +83,7 @@ function IncomeTax({ }) {
                 <div>0</div>
               </div>
               <hr />
-              <div className={`${incomeStyle.row} ${incomeStyle.list_group_item} ${incomeStyle.bg_white}`}>
-                <div className={incomeStyle['username_cell']}>
-                  <div className={`${incomeStyle.media} ${incomeStyle.align_items_center} ${incomeStyle.cursor_pointer}`}>                                               
-                    <div className={incomeStyle['user_name']}><span>0</span></div>
-                  </div>
-                </div>
-                <div style={{"width":"calc((100% - 480px) / 3)"}}>0</div>
-                <div style={{"width":"calc((100% - 480px) / 3)"}}><span>0.06</span></div>
-                <div style={{"width":"calc((100% - 480px) / 3)"}}>0</div>
-                <div>0</div>
-              </div>
-              <hr /><div className={`${incomeStyle.row} ${incomeStyle.list_group_item} ${incomeStyle.bg_white}`}>
-                <div className={incomeStyle['username_cell']}>
-                  <div className={`${incomeStyle.media} ${incomeStyle.align_items_center} ${incomeStyle.cursor_pointer}`}>                                               
-                    <div className={incomeStyle['user_name']}><span>0</span></div>
-                  </div>
-                </div>
-                <div style={{"width":"calc((100% - 480px) / 3)"}}>0</div>
-                <div style={{"width":"calc((100% - 480px) / 3)"}}><span>0.06</span></div>
-                <div style={{"width":"calc((100% - 480px) / 3)"}}>0</div>
-                <div>0</div>
-              </div>
-              <hr /><div className={`${incomeStyle.row} ${incomeStyle.list_group_item} ${incomeStyle.bg_white}`}>
-                <div className={incomeStyle['username_cell']}>
-                  <div className={`${incomeStyle.media} ${incomeStyle.align_items_center} ${incomeStyle.cursor_pointer}`}>                                               
-                    <div className={incomeStyle['user_name']}><span>0</span></div>
-                  </div>
-                </div>
-                <div style={{"width":"calc((100% - 480px) / 3)"}}>0</div>
-                <div style={{"width":"calc((100% - 480px) / 3)"}}><span>0.06</span></div>
-                <div style={{"width":"calc((100% - 480px) / 3)"}}>0</div>
-                <div>0</div>
-              </div>
-              <hr /><div className={`${incomeStyle.row} ${incomeStyle.list_group_item} ${incomeStyle.bg_white}`}>
-                <div className={incomeStyle['username_cell']}>
-                  <div className={`${incomeStyle.media} ${incomeStyle.align_items_center} ${incomeStyle.cursor_pointer}`}>                                               
-                    <div className={incomeStyle['user_name']}><span>0</span></div>
-                  </div>
-                </div>
-                <div style={{"width":"calc((100% - 480px) / 3)"}}>0</div>
-                <div style={{"width":"calc((100% - 480px) / 3)"}}><span>0.06</span></div>
-                <div style={{"width":"calc((100% - 480px) / 3)"}}>0</div>
-                <div>0</div>
-              </div>
-              <hr />
-              <div className={`${incomeStyle.row} ${incomeStyle.list_group_item} ${incomeStyle.bg_white}`}>
-                <div className={incomeStyle['username_cell']}>
-                  <div className={`${incomeStyle.media} ${incomeStyle.align_items_center} ${incomeStyle.cursor_pointer}`}>                                               
-                    <div className={incomeStyle['user_name']}><span>0</span></div>
-                  </div>
-                </div>
-                <div style={{"width":"calc((100% - 480px) / 3)"}}>0</div>
-                <div style={{"width":"calc((100% - 480px) / 3)"}}><span>0.06</span></div>
-                <div style={{"width":"calc((100% - 480px) / 3)"}}>0</div>
-                <div>0</div>
-              </div>
-              <hr />
-              <div className={`${incomeStyle.row} ${incomeStyle.list_group_item} ${incomeStyle.bg_white}`}>
-                <div className={incomeStyle['username_cell']}>
-                  <div className={`${incomeStyle.media} ${incomeStyle.align_items_center} ${incomeStyle.cursor_pointer}`}>                                               
-                    <div className={incomeStyle['user_name']}><span>0</span></div>
-                  </div>
-                </div>
-                <div style={{"width":"calc((100% - 480px) / 3)"}}>0</div>
-                <div style={{"width":"calc((100% - 480px) / 3)"}}><span>0.06</span></div>
-                <div style={{"width":"calc((100% - 480px) / 3)"}}>0</div>
-                <div>0</div>
-              </div>
-              <hr />
+              
             </div>
           </div>
           
