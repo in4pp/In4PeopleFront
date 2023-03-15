@@ -39,6 +39,11 @@
   font-family: inherit;
 }
 
+.workType1 {
+  margin-top: 10px;
+  font-family: inherit;
+}
+
 .box2 {
   margin-left: 23%;
   margin-right: 5%;
@@ -131,6 +136,13 @@
   float: left;
 }
 
+.basicWorkTime3 {
+  margin-top: 3px;
+
+  margin-right: 160px;
+  float: left;
+}
+
 .content6 {
   padding-top: 27px;
   font-size: large;
@@ -163,6 +175,11 @@
   height: 30px;
 }
 
+.basicLunch3 {
+  margin-top: 5px;
+  margin-left: 3px;
+}
+
 .basicLunch {
   overflow: hidden;
 
@@ -173,7 +190,6 @@
 
 .availwork {
   overflow: hidden;
-
   padding-top: 5px;
   padding-left: 100px;
   float: left;
@@ -196,6 +212,12 @@
   margin-left: 15px;
 }
 
+.startAvail3 {
+  margin-top: 10px;
+  margin-left: 4px;
+  float: left;
+}
+
 .endAvail1 {
   border: 1px solid #999;
   background-color: #b9ddff35;
@@ -213,6 +235,11 @@
   margin-left: 15px;
 }
 
+.endAvail3 {
+  margin-left: 328px;
+  margin-top: 10px;
+}
+
 .selectDay1 {
   font-size: small;
   color: #999;
@@ -221,9 +248,25 @@
   float: left;
 }
 
+.selectDay3 {
+  font-size: small;
+  color: #999;
+  padding-left: 96px;
+  padding-right: 220px;
+  float: left;
+  margin-left: 7px;
+}
+
 .selectDay2 {
   font-size: small;
   color: #999;
+}
+
+.selectDay4 {
+  font-size: small;
+  color: #999;
+  margin-left: 30px;
+  display: inline-block;
 }
 
 .allTime {
@@ -235,6 +278,11 @@
   float: left;
 }
 
+.allTime1 {
+  float: left;
+  margin-top: 3px;
+}
+
 .overTime {
   border: 1px solid #999;
   background-color: #b9ddff35;
@@ -242,6 +290,11 @@
   height: 30px;
   width: 110px;
   float: left;
+}
+
+.overTime1 {
+  float: left;
+  margin-top: 3px;
 }
 
 .availwork2 {

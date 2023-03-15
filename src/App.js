@@ -45,7 +45,7 @@ function App() {
           <Route path="/incomeTax" element={<SalarySidebar />}>
             <Route index element={<IncomeTax />} />
           </Route>
-          <Route path="/workManage" element={<WorkManageSidebar />}>
+          <Route path="/workmanage" element={<WorkManageSidebar />}>
             <Route index element={<ApprovalSubmit />} />
             <Route path="setting" element={<WorkSetting />} />
             <Route path="scheduleApprove" element={<SchedulManage />}></Route>
