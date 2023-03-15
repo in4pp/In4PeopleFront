@@ -19,6 +19,8 @@ function IncomeTax() {
       const dispatch = useDispatch();
       const incomTaxList = useSelector(state => state.salaryReducer)
 
+      console.log('incomTaxList', incomTaxList);
+
 
       useEffect(
         () => {
