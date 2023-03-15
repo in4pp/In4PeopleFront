@@ -24,8 +24,8 @@ function App() {
         <Route path="salary" element={<SalarySidebar />}>
           <Route path="salinfo" element={<SalaryInfo />} />
           <Route path="incometax" element={<IncomeTax  />} />
-          <Route path="salSet" element={<SalarySettlement />} />
-          <Route path="hourlySet" element={<HourlyWageSetting />} />
+          <Route path="salset" element={<SalarySettlement />} />
+          <Route path="hourlyset" element={<HourlyWageSetting />} />
           <Route path="workInquiry" element={<WorkInquiry />} />
         </Route>
           
