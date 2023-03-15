@@ -3,8 +3,14 @@ import { GET_APPROVAL,
          DELETE_APPROVAL_BOOKMARK
  } from '../modules/ApprovalModule';
 
-export const callGetApprovalAPI = ({ memCode }) => {
-    const requestURL = `http://${process.env.REACT_APP_RESTAPI_IP}:7777/api/v1/approval/${memCode}`;
+export const callGetApprovalAPI = ({ memCode, currentPage }) => {
+    let requestURL;
+
+    if(currentPage !== undefined || currentPage !== null){
+        requestURL = `http://${process.env.REACT_APP_RESTAPI_IP}:7777/api/v1/approval?memCode=${memCode}&offset=${currentPage}`;
+    } else {
+        requestURL = `http://${process.env.REACT_APP_RESTAPI_IP}:7777/api/v1/approval/?memCode=${memCode}`;
+    }
 
     return async (dispatch, getState) => {
 
@@ -17,7 +23,7 @@ export const callGetApprovalAPI = ({ memCode }) => {
             }
         })
             .then(response => response.json());
-        if (result.status === 200) {
+        if(result.status === 200) {
             console.log('[ApprovalAPICalls] callGetApprovalAPI RESULT : ', result);
             dispatch({ type: GET_APPROVAL, payload: result.data });
         }
@@ -27,9 +33,8 @@ export const callGetApprovalAPI = ({ memCode }) => {
 
 export const callPostBookmarkAPI = ({ form }) => {
     const requestURL = `http://${process.env.REACT_APP_RESTAPI_IP}:7777/api/v1/approval/bookmark/post`;
-    console.log("form {}", form);
+    
     return async (dispatch, getState) => {
-        console.log("여까지옴...");
 
         const result = await fetch(requestURL, {
             method: "POST",
@@ -73,5 +78,27 @@ export const callDeleteBookmarkAPI = ({ form }) => {
         console.log('[ApprovalAPICalls] callDeleteBookmarkAPI RESULT : ', result);
 
         dispatch({ type: DELETE_APPROVAL_BOOKMARK , payload: result });
+    };
+}
+
+export const callGetSearchApprovalAPI = ({ startDate, endDate, memCode }) =>{
+    console.log(startDate);
+    console.log(endDate);
+    const requestURL = `http://${process.env.REACT_APP_RESTAPI_IP}:7777/api/v1/approval/search?memCode=${memCode}&startDate=${startDate}&endDate=${endDate}`;
+
+    return async (dispatch, getState) => {
+
+        const result = await fetch(requestURL, {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "*/*"
+            }
+        })
+            .then(response => response.json());
+        if (result.status === 200) {
+            console.log('[ApprovalAPICalls] callGetSearchApprovalAPI RESULT : ', result);
+            dispatch({ type: GET_APPROVAL, payload: result.data });
+        }
     };
 }
