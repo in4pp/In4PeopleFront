@@ -345,6 +345,74 @@ input {
 
 
 
+.fcrGkJ {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+}
+
+.fcrGkJ > h4 {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgb(136, 136, 136);
+}
+
+.emfnGG {
+    display: flex;
+    gap: 14px;
+    margin: 0px;
+}
+
+.jpUIyz {
+    position: relative;
+}
+
+.kSYRJd {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 480px;
+    height: 40px;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 5px;
+    padding: 0px 12px;
+    color: rgb(72, 72, 72);
+    line-height: 20px;
+    appearance: none;
+    cursor: pointer;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+option {
+    font-weight: normal;
+    display: block;
+    white-space: nowrap;
+    min-height: 1.2em;
+    padding: 0px 2px 1px;
+}
+
+.jpUIyz svg {
+    position: absolute;
+    right: 16px;
+    top: 17px;
+}
+
+svg {
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+
+
+
+
 
 
 
