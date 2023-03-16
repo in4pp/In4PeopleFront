@@ -20,20 +20,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
 
-<<<<<<< HEAD
-          <Route path="/salary" element={<SalarySidebar />}>
-            <Route index element={<SalaryInfo />} />
-          </Route>
-          <Route path="/incomeTax" element={<SalarySidebar />}>
-            <Route index element={<IncomeTax />} />
-          </Route>
-          <Route path="/workmanage" element={<WorkManageSidebar />}>
-            <Route index element={<ApprovalSubmit />} />
-            <Route path="setting" element={<WorkSetting />} />
-            <Route path="scheduleApprove" element={<SchedulManage />}></Route>
-          </Route>
-=======
->>>>>>> origin/Minjae
+
+
 
         <Route path="salary" element={<SalarySidebar />}>
           <Route path="salinfo" element={<SalaryInfo />} />
