@@ -22,7 +22,6 @@ function App() {
 
 
 
-
         <Route path="salary" element={<SalarySidebar />}>
           <Route path="salinfo" element={<SalaryInfo />} />
           <Route path="incometax" element={<IncomeTax  />} />

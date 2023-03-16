@@ -322,7 +322,7 @@ body {
   color: rgb(0, 0, 0);
 }
 
-<<<<<<< HEAD
+
 .wrap {
   overflow: hidden;
   display: flex;
@@ -350,14 +350,14 @@ body {
   margin-right: auto;
   margin-left: auto;
 }
->>>>>>>>>Temporary merge branch 2 .bread-title {
-=======
+
+
 
 
 
 
 .bread-title {
->>>>>>> origin/Minjae
+
   display: flex;
   align-items: center;
   justify-content: space-between;
