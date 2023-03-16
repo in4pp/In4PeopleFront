@@ -14,7 +14,7 @@ function HRApplist() {
     const list = hrApplist.data;
     if(list != undefined){
 
-        console.log('list', list[0].memCode.departmentCode.departmentName);
+        console.log('list', list);
     }
     useEffect(
         () => {
