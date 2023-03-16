@@ -35,7 +35,7 @@ export const callOrderInfoListAPI = ({currentPage}) => {
 
 export const callMemberRegistAPI = ({form}) => {
     console.log('[PersonnelAPICalls] callMemberRegistAPI Call');
-   alert(form);
+    alert('form============', form);
     const requestURL = `http://${process.env.REACT_APP_RESTAPI_IP}:7777/api/v1/personnel/memberRegist`;
 
     return async (dispatch, getState) => {
@@ -43,24 +43,11 @@ export const callMemberRegistAPI = ({form}) => {
         const result = await fetch(requestURL, {
             method: "POST",
             headers: {
-                "Content-Type": "application/json",
-                "Accept": "*/*",
+                //  "Content-Type":"application/json",
+                "Accept": "*/*"
                 // "Authorization": "Bearer " + window.localStorage.getItem("accessToken")
             },
-            body: JSON.stringify({
-                memCode: form.memCode,
-                memName: form.memName,
-                regiNumber: form.regiNumber,
-                phone:form.phone,
-                email: form.email,
-                nationality: form.nationality,
-                gender: form.gender,
-                isMarried: form.isMarried,
-                address: form.address,
-                isWorking: form.isWorking,
-                positionCode: form.positionCode,
-                departmentCode: form.departmentCode
-            })
+            body: form
         })
         .then(response => response.json());
 
