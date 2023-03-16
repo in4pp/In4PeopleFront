@@ -376,7 +376,7 @@ input {
     display: flex;
     -webkit-box-align: center;
     align-items: center;
-    width: 480px;
+    width: 250px;
     height: 40px;
     border: 1px solid rgb(204, 204, 204);
     border-radius: 5px;
