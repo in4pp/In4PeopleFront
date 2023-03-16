@@ -9,7 +9,7 @@ div {
 .mSgFN {
   position: relative;
   min-width: 1060px;
-  min-height: 2000px;
+  /* min-height: 2000px; */
   background-color: rgb(255, 255, 255);
 }
 .bwzYVU {
@@ -31,7 +31,7 @@ div {
   width: 100%;
   padding: 15px 32px;
   border-bottom: 1px solid rgb(239, 239, 239);
-  background-color: var(--color-ws-white);
+  background-color: white;
   color: var(--color-ws-gray-gray-800);
 }
 .cAnmmb {
@@ -171,22 +171,22 @@ button {
 }
 
 .bfYjzh {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    padding: 9px 20px;
-    border: 1px solid transparent;
-    border-radius: 4px;
-    font-family: inherit;
-    font-weight: 400;
-    font-size: 25px;
-    line-height: 20px;
-    /* background-color: var(--colors-blue400); */
-    text-decoration: none;
-    white-space: nowrap;
-    vertical-align: top;
-    cursor: pointer;
-    color: var(--colors-white);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 9px 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 20px;
+  /* background-color: var(--colors-blue400); */
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: top;
+  cursor: pointer;
+  color: var(--colors-white);
 }
 svg {
   overflow: hidden;
@@ -352,7 +352,7 @@ body {
   color: rgb(0, 0, 0);
 }
 
-<<<<<<<<< Temporary merge branch 1 ========= .wrap {
+.wrap {
   overflow: hidden;
   display: flex;
   min-width: 1256px;
@@ -365,12 +365,6 @@ body {
   padding: 80px 0 0 240px;
   transition: padding 0.3s ease;
   background: #fff;
-}
-.ct {
-  position: relative;
-  display: flex;
-  flex: 1 0 auto;
-  flex-direction: column;
 }
 #ct > .container2 {
   width: 100%;
@@ -397,4 +391,3 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-

@@ -1,28 +1,30 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Layout from './layouts/Layout';
-import IncomeTax from './pages/salary/IncomeTax';
-import SalarySidebar from './sidebars/SalarySidebar';
-import SalaryInfo from './pages/salary/SalaryInformation';
-import TaskSidebar from './pages/task/TaskSidebar';
-import ApprovalSubmit from './pages/task/taskApproval/ApprovalSubmit'
-import Main from './pages/main/Main';
-import ApprovalBookmark from './pages/task/taskApproval/ApprovalBookmark';
-import ApprovalNeed from './pages/task/taskApproval/ApprovalNeed';
-import ApprovalCompleted from './pages/task/taskApproval/ApprovalCompleted';
-import ApprovalRefered from './pages/task/taskApproval/ApprovalRefered';
-import SettlementGeneration from './pages/task/taskApproval/SettlementGeneration';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./layouts/Layout";
+import IncomeTax from "./pages/salary/IncomeTax";
+import SalarySidebar from "./sidebars/SalarySidebar";
+import SalaryInfo from "./pages/salary/SalaryInformation";
+import TaskSidebar from "./pages/task/TaskSidebar";
+import ApprovalSubmit from "./pages/task/taskApproval/ApprovalSubmit";
+import Main from "./pages/main/Main";
+import ApprovalBookmark from "./pages/task/taskApproval/ApprovalBookmark";
+import ApprovalNeed from "./pages/task/taskApproval/ApprovalNeed";
+import ApprovalCompleted from "./pages/task/taskApproval/ApprovalCompleted";
+import ApprovalRefered from "./pages/task/taskApproval/ApprovalRefered";
+import SettlementGeneration from "./pages/task/taskApproval/SettlementGeneration";
 import WorkManageSidebar from "./pages/workManagement/WorkManageSidebar";
 import PersonnelSidebar from "./pages/personnel/PersonnelSidebar";
-import DailyWorkerSidebar from "./pages/dailyWorker/DailyWorkerSidebar";  
-import Login from './pages/login/Login';
+import DailyWorkerSidebar from "./pages/dailyWorker/DailyWorkerSidebar";
+import Login from "./pages/login/Login";
 import HRRegist from "./pages/personnel/HR/HRRegist";
 import Orgchart from "./pages/personnel/HR/Orgchart";
-import HRAuth from './pages/personnel/HR/HRAuth';
-import HRlist from './pages/personnel/HR/HRlist';
-import HRApplist from './pages/personnel/HR/HRApplist';
-import HRApplication from './pages/personnel/HR/HRApplication';
-function App() {
+import HRAuth from "./pages/personnel/HR/HRAuth";
+import HRlist from "./pages/personnel/HR/HRlist";
+import HRApplist from "./pages/personnel/HR/HRApplist";
+import HRApplication from "./pages/personnel/HR/HRApplication";
+import WorkSetting from "./pages/workManagement/Schedule/WorkSetting";
+import SchedulManage from "./pages/workManagement/Schedule/ScheduleManage";
 
+function App() {
   return (
     <BrowserRouter>
       <Routes>
@@ -43,8 +45,12 @@ function App() {
           <Route path="/incomeTax" element={<SalarySidebar />}>
             <Route index element={<IncomeTax />} />
           </Route>
-          <Route path="/workManage" element={<WorkManageSidebar />}></Route>
-          
+          <Route path="/workmanage" element={<WorkManageSidebar />}>
+            <Route index element={<ApprovalSubmit />} />
+            <Route path="setting" element={<WorkSetting />} />
+            <Route path="scheduleApprove" element={<SchedulManage />}></Route>
+          </Route>
+
           <Route path="/personnel" element={<PersonnelSidebar />}>
             <Route index element={<HRRegist />}></Route>
             <Route path="memberRegist" element={<HRRegist />} />
@@ -56,13 +62,11 @@ function App() {
           </Route>
 
           <Route path="/dailyWorker" element={<DailyWorkerSidebar />}></Route>
-
         </Route>
 
         <Route path="/login" element={<Login />} />
       </Routes>
     </BrowserRouter>
-
   );
 }
 
