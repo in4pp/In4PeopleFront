@@ -11,7 +11,7 @@ const rootReducer = combineReducers({
   orderInfoReducer,
   approvalReducer,
   workmanageReducer,
-
+  salaryReducer
 
 
 });
