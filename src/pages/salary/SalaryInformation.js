@@ -1,9 +1,36 @@
 import salaryStyle from './SalaryInformation.module.css'; 
+import { useSelector, useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
+import { useEffect, useState, useRef } from 'react';
 
+import {
+  callSalMemberListAPI
+} from '../../apis/SalaryAPICalls'
+import { GET_SALINFO } from '../../modules/SalaryModule';
 
 
 
 function SalaryInfo() {
+
+      const navigate = useNavigate();
+
+      const dispatch = useDispatch();
+      const salMembers = useSelector(state => state.salaryReducer)
+      // const salMemberList = salMembers.data;
+
+      console.log('salMembers', salMembers);
+
+      useEffect(
+        () => {
+            dispatch(callSalMemberListAPI());
+        }
+        ,[] 
+      );
+
+
+
+
 
        return (
 
@@ -13,10 +40,11 @@ function SalaryInfo() {
               // 
 
               <div id="root">
+                <div className={salaryStyle['ePUqqs']}>
         <div className={salaryStyle['iIajZC']}>
           <h1 className={salaryStyle['eyVfFY']}>
             <div className={salaryStyle['khtcvx']}>
-              <p>직원별 급여 정보</p> <button>급여 정보 엑셀 업로드</button>
+              <p>직원별 급여 정보</p> 
             </div>
           </h1>
           <div className={salaryStyle['hBCNCB']}>
@@ -43,27 +71,33 @@ function SalaryInfo() {
                 <div className={salaryStyle['iPgbaV']}>
                   <div width={120} className={salaryStyle['gyvscI']}>급여 정보 상세</div>
                   <div width={180} className={salaryStyle['falgcA']}>이름</div>
+                  <div width={110} className={salaryStyle['hPSnHF']}>직급</div>               
                   <div width={240} className={salaryStyle['hPSnHF']}>부서</div>
-                  <div width={110} className={salaryStyle['hPSnHF']}>직급</div>
+                  <div width={110} className={salaryStyle['hPSnHF']}>팀명</div>
+                  <div width={110} className={salaryStyle['hPSnHF']}>재직 여부</div>
                 </div>
-                <div className={salaryStyle['czoAar']}>
+                <div> 
+                  
+                  <div className={salaryStyle['czoAar']}> {Array.isArray(salMembers) && salMembers.map((salMember, index) => (
                   <div className={salaryStyle['bobEjr']}>
+                    
                     <div width={120} className={salaryStyle['cHyQCM']}><button>보기</button></div>
-                    <div width={180} className={salaryStyle['jBNnBY']}>해란</div>
-                    <div width={240} className={salaryStyle['dDqPZt']}>CEO</div>
-                    <div width={110} className={salaryStyle['dDqPZt']}>사장</div>
+                    <div width={180} className={salaryStyle['jBNnBY']}>{salMember.memName}</div>
+                    <div width={110} className={salaryStyle['dDqPZt']}>{salMember.positionCode.positionName}</div>                  
+                    <div width={240} className={salaryStyle['dDqPZt']}>{salMember.departmentCode?.departmentName}</div>
+                    <div width={110} className={salaryStyle['dDqPZt']}>{salMember.teamCode?.teamName}</div>
+                    <div width={110} className={salaryStyle['dDqPZt']}>{salMember.isWorking}</div>
                   </div>
-                  <div className={salaryStyle['bobEjr']}>
-                    <div width={120} className={salaryStyle['cHyQCM']}><button>보기</button></div>
-                    <div width={180} className={salaryStyle['jBNnBY']}>해란</div>
-                    <div width={240} className={salaryStyle['dDqPZt']}>CEO</div>
-                    <div width={110} className={salaryStyle['dDqPZt']}>사장</div>
-                  </div>
+                 ))}
+                </div>
+
+               
                 </div>
               </div>
               <ul className={salaryStyle['KvHzc']}><button className={salaryStyle['kQVKYn']}>1</button></ul>
             </div>
           </div>
+        </div>
         </div>
       </div>
 
