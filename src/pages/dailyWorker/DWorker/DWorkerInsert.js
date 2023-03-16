@@ -1,9 +1,24 @@
 import DWorkerStyle from './DWorkerInsert.module.css';
 import { useEffect } from "react";
 import { useSelector, useDispatch } from 'react-redux';
-
+import { dworkerInfoAPI} from '../../../apis/DailyWorkerAPICalls';
 
 function DWorkerInsert(){
+
+    const dispatch = useDispatch();
+    const dworker = useSelector(state => state.dailyWorkerReducer); // modules/index.js 안에 선언한 store목록 중에서 dailyWorkerReducer 가져오겠다.
+    console.log('dworker', dworker);
+
+    if (dworker !== undefined) {
+        console.log("dworker", dworker);
+    }
+
+    // useEffect(
+    //     () => {
+    //
+    //         dispatch(dworkerInfoAPI(workerName));
+    //     }, []
+    // );
 
     return(
      <div>
@@ -21,12 +36,7 @@ function DWorkerInsert(){
                                     {/* 이미지 미리보기 */}
                                     {/* <td><img alt="메인사진" src={mainImg} /></td> */}
                                 </tr>
-                                <tr>
-                                    <th className={`${DWorkerStyle["ppth"]}`}>일용직사원 번호</th>
-                                    <td className={`${DWorkerStyle["pptd"]}`}>
-                                        <input type="text" placeholder="" />
-                                    </td>
-                                </tr>
+
                                 <tr>
                                     <th className={`${DWorkerStyle["ppth"]}`}>성명</th>
                                     <td className={`${DWorkerStyle["pptd"]}`}>

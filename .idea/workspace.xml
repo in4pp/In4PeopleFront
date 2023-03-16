@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b483081-ba65-40ae-aaaf-f0b81a7d472e" name="Changes" comment="">
+    <list default="true" id="8b483081-ba65-40ae-aaaf-f0b81a7d472e" name="Changes" comment="feat : 전체조회">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/apis/DailyWorkerAPICalls.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/apis/DailyWorkerAPICalls.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/DWorkerModule.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/DWorkerModule.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/dailyWorker/DWorker/DWorkerInsert.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dailyWorker/DWorker/DWorkerInsert.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/dailyWorker/DWorker/DWorkerSelect.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dailyWorker/DWorker/DWorkerSelect.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/dailyWorker/DWorker/DWorkerSelect.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dailyWorker/DWorker/DWorkerSelect.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/dailyWorker/components/SlideToggleWorker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dailyWorker/components/SlideToggleWorker.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,21 +72,21 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/dev/04_project/finalProject/final4jo/In4PeopleFront&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/dev/04_project/finalProject/final4jo/In4PeopleFront",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "node",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\DEV\04_project\In4PeopleFront--\src\pages\salary" />
@@ -142,6 +139,8 @@
       <workItem from="1678102218560" duration="21000" />
       <workItem from="1678437456329" duration="746000" />
       <workItem from="1678786597227" duration="18000" />
+      <workItem from="1678866499016" duration="1508000" />
+      <workItem from="1678868171142" duration="21811000" />
     </task>
     <servers />
   </component>
