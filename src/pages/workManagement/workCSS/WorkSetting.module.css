@@ -155,6 +155,8 @@
 .result {
   display: inline-block;
   padding-top: 27px;
+  margin-top: 1.5px;
+  font-size: medium;
   color: red;
 }
 

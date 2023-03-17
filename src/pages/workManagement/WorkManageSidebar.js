@@ -18,10 +18,10 @@ function WorkManageSidebar() {
               <hr style={{ marginTop: 5 }} />
 
               <ul>
-                <li className={Side.fcngae}>
+                <li className={Side.fcngae} style={{ marginBottom: 30 }}>
                   <SlideToggle1 />
                 </li>
-                <li className={Side.fcngae}>
+                <li className={Side.fcngae} style={{ marginBottom: 30 }}>
                   <SlideToggle2 />
                 </li>
                 <li className={Side.fcngae}>
