@@ -10,7 +10,6 @@ import ApprovalBookmark from "./pages/task/taskApproval/ApprovalBookmark";
 import ApprovalNeed from "./pages/task/taskApproval/ApprovalNeed";
 import ApprovalCompleted from "./pages/task/taskApproval/ApprovalCompleted";
 import ApprovalRefered from "./pages/task/taskApproval/ApprovalRefered";
-import SettlementGeneration from "./pages/task/taskApproval/SettlementGeneration";
 import WorkManageSidebar from "./pages/workManagement/WorkManageSidebar";
 import PersonnelSidebar from "./pages/personnel/PersonnelSidebar";
 import DailyWorkerSidebar from "./pages/dailyWorker/DailyWorkerSidebar";
@@ -28,6 +27,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
+
         <Route path="/" element={<Layout />}>
           <Route index element={<Main />} />
           <Route path="task" element={<TaskSidebar />}>
@@ -38,6 +38,7 @@ function App() {
             <Route path="completed" element={<ApprovalCompleted />} />
             <Route path="refered" element={<ApprovalRefered />} />
           </Route>
+
 
           <Route path="/salary" element={<SalarySidebar />}>
             <Route index element={<SalaryInfo />} />

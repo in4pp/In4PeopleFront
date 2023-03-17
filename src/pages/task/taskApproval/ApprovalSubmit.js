@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { decodeJwt } from '../../../utils/tokenUtils';
 import { useEffect, useState, useRef } from 'react';
-import ApprovalRow from './ApprovalRow';
 import PlainStar from '../../../components/icon/PlainStar';
 import BlueStar from '../../../components/icon/BlueStar';
 import Pagination from '../components/Pagination';
