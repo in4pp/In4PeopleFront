@@ -273,8 +273,8 @@
   border: 1px solid #999;
   background-color: #b9ddff35;
   border-radius: 5px;
-  height: 30px;
-  width: 110px;
+  height: 25px;
+  width: 60px;
   float: left;
 }
 
@@ -287,22 +287,15 @@
   border: 1px solid #999;
   background-color: #b9ddff35;
   border-radius: 5px;
-  height: 30px;
-  width: 110px;
+  height: 25px;
+  width: 60px;
   float: left;
+  margin-bottom: 3px;
 }
 
 .overTime1 {
   float: left;
   margin-top: 3px;
-}
-
-.availwork2 {
-  overflow: hidden;
-
-  padding-top: 25px;
-  margin-left: 140px;
-  float: left;
 }
 
 .availwork1 {
@@ -313,16 +306,40 @@
   float: left;
 }
 
+.availwork2 {
+  overflow: hidden;
+
+  padding-top: 25px;
+  margin-left: 140px;
+  float: left;
+}
+
+.availwork3 {
+  float: left;
+}
+.availwork4 {
+  display: inline-block;
+}
+
 .workSet {
   border: 1px solid #999;
   background-color: #b9ddff35;
   border-radius: 5px;
   height: 30px;
-  width: 60px;
+  width: 100px;
+}
+
+.workSet1 {
+  border: 1px solid #999;
+  background-color: #b9ddff35;
+  border-radius: 5px;
+  height: 30px;
+  width: 80px;
+  margin-left: 10px;
 }
 
 .box3 {
-  margin-left: 85%;
+  margin-left: 82%;
   margin-right: 10%;
   padding-top: 40px;
   padding-left: 30px;
