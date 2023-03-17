@@ -1,7 +1,53 @@
 import {
        GET_INCOMETAX,
-       GET_SALINFO
+       GET_SALINFO,
+       POST_SALINFO
 } from '../modules/SalaryModule';
+
+
+
+
+
+
+export const callMemberSalinfoRegistAPI = ({form}) => {
+       console.log('[SalaryAPICalls] callMemberSalinfoRegistAPI Call');
+       console.log(form)
+   
+       const requestURL =`http://${process.env.REACT_APP_RESTAPI_IP}:7777/api/v1/salary/empsalsetting`;
+   
+       return async (dispatch, getState) => {
+   
+           const result = await fetch(requestURL, {
+               method: "POST",
+               headers: {
+                     "Content-Type": "application/json",
+                     "Accept": "*/*"
+               },
+               body: JSON.stringify({
+                     memCode: form.memCode,
+                     bank: form.bank,
+                     accountNumber: form.accountNumber,
+                     settingDate: form.settingDate,
+                     basicMonthlySalary: form.basicMonthlySalary,
+                     hourlyWage: form.hourlyWage
+              })
+
+           })
+           .then(response => response.json());
+   
+           console.log('[SalaryAPICalls] callMemberSalinfoRegistAPI RESULT : ', result);
+   
+           if(result.status === 201){
+              dispatch({ type: POST_SALINFO,  payload: result });
+           }
+           
+           
+       };    
+   }
+
+
+
+
 
 
 

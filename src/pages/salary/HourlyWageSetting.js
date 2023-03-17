@@ -5,7 +5,8 @@ import { useEffect, useState } from 'react';
 
 
 import {
-    callHourlyMemberAPI
+    callHourlyMemberAPI,
+    callMemberSalinfoRegistAPI
 } from '../../apis/SalaryAPICalls';
 
 
@@ -14,6 +15,19 @@ function HourlyWageSetting() {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const params = useParams();
+
+
+
+    const [form, setForm] = useState({
+      memCode: '',
+      bank: '',
+      accountNumber: '',
+      settingDate: '',
+      basicMonthlySalary: '',
+      hourlyWage: ''
+  });
+
+
     const hourlyMember  = useSelector(state => state.salaryReducer);
 
 
@@ -22,9 +36,33 @@ function HourlyWageSetting() {
           dispatch(callHourlyMemberAPI({	// 상품 상세 정보 조회
               memCode: params.memCode
           }));            
-      }
+          setForm(({
+            ...form,
+            memCode:params.memCode
+          }))  
+          console.log(form);
+          console.log("zzzz");
+        }
       ,[]
   );
+
+
+  const onChangeHandler = (e) => {
+    setForm({
+        ...form,
+        [e.target.name]: e.target.value
+    });
+}; 
+
+
+const onClickRegisterHandler = () => {
+  dispatch(callMemberSalinfoRegistAPI({
+      form: form
+  }));
+}
+
+  
+
 
 
 
@@ -46,7 +84,7 @@ function HourlyWageSetting() {
                       <h4>은행</h4>
                       <div className={HourlySettingStyle['emfnGG']}>
                         
-                              <div className={HourlySettingStyle['jpUIyz']}><select width="480" className={HourlySettingStyle['kSYRJd']}>
+                              <div className={HourlySettingStyle['jpUIyz']}><select width="480" className={HourlySettingStyle['kSYRJd']} name="bank" onChange={ onChangeHandler }>
                                             <option value="">은행선택</option>
                                             <option value="1">국민은행</option>
                                             <option value="6">우리은행</option>
@@ -65,17 +103,17 @@ function HourlyWageSetting() {
                     <h4>계좌번호</h4>
                     <div className={HourlySettingStyle['knYfag']}>
                       <div width={262} className={HourlySettingStyle['kfdWKD']}>
-                        <div className={HourlySettingStyle['kGCoAu']}></div><input className={HourlySettingStyle['dzyuNL']} defaultValue />
+                        <div className={HourlySettingStyle['kGCoAu']}></div><input className={HourlySettingStyle['dzyuNL']} name="accountNumber"  onChange={ onChangeHandler }/>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div>
                   <div className={HourlySettingStyle['eieTGn']}>
-                    <h4>연봉 계약 금액</h4>
+                    <h4>날짜</h4>
                     <div className={HourlySettingStyle['knYfag']}>
                       <div width={262} className={HourlySettingStyle['kfdWKD']}>
-                        <div className={HourlySettingStyle['kGCoAu']}>원</div><input className={HourlySettingStyle['dzyuNL']} defaultValue />
+                        <div className={HourlySettingStyle['kGCoAu']}>원</div><input name="settingDate" className={HourlySettingStyle['dzyuNL']} onChange={ onChangeHandler }/>
                       </div>
                     </div>
                   </div>
@@ -83,15 +121,7 @@ function HourlyWageSetting() {
                     <h4>월 기본급</h4>
                     <div className={HourlySettingStyle['knYfag']}>
                       <div width={262} className={HourlySettingStyle['kfdWKD']}>
-                        <div className={HourlySettingStyle['kGCoAu']}>원</div><input className={HourlySettingStyle['dzyuNL']} defaultValue />
-                      </div>
-                    </div>
-                  </div>
-                  <div className={HourlySettingStyle['eieTGn']}>
-                    <h4>기준소득월액</h4>
-                    <div className={HourlySettingStyle['knYfag']}>
-                      <div width={262} className={HourlySettingStyle['kfdWKD']}>
-                        <div className={HourlySettingStyle['kGCoAu']}>원</div><input className={HourlySettingStyle['dzyuNL']} defaultValue />
+                        <div className={HourlySettingStyle['kGCoAu']}>원</div><input className={HourlySettingStyle['dzyuNL']} name="basicMonthlySalary" onChange={ onChangeHandler } />
                       </div>
                     </div>
                   </div>
@@ -99,12 +129,20 @@ function HourlyWageSetting() {
                     <h4>통상시급</h4>
                     <div className={HourlySettingStyle['knYfag']}>
                       <div width={262} className={HourlySettingStyle['kfdWKD']}>
-                        <div className={HourlySettingStyle['kGCoAu']}>원</div><input className={HourlySettingStyle['dzyuNL']} defaultValue />
+                        <div className={HourlySettingStyle['kGCoAu']}>원</div><input className={HourlySettingStyle['dzyuNL']} name="hourlyWage" onChange={ onChangeHandler } />
                       </div>
                     </div>
                   </div>
+                  {/* <div className={HourlySettingStyle['eieTGn']}>
+                    <h4>통상시급</h4>
+                    <div className={HourlySettingStyle['knYfag']}>
+                      <div width={262} className={HourlySettingStyle['kfdWKD']}>
+                        <div className={HourlySettingStyle['kGCoAu']}>원</div><input className={HourlySettingStyle['dzyuNL']} onChange={ onChangeHandler } />
+                      </div>
+                    </div>
+                  </div> */}
                 </div>
-              </div><button className={HourlySettingStyle['jlwMoN']}>저장하기</button>
+              </div><button className={HourlySettingStyle['jlwMoN']} onClick={onClickRegisterHandler} >저장하기</button>
             </div>
           </div>
         </div>
