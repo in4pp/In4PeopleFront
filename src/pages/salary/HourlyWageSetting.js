@@ -35,7 +35,7 @@ function HourlyWageSetting() {
 
 <div className={HourlySettingStyle['dUEwDP']}>
         <div className={HourlySettingStyle['chgDvi']}>
-          <h1 className={HourlySettingStyle['eyVfFY']}>{hourlyMember?.memName} / {hourlyMember?.departmentCode.departmentName} / {hourlyMember?.teamCode.teamName} / {hourlyMember?.positionCode.positionName}</h1>
+          <h1 className={HourlySettingStyle['eyVfFY']}>{hourlyMember.memName} / {hourlyMember.departmentCode?.departmentName} / {hourlyMember.teamCode?.teamName} / {hourlyMember.positionCode?.positionName}</h1>
           <div className={HourlySettingStyle['hBCNCB']}>
             <div className={HourlySettingStyle['fKICbv']}>
               <h3 className={HourlySettingStyle['elHVrX']}>급여 설정</h3>
