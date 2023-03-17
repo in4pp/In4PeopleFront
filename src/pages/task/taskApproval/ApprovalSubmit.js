@@ -4,8 +4,14 @@ import { useSelector, useDispatch } from 'react-redux';
 import { decodeJwt } from '../../../utils/tokenUtils';
 import { useEffect, useState, useRef } from 'react';
 import ApprovalRow from './ApprovalRow';
+import PlainStar from '../../../components/icon/PlainStar';
+import BlueStar from '../../../components/icon/BlueStar';
+import Pagination from '../components/Pagination';
 
-import { callGetApprovalAPI } from '../../../apis/ApprovalAPICalls';
+import {
+    callGetApprovalAPI, callGetSearchApprovalAPI,
+    callPostBookmarkAPI, callDeleteBookmarkAPI
+} from '../../../apis/ApprovalAPICalls';
 
 function ApprovalSubmit() {
 
@@ -21,11 +27,16 @@ function ApprovalSubmit() {
     const dispatch = useDispatch();
     const token = decodeJwt(window.localStorage.getItem("accessToken"));
 
-    const approvalList = useSelector(state => state.approvalReducer);
+    const approvals = useSelector(state => state.approvalReducer);
+    const approvalList = approvals.data || approvals;
+    const pageInfo = approvals.pageInfo;
+
+    const [isBookmark, setIsBookmark] = useState();
+    const [currentPage, setCurrentPage] = useState(1);
 
     const onChangeCalendarHandler = (e) => {
 
-        if(endDate.current.value !== '' && endDate.current.value < startDate.current.value) {
+        if (endDate.current.value !== '' && endDate.current.value < startDate.current.value) {
             alert('종료일이 더 작을 수 없습니다.')
         } else {
             setForm({
@@ -33,23 +44,52 @@ function ApprovalSubmit() {
                 [e.target.name]: e.target.value,
             });
         }
-
     };
 
     const onClickSearchHandler = () => {
-        
+        if (startDate.current.value !== '' && endDate.current.value !== '') {
+            dispatch(callGetSearchApprovalAPI({
+                memCode: token.sub,
+                startDate: startDate.current.value,
+                endDate: endDate.current.value
+            }));
+        } else {
+            alert('검색 날짜를 선택해주세요.');
+        }
+
     }
+
+    const onClickBookmarkHandler = (docCode, bookmark) => {
+        // const docCode = e.target.parentElement.id;
+        // console.log(docCode);
+
+        const form = {
+            "memCode": token.sub,
+            "docCode": docCode
+        }
+
+        bookmark == null ? dispatch(callPostBookmarkAPI({ form: form })) : dispatch(callDeleteBookmarkAPI({ form: form }));
+        setTimeout(() => {
+            setIsBookmark(!isBookmark);
+
+        }, 50);
+    }
+
+
+
+
 
     useEffect(
         () => {
             console.log('token', token.sub);
             if (token !== null) {
                 dispatch(callGetApprovalAPI({
-                    memCode: token.sub
+                    memCode: token.sub,
+                    currentPage: currentPage
                 }));
             }
         }
-        , []
+        , [isBookmark, currentPage]
     );
 
     return (
@@ -75,7 +115,7 @@ function ApprovalSubmit() {
                                             <div className={`${NavCSS["form-group"]}`}>
                                                 <span className={`${NavCSS["control-label"]}`}>시작일</span>
                                                 <div className={`${NavCSS["position-relative"]}`}>
-                                                    <input value={form.startDate}ref={startDate} type="date" name="startDate" className={`${NavCSS["sc-fWHiwC"]} ${NavCSS["jtuvXR"]} ${NavCSS["form-control"]} ${NavCSS["input-datepicker"]}`} placeholder="시작일" onChange={onChangeCalendarHandler} />
+                                                    <input value={form.startDate} ref={startDate} type="date" name="startDate" className={`${NavCSS["sc-fWHiwC"]} ${NavCSS["jtuvXR"]} ${NavCSS["form-control"]} ${NavCSS["input-datepicker"]}`} placeholder="시작일" onChange={onChangeCalendarHandler} />
                                                 </div>
                                             </div>
                                             <h1>-</h1>
@@ -85,7 +125,7 @@ function ApprovalSubmit() {
                                                     <input value={form.endDate} ref={endDate} type="date" name="endDate" className={`${NavCSS["sc-fWHiwC"]} ${NavCSS["jtuvXR"]} ${NavCSS["form-control"]} ${NavCSS["input-datepicker"]}`} placeholder="시작일" onChange={onChangeCalendarHandler} />
                                                 </div>
                                             </div>
-                                            <button className="btn btn-primary mt-3" onClick={ onClickSearchHandler } >조회</button>
+                                            <button className="btn btn-primary mt-3" onClick={onClickSearchHandler} >조회</button>
                                         </div>
                                     </div>
                                     <div className={`${NavCSS["d-flex-space"]}`}>
@@ -97,6 +137,7 @@ function ApprovalSubmit() {
                                                 <option value="3">Three</option>
                                             </select>
                                         </div> */}
+
                                         <div className={`${["display-flex"]}`}>
                                             <button className={`${["btn"]} ${["btn-primary"]}`} style={{ alignSelf: "self-start" }}>결재 작성하기</button>
                                         </div>
@@ -127,12 +168,32 @@ function ApprovalSubmit() {
                                             </thead>
                                             <tbody>
                                                 {
-                                                    approvalList.length > 0 && approvalList.map((approval) => (<ApprovalRow key={approval.docCode} approval={approval} memCode={token.sub} />))
+                                                    Array.isArray(approvalList) && approvalList.map((a) => (
+                                                        <tr key={a.docCode}>
+                                                            <td>
+                                                                <input className={`${["form-check-input"]}`} type="checkbox" value=""
+                                                                    id="flexCheckDefault" />
+                                                                <label className={`${["form-check-label"]}`} htmlFor="flexCheckDefault"></label>
+                                                            </td>
+                                                            <td><button onClick={() => onClickBookmarkHandler(a.docCode, a.bookmark)}>{(a.bookmark == null ? <PlainStar /> : <BlueStar />)}</button></td>
+                                                            <td>{a.docType}</td>
+                                                            <td>{a.docCode}</td>
+                                                            <td>{a.title}</td>
+                                                            <td><span className={`${NavCSS["badge"]} ${NavCSS["badge-green"]}`}>{a.isApproved == 'W' ? '진행중' : a.isApproved == 'Y' ? '승인' : '반려'}</span></td>
+                                                            <td>{a.docAttachmentList.length}</td>
+                                                            <td>0개</td>
+                                                            <td>{a.reportDate.substring(0, 16).replace('T', ' ')}</td>
+                                                        </tr>
+                                                    ))
+
+
+                                                    // approvalList.length > 0 && approvalList.map((approval) => (<ApprovalRow key={approval.docCode} 
+                                                    //     approval={approval} isBookmark={isBookmark} setIsBookmark={setIsBookmark} memCode={token.sub} />))
                                                 }
                                             </tbody>
                                         </table>
+                                        {Array.isArray(approvals.data) && <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage} pageInfo={pageInfo} />}
                                     </div>
-
 
                                 </div>
 

@@ -13,7 +13,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="In4PeopleFront/성일" />
+    <option name="BRANCH" value="In4PeopleFront/master" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -38,12 +38,12 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="master" />
-                    <option name="lastUsedInstant" value="1678602769" />
+                    <option name="branchName" value="성일" />
+                    <option name="lastUsedInstant" value="1678749640" />
                   </RecentBranch>
                   <RecentBranch>
-                    <option name="branchName" value="성일" />
-                    <option name="lastUsedInstant" value="1678519084" />
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1678749555" />
                   </RecentBranch>
                 </list>
               </option>
@@ -139,6 +139,8 @@
       <workItem from="1678102218560" duration="21000" />
       <workItem from="1678437456329" duration="746000" />
       <workItem from="1678602709353" duration="252000" />
+      <workItem from="1678749420277" duration="258000" />
+      <workItem from="1678923246926" duration="352000" />
     </task>
     <servers />
   </component>
