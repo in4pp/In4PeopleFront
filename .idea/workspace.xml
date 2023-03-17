@@ -4,23 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b483081-ba65-40ae-aaaf-f0b81a7d472e" name="Changes" comment="feat : 전체조회">
-      <change afterPath="$PROJECT_DIR$/src/apis/DailyWorkerAPICalls.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/DWorkerModule.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/dailyWorker/DWorker/DWorkerInsert.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/dailyWorker/DWorker/DWorkerInsert.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/dailyWorker/DWorker/DWorkerSelect.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/dailyWorker/DWorker/DWorkerSelect.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/dailyWorker/DWorker/DWorkerUpdate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/dailyWorker/DWorker/DWorkerUpdate.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/In4People-front.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/In4PeopleFront.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="eb5e74b7-47b9-4927-85f5-ec546fbe7dc7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/dailyWorker/components/SlideTogglePay.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dailyWorker/components/SlideTogglePay.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/dailyWorker/components/SlideToggleWorker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dailyWorker/components/SlideToggleWorker.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,9 +154,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat : 전체조회" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat : 전체조회" />
   </component>
 </project>
