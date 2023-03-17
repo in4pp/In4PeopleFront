@@ -12,7 +12,7 @@ function HourlyWageSetting() {
           <h1 className={HourlySettingStyle['eyVfFY']}>해란/CEO</h1>
           <div className={HourlySettingStyle['hBCNCB']}>
             <div className={HourlySettingStyle['fKICbv']}>
-              <h3 className={HourlySettingStyle['elHVrX']}>연봉 정보</h3>
+              <h3 className={HourlySettingStyle['elHVrX']}>급여 설정</h3>
               <div className={HourlySettingStyle['jdTeyH']}>
                 <div>
                   <div className={HourlySettingStyle['eieTGn']}>
