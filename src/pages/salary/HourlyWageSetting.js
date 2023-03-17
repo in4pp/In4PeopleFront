@@ -1,6 +1,32 @@
 import HourlySettingStyle from './HourlyWageSetting.module.css';
+import { useNavigate, useParams } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import { useEffect, useState } from 'react';
+
+
+import {
+    callHourlyMemberAPI
+} from '../../apis/SalaryAPICalls';
+
 
 function HourlyWageSetting() {
+
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+    const params = useParams();
+    const hourlyMember  = useSelector(state => state.salaryReducer);
+
+
+    useEffect(
+      () => {
+          dispatch(callHourlyMemberAPI({	// 상품 상세 정보 조회
+              memCode: params.memCode
+          }));            
+      }
+      ,[]
+  );
+
+
 
        return(
 
@@ -9,7 +35,7 @@ function HourlyWageSetting() {
 
 <div className={HourlySettingStyle['dUEwDP']}>
         <div className={HourlySettingStyle['chgDvi']}>
-          <h1 className={HourlySettingStyle['eyVfFY']}>해란/CEO</h1>
+          <h1 className={HourlySettingStyle['eyVfFY']}>{hourlyMember?.memName} / {hourlyMember?.departmentCode.departmentName} / {hourlyMember?.teamCode.teamName} / {hourlyMember?.positionCode.positionName}</h1>
           <div className={HourlySettingStyle['hBCNCB']}>
             <div className={HourlySettingStyle['fKICbv']}>
               <h3 className={HourlySettingStyle['elHVrX']}>급여 설정</h3>

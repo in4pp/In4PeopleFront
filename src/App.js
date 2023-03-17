@@ -26,7 +26,7 @@ function App() {
           <Route path="salinfo" element={<SalaryInfo />} />
           <Route path="incometax" element={<IncomeTax  />} />
           <Route path="salset" element={<SalarySettlement />} />
-          <Route path="hourlyset" element={<HourlyWageSetting />} />
+          <Route path="hourlyset/:memCode" element={<HourlyWageSetting />} />
           <Route path="workInquiry" element={<WorkInquiry />} />
         </Route>
           
