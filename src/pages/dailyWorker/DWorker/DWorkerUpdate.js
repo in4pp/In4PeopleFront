@@ -1,112 +1,110 @@
-import DWorkerStyle from './DWorkerInsert.module.css';
+import {useDispatch, useSelector} from 'react-redux';
+import DWorkerSelectCSS from './DWorkerSelect.module.css';
+import {useEffect, useState} from 'react';
+import {dworkerInfoAllAPI, dworkerInfoAPI, dworkerSearchAPI} from '../../../apis/DailyWorkerAPICalls';
 
-function DWorkerInsert(){
-    return(
-        <div>
-            <div className={`${DWorkerStyle["registone"]}`}>
-                <div className={`${DWorkerStyle['titlee']}`}>
-                    <h3>일용직사원 정보 등록</h3>
+function DWorkerlist() {
+
+    const dispatch = useDispatch();
+    const dworkerlist = useSelector(state => state.dailyWorkerReducer); // modules/index.js 안에 선언한 store목록 중에서 dailyWorkerReducer 가져오겠다.
+    const [search, setSearch] = useState('');
+
+
+    if (dworkerlist !== undefined) {
+        console.log("dworkerlistUndefined", dworkerlist);
+    }
+    useEffect(
+        () => {
+            dispatch(dworkerInfoAllAPI());
+        }, []
+    );
+
+
+    const onSearchChangeHandler = (e) => {
+        setSearch(e.target.value);
+    }
+
+    const onEnterkeyHandler = (e) => {
+        if (e.key == 'Enter') {
+            console.log('Enter key', search);
+
+            dispatch(dworkerSearchAPI({
+                workerName: search
+            }));
+        }
+    }
+
+
+    return (
+        <>
+            <div className={`${DWorkerSelectCSS["HRlistone"]}`}>
+                <div className={`${DWorkerSelectCSS["titlee"]}`}>
+                    <h3>일용직사원 조회</h3>
                 </div>
-                <div className={`${DWorkerStyle['box']}`}>
-                    <div className={`${DWorkerStyle['commonInfo']}`}>
-                        <form>
-                            <table className={`${DWorkerStyle['ppinsa']}`}>
-                                <tr>
-                                    <th className={`${DWorkerStyle["ppth"]}`}>사진</th>
-                                    <td className={`${DWorkerStyle["pptd"]}`}><input type="file" id="image" accept="image/*" /></td>
-                                    {/* 이미지 미리보기 */}
-                                    {/* <td><img alt="메인사진" src={mainImg} /></td> */}
-                                </tr>
-                                <tr>
-                                    <th className={`${DWorkerStyle["ppth"]}`}>일용직사원 번호</th>
-                                    <td className={`${DWorkerStyle["pptd"]}`}>
-                                        <input type="text" placeholder="6자리를 입력해주세요" />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th className={`${DWorkerStyle["ppth"]}`}>성명</th>
-                                    <td className={`${DWorkerStyle["pptd"]}`}>
-                                        <input type="text" />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th className={`${DWorkerStyle["ppth"]}`}>주민등록번호</th>
-                                    <td className={`${DWorkerStyle["pptd"]}`}>
-                                        <input type="text" placeholder="000000-0000000" />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th className={`${DWorkerStyle["ppth"]}`}>휴대폰번호</th>
-                                    <td className={`${DWorkerStyle["pptd"]}`}>
-                                        <input type="text" placeholder="000-0000-0000" />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th className={`${DWorkerStyle["ppth"]}`}>이메일</th>
-                                    <td className={`${DWorkerStyle["pptd"]}`}>
-                                        <input type="text" />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th className={`${DWorkerStyle["ppth"]}`}>주소API?</th>
-                                    <td className={`${DWorkerStyle["pptd"]}`}>
-                                        <input type="text" />
-                                    </td>
-                                </tr>
-                            </table>
+                <div className={`${DWorkerSelectCSS["box"]}`}>
+                    <div className={`${DWorkerSelectCSS["content1"]}`}>
+                        <h4>검색어</h4>
+                        <div className={`${DWorkerSelectCSS["content2"]}`} type="text"  onChange={ onSearchChangeHandler } value={ search }>
+                            <div className={`${DWorkerSelectCSS["workType"]}`}>
+                                <option value="1">성명 -> </option>
+                                {/*<option value="2">사원번호</option>*/}
+                            </div>
 
-                            <table className={`${DWorkerStyle["ppwork"]}`}>
-                                <tr>
-                                    <th className={`${DWorkerStyle["ppth"]}`}>재직구분</th>
-                                    <td className={`${DWorkerStyle["pptd"]}`}>
-                                        <select name="ppwork">
-                                            <option value="tenure">재직</option>
-                                            <option value="leave">휴직</option>
-                                            <option value="retirement">퇴직</option>
-                                        </select>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th className={`${DWorkerStyle["ppth"]}`}>입사일자</th>
-                                    <td className={`${DWorkerStyle["pptd"]}`}>
-                                        <input type="date" name="join" />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th className={`${DWorkerStyle["ppth"]}`}>퇴직일자</th>
-                                    <td className={`${DWorkerStyle["pptd"]}`}>
-                                        <input type="date" name="retire" />
-                                    </td>
-                                </tr>
+                            <div className={`${DWorkerSelectCSS["content2"]}` }  >
 
-                                <tr>
-                                    <th className={`${DWorkerStyle["ppth"]}`}>부서</th>
-                                    <td className={`${DWorkerStyle["pptd"]}`}>
-                                        <select name="dep">
-                                            <option value=""></option>
-                                            <option value="programming">게임프로그래밍</option>
-                                            <option value="design">기업/게임디자인</option>
-                                            <option value="gameBusiness">게임사업</option>
-                                            <option value="overseasBusiness">해외사업</option>
-                                            <option value="ITEngineer">IT엔지니어</option>
-                                            <optgroup label="경영지원">
-                                                <option value="HR">인사</option>
-                                                <option value="Accounting">회계</option>
-                                            </optgroup>
-                                        </select>
-                                    </td>
-                                </tr>
+                                <input
+                                    type="text"
+                                    placeholder="입력 후 엔터 누르세요"
+                                    value={ search }
+                                    onKeyUp={ onEnterkeyHandler }
+                                    onChange={ onSearchChangeHandler }
+                                />
+                            </div>
 
-                            </table>
-                        </form>
+                        </div>
                     </div>
-                    <div className={`${DWorkerStyle['ppbutton']}`}>
-                        <button type="submit">저장</button>
+                    <h5>사원조회</h5>
+                    <div className={`${DWorkerSelectCSS["pplist"]}`}>
+                        <table className={`${DWorkerSelectCSS["appltable"]}`}>
+                            <thead className={`${DWorkerSelectCSS["applthead"]}`}>
+                            <tr className={`${DWorkerSelectCSS["appltr"]}`}>
+                                <th className={`${DWorkerSelectCSS["applth"]}`}>사원번호</th>
+                                <th className={`${DWorkerSelectCSS["applth"]}`}>성명</th>
+                                <th className={`${DWorkerSelectCSS["applth"]}`}>주민번호</th>
+                                <th className={`${DWorkerSelectCSS["applth"]}`}>휴대폰</th>
+                                <th className={`${DWorkerSelectCSS["applth"]}`}>주소</th>
+                                <th className={`${DWorkerSelectCSS["applth"]}`}>은행명</th>
+                                <th className={`${DWorkerSelectCSS["applth"]}`}>계좌번호</th>
+                                <th className={`${DWorkerSelectCSS["applth"]}`}>등록일</th>
+                                <th className={`${DWorkerSelectCSS["applth"]}`}>수정일</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {dworkerlist && dworkerlist.map(
+                                (dwinfo, index) => (
+                                    <tr key={dwinfo.workerCode} className={`${DWorkerSelectCSS["appltr"]}`}>
+                                        <td className={`${DWorkerSelectCSS["appltd"]}`}>{dwinfo.workerCode}</td>
+                                        <td className={`${DWorkerSelectCSS["appltd"]}`}>{dwinfo.workerName}</td>
+                                        <td className={`${DWorkerSelectCSS["appltd"]}`}>{dwinfo.workerRegNumber}</td>
+                                        <td className={`${DWorkerSelectCSS["appltd"]}`}>{dwinfo.workerPhone}</td>
+                                        <td className={`${DWorkerSelectCSS["appltd"]}`}>{dwinfo.workerAddress}</td>
+                                        <td className={`${DWorkerSelectCSS["appltd"]}`}>{dwinfo.employeeSalarySetting.bank}</td>
+                                        <td className={`${DWorkerSelectCSS["appltd"]}`}>{dwinfo.employeeSalarySetting.accountNumber}</td>
+                                        <td className={`${DWorkerSelectCSS["appltd"]}`}>{dwinfo.createAt}</td>
+                                        <td className={`${DWorkerSelectCSS["appltd"]}`}>{dwinfo.updatedAt}</td>
+                                    </tr>
+                                )
+                            )}
+
+                            </tbody>
+
+                        </table>
                     </div>
                 </div>
             </div>
-        </div>
+
+        </>
     )
 }
 
-export default DWorkerInsert;
+export default DWorkerlist;

@@ -9,7 +9,7 @@ div {
 .mSgFN {
   position: relative;
   min-width: 1060px;
-  min-height: 2000px;
+  /* min-height: 2000px; */
   background-color: rgb(255, 255, 255);
 }
 .bwzYVU {
@@ -352,7 +352,7 @@ body {
   color: rgb(0, 0, 0);
 }
 
-<<<<<<<<< Temporary merge branch 1 ========= .wrap {
+.wrap {
   overflow: hidden;
   display: flex;
   min-width: 1256px;
@@ -365,12 +365,6 @@ body {
   padding: 80px 0 0 240px;
   transition: padding 0.3s ease;
   background: #fff;
-}
-.ct {
-  position: relative;
-  display: flex;
-  flex: 1 0 auto;
-  flex-direction: column;
 }
 #ct > .container2 {
   width: 100%;
