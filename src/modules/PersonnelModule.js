@@ -2,14 +2,20 @@ import { createActions, handleActions } from "redux-actions";
 
 const initialState = [];
 
-export const GET_ORDERINFO = 'orderInfo/GET_ORDERINFO';
+export const GET_PERSONNEL = 'orderInfo/GET_PERSONNEL';
+export const POST_MEMBER = 'memberRegist/POST_MEMBER';
 
 const actions = createActions({
-    [GET_ORDERINFO]: () => {}
+    [GET_PERSONNEL]: () => {},
+    [POST_MEMBER]: () => {}
 });
 
-const orderInfoReducer = handleActions({
-        [GET_ORDERINFO]: (state, {payload}) => {
+const personnelReducer = handleActions({
+        [GET_PERSONNEL]: (state, {payload}) => {
+
+            return payload;
+        },
+        [POST_MEMBER]: (state, {payload}) => {
 
             return payload;
         }
@@ -17,4 +23,4 @@ const orderInfoReducer = handleActions({
     initialState
 );
 
-export default orderInfoReducer;
+export default personnelReducer;
