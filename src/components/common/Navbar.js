@@ -90,19 +90,19 @@ function Navbar() {
               </span>
             </div>
             <div className={NavCSS.lkOGXI}>
-              <a className={`${NavCSS.fEXmlR} ${NavCSS.kOVHNW}`}>HOME</a>
-              <a className={`${NavCSS.fEXmlR} ${NavCSS.kOVHNW}`}>인사</a>
-              <a className={`${NavCSS.fEXmlR} ${NavCSS.kOVHNW}`}>
+              <span className={`${NavCSS.fEXmlR} ${NavCSS.kOVHNW} ${NavCSS.nav}`}>HOME</span>
+              <span className={`${NavCSS.fEXmlR} ${NavCSS.kOVHNW} ${NavCSS.nav}`}>인사</span>
+              <span className={`${NavCSS.fEXmlR} ${NavCSS.kOVHNW} ${NavCSS.nav}`}>
                 <NavLink to="/workmanage">근무/휴가</NavLink>
-              </a>
-              <a className={`${NavCSS.fEXmlR} ${NavCSS.kOVHNW}`}>급여</a>
-              <span className={`${NavCSS.fEXmlR} ${NavCSS.kOVHNW}`}>
+              </span>
+              <span className={`${NavCSS.fEXmlR} ${NavCSS.kOVHNW} ${NavCSS.nav}`}>급여</span>
+              <span className={`${NavCSS.fEXmlR} ${NavCSS.kOVHNW} ${NavCSS.nav}`}>
                 일용직
               </span>
-              <span className={`${NavCSS.fEXmlR} ${NavCSS.kOVHNW}`}>
+              <span className={`${NavCSS.fEXmlR} ${NavCSS.kOVHNW} ${NavCSS.nav}`}>
                 <NavLink to="/task">업무</NavLink>
               </span>
-              <a className={`${NavCSS.fEXmlR} ${NavCSS.kOVHNW}`}>게시판</a>
+              <span className={`${NavCSS.fEXmlR} ${NavCSS.kOVHNW} ${NavCSS.nav}`}>게시판</span>
             </div>
           </div>
           {isLogin == null || isLogin === undefined ? (
