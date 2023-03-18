@@ -1,5 +1,3 @@
-
-
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="AutoImportSettings">
@@ -41,11 +39,11 @@
                 <list>
                   <RecentBranch>
                     <option name="branchName" value="성일" />
-                    <option name="lastUsedInstant" value="1678519084" />
+                    <option name="lastUsedInstant" value="1678749640" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="master" />
-                    <option name="lastUsedInstant" value="1678102002" />
+                    <option name="lastUsedInstant" value="1678749555" />
                   </RecentBranch>
                 </list>
               </option>
@@ -74,21 +72,21 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-    &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/DEV/04_project/In4PeopleFront--&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-    }
-    }</component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/DEV/04_project/In4People-back",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "node",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\DEV\04_project\In4PeopleFront--\src\pages\salary" />
@@ -140,6 +138,11 @@
       <workItem from="1678101399786" duration="678000" />
       <workItem from="1678102218560" duration="21000" />
       <workItem from="1678437456329" duration="746000" />
+      <workItem from="1678602709353" duration="252000" />
+      <workItem from="1678749420277" duration="258000" />
+      <workItem from="1678923246926" duration="732000" />
+      <workItem from="1678924022380" duration="115000" />
+      <workItem from="1678924167352" duration="415000" />
     </task>
     <servers />
   </component>

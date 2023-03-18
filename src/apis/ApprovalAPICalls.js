@@ -1,6 +1,7 @@
 import { GET_APPROVAL,
          POST_APPROVAL_BOOKMARK,
-         DELETE_APPROVAL_BOOKMARK
+         DELETE_APPROVAL_BOOKMARK,
+         GET_APPROVAL_SEARCHINFO
  } from '../modules/ApprovalModule';
 
 export const callGetApprovalAPI = ({ memCode, currentPage }) => {
@@ -30,6 +31,29 @@ export const callGetApprovalAPI = ({ memCode, currentPage }) => {
     };
 }
 
+export const callGetSearchInfoAPI = ({nameOrPosition, inputValue}) => {
+
+    console.log(nameOrPosition);
+    console.log(inputValue);
+
+    const requestURL = `http://${process.env.REACT_APP_RESTAPI_IP}:7777/api/v1/approval/searchInfo?nameOrPosition=${nameOrPosition}&inputValue=${inputValue}`;
+        //requestURl길다고 밑으로 내리면 글자 못읽어옴.
+    return async (dispatch, getState) => {
+
+        const result = await fetch(requestURL, {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "*/*"
+            }
+        })
+            .then(response => response.json());
+        if (result.status === 200) {
+            console.log('[ApprovalAPICalls] callGetSearchApprovalAPI RESULT : ', result);
+            dispatch({ type: GET_APPROVAL_SEARCHINFO, payload: result.data });
+        }
+    };
+}
 
 export const callPostBookmarkAPI = ({ form }) => {
     const requestURL = `http://${process.env.REACT_APP_RESTAPI_IP}:7777/api/v1/approval/bookmark/post`;
@@ -102,3 +126,4 @@ export const callGetSearchApprovalAPI = ({ startDate, endDate, memCode }) =>{
         }
     };
 }
+
