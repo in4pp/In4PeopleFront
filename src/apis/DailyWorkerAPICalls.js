@@ -75,6 +75,7 @@ export const dworkerInfoAllAPI = () => {
 }
 
 export const dwInsertAPI = ({form}) => {
+    console.log(form);
     const requestURL = `http://${process.env.REACT_APP_RESTAPI_IP}:7777/api/v1/dailyWorker/insert`;
 
     return async (dispatch, getState) => {
@@ -82,25 +83,18 @@ export const dwInsertAPI = ({form}) => {
         const result = await fetch(requestURL, {
             method: "POST",
             headers: {
-                "Content-Type": "application/json",
+                // "Content-Type": "application/json",
                 "Accept": "*/*",
                 "Authorization": "Bearer " + window.localStorage.getItem("accessToken")
             },
-            body: JSON.stringify({
-                workerName : form.workerName,
-                workerRegNumber : form.workerRegNumber,
-                workerPhone : form.workerPhone,
-                workerAddress : form.workerAddress,
-                createAt : form.createAt,
-                updatedAt : form.updatedAt,
-                employeeSalarySetting : form.employeeSalarySetting
-            })
+            body: form
+
         })
             .then(response => response.json());
 
-        console.log('[PurchaseAPICalls] callPurchaseAPI RESULT : ', result);
+        console.log('[PurchaseAPICalls] dwInsertAPI RESULT : ', result);
 
-        dispatch({ type: POST_DWINSERT,  payload: result });
+        dispatch({type: POST_DWINSERT, payload: result});
 
     };
 }
