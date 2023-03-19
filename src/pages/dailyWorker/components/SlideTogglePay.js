@@ -16,7 +16,8 @@ function SlideTogglePay() {
         {show && (
           <CSSTransition classNames="slide" timeout={200}>
             <div>
-              <div className="mt-2"></div>
+              <div className="mt-2">급여조회</div>
+              <div className="mt-2">급여명세서</div>
             </div>
           </CSSTransition>
         )}
