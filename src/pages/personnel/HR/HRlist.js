@@ -1,6 +1,27 @@
 import HRlistCSS from './HRlist.module.css'
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect, useState } from 'react';
+import {callMemberListAPI} from '../../../apis/PersonnelAPICalls';
 
 function HRlist() {
+
+    const dispatch = useDispatch();
+    const hrlist = useSelector(state => state.personnelReducer); // modules/index.js 안에 선언한 store목록 중에서 personnelReducer 가져오겠다.
+    const [currentPage, setCurrentPage] = useState(1);
+    console.log('hrlist', hrlist);
+    // 페이징이 필요한면 useState를 통해서 상태값을 추가 -> currentPage참조
+
+    const list = hrlist.data;
+    if(list != undefined){
+
+        console.log('list', list);
+    }
+    useEffect(
+        () => {
+
+            dispatch(callMemberListAPI({currentPage : currentPage}));
+        },[currentPage]
+    );
 
     return(
         <>
@@ -44,15 +65,19 @@ function HRlist() {
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr className={`${HRlistCSS["appltr"]}`}>
-                                    <td className={`${HRlistCSS["appltd"]}`}>220101</td>
-                                    <td className={`${HRlistCSS["appltd"]}`}>가나다</td>
-                                    <td className={`${HRlistCSS["appltd"]}`}>사원</td>
-                                    <td className={`${HRlistCSS["appltd"]}`}>인사팀</td>
-                                    <td className={`${HRlistCSS["appltd"]}`}>010-0000-0000</td>
-                                    <td className={`${HRlistCSS["appltd"]}`}>jkl@hjkl</td>
-                                    <td className={`${HRlistCSS["appltd"]}`}>서울</td>
-                                </tr>
+                                { Array.isArray(list) && list.map (
+                                        (hrApp, index) => (
+                                            <tr key={index}
+                                            className={`${HRlistCSS["appltr"]}`}>
+                                                <td className={`${HRlistCSS["appltd"]}`}>{hrApp.memCode}</td>
+                                                <td className={`${HRlistCSS["appltd"]}`}>{hrApp.memName}</td>
+                                                <td className={`${HRlistCSS["appltd"]}`}>{hrApp.department.departmentName}</td>
+                                                <td className={`${HRlistCSS["appltd"]}`}>{hrApp.position.positionName}</td>
+                                                <td className={`${HRlistCSS["appltd"]}`}>{hrApp.phone}</td>
+                                                <td className={`${HRlistCSS["appltd"]}`}>{hrApp.email}</td>
+                                                <td className={`${HRlistCSS["appltd"]}`}>{hrApp.address}</td>
+                                            </tr>
+                                        ))}
                             </tbody>
                         </table>
                     </div>

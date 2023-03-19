@@ -1,5 +1,6 @@
 import { GET_PERSONNEL
         , POST_MEMBER
+        , GET_MEMBER
 } from "../modules/PersonnelModule";
 
 export const callOrderInfoListAPI = ({currentPage}) => {
@@ -56,4 +57,34 @@ export const callMemberRegistAPI = ({form}) => {
         dispatch({ type: POST_MEMBER,  payload: result });
         
     };    
+}
+
+export const callMemberListAPI = ({currentPage}) => {
+
+    let requestURL;
+
+    if(currentPage !== undefined || currentPage !== null) {
+        requestURL = `http://${process.env.REACT_APP_RESTAPI_IP}:7777/api/v1/personnel/memberList?offset=${currentPage}`;
+
+    } else {
+        requestURL = `http://${process.env.REACT_APP_RESTAPI_IP}:7777/api/v1/personnel/memberList`;
+    }
+
+    console.log(`[PersonnelAPICalls] requestURL : `, requestURL);
+
+    return async (dispatch, getState) => {
+        const result = await fetch(requestURL, {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "*/*",
+                // "Authorization":"Bearer " + window.localStorage.getItem("accessToken")
+            }
+        })
+        .then(response => response.json());
+        if(result.status === 200) {
+            console.log(`[PersonnelAPICalls] callOrderInfoAPI : `, result);
+            dispatch({type: GET_MEMBER, payload: result.data});
+        }
+    };
 }
