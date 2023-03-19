@@ -86,7 +86,7 @@ function DWorkerInsert(){
         console.log(form);
 
         alert('멤버 등록이 완료되었습니다.');
-        window.location.reload();
+        // window.location.reload();
     }
 
     return(

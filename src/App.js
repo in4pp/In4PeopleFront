@@ -68,6 +68,9 @@ function App() {
             <Route path="insert" element={<DWorkerInsert />} />
             <Route path="update" element={<DWorkerUpdate />} />
             <Route path="workers" element={<DWorkerSelect />} />
+
+
+
           </Route>
 
         </Route>
