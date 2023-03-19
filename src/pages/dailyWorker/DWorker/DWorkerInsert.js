@@ -18,7 +18,7 @@ function DWorkerInsert(){
         workerRegNumber: '',
         workerPhone: '',
         workerAddress:'',
-        email: '',
+        workerEmail: '',
         createAt: '',
         updatedAt: ''
     });
@@ -47,12 +47,12 @@ function DWorkerInsert(){
     };
 
     const onChangeHandler = (e) => {
-        const address = document.getElementById("daumAdd").value
+        const workerAddress = document.getElementById("daumAdd").value
 
         setForm({
             ...form, // 스프레드문법
             [e.target.name]: e.target.value,
-            address : address
+            workerAddress : workerAddress
         });
     };
 
@@ -67,7 +67,7 @@ function DWorkerInsert(){
         formData.append("workerRegNumber", form.workerRegNumber);
         formData.append("workerPhone", form.workerPhone);
         formData.append("workerAddress", form.workerAddress);
-        formData.append("email", form.email);
+        formData.append("workerEmail", form.workerEmail);
         formData.append("createAt", form.createAt);
         formData.append("updatedAt", form.updatedAt);
 
@@ -83,10 +83,12 @@ function DWorkerInsert(){
 
         }));
 
-        console.log(form);
+        // for (var pair of formData.entries()) {
+        //     console.log(pair[0]+ ', ' + pair[1]);
+        //   }
 
         alert('멤버 등록이 완료되었습니다.');
-        window.location.reload();
+        // window.location.reload();
     }
 
     return(
