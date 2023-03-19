@@ -23,6 +23,8 @@ import HRApplist from "./pages/personnel/HR/HRApplist";
 import HRApplication from "./pages/personnel/HR/HRApplication";
 import WorkSetting from "./pages/workManagement/Schedule/WorkSetting";
 import SchedulManage from "./pages/workManagement/Schedule/ScheduleManage";
+import HRcerApp from "./pages/personnel/HR/HRcerApp";
+import HRlistDetail from "./pages/personnel/HR/HRlistDetail";
 
 function App() {
   return (
@@ -54,11 +56,13 @@ function App() {
           <Route path="/personnel" element={<PersonnelSidebar />}>
             <Route index element={<HRRegist />}></Route>
             <Route path="memberRegist" element={<HRRegist />} />
-            <Route path="memberList" element={<HRlist />} />
+            <Route path="member/list" element={<HRlist />} />
+            <Route path="memDetail/:memCode" element={ < HRlistDetail/> } /> 
             <Route path="auth" element={<HRAuth />} />
-            <Route path="orderInfo" element={<HRApplist />} />
+            <Route path="orderInfo/list" element={<HRApplist />} />
             <Route path="application" element={<HRApplication />} />
             <Route path="orgchart" element={<Orgchart />} />
+            <Route path="cerApp" element={<HRcerApp />} />
           </Route>
 
           <Route path="/dailyWorker" element={<DailyWorkerSidebar />}></Route>

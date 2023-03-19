@@ -1,27 +1,48 @@
 import HRlistCSS from './HRlist.module.css'
+import { useNavigate, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
 import {callMemberListAPI} from '../../../apis/PersonnelAPICalls';
 
 function HRlist() {
 
+    const navigate = useNavigate();
+    // const params = useParams();
+
     const dispatch = useDispatch();
-    const hrlist = useSelector(state => state.personnelReducer); // modules/index.js 안에 선언한 store목록 중에서 personnelReducer 가져오겠다.
+    const hrmemlist = useSelector(state => state.personnelReducer); // modules/index.js 안에 선언한 store목록 중에서 personnelReducer 가져오겠다.
     const [currentPage, setCurrentPage] = useState(1);
-    console.log('hrlist', hrlist);
+    // console.log('hrmemlist', hrmemlist);
     // 페이징이 필요한면 useState를 통해서 상태값을 추가 -> currentPage참조
 
-    const list = hrlist.data;
-    if(list != undefined){
+    // const pageInfo = hrmemlist.pageInfo;
 
-        console.log('list', list);
+    // const pageNumber = [];
+    // if(pageInfo){
+    //     for(let i = 1; i <= pageInfo.pageEnd ; i++){
+    //         pageNumber.push(i);
+    //     }
+    // }
+
+    // const hrlist = hrmemlist.data;
+    if(hrmemlist != undefined){
+
+        console.log('hrmemlist', hrmemlist);
     }
     useEffect(
         () => {
-
-            dispatch(callMemberListAPI({currentPage : currentPage}));
+            dispatch(callMemberListAPI({
+                // memCode: params.memCode,
+                currentPage : currentPage
+            }));
         },[currentPage]
     );
+
+    
+    const onClickTableTr = (memCode) => {
+        navigate(`/personnel/memDetail/${memCode}`, { replace: false });
+    }
+
 
     return(
         <>
@@ -65,21 +86,53 @@ function HRlist() {
                                 </tr>
                             </thead>
                             <tbody>
-                                { Array.isArray(list) && list.map (
-                                        (hrApp, index) => (
-                                            <tr key={index}
+                                { Array.isArray(hrmemlist) && hrmemlist.map (
+                                        (hrmemberlist, index) => (
+                                            <tr 
+                                            key={hrmemberlist.memCode}
+                                            onClick={ () => onClickTableTr(hrmemberlist.memCode) }
                                             className={`${HRlistCSS["appltr"]}`}>
-                                                <td className={`${HRlistCSS["appltd"]}`}>{hrApp.memCode}</td>
-                                                <td className={`${HRlistCSS["appltd"]}`}>{hrApp.memName}</td>
-                                                <td className={`${HRlistCSS["appltd"]}`}>{hrApp.department.departmentName}</td>
-                                                <td className={`${HRlistCSS["appltd"]}`}>{hrApp.position.positionName}</td>
-                                                <td className={`${HRlistCSS["appltd"]}`}>{hrApp.phone}</td>
-                                                <td className={`${HRlistCSS["appltd"]}`}>{hrApp.email}</td>
-                                                <td className={`${HRlistCSS["appltd"]}`}>{hrApp.address}</td>
+                                                <td className={`${HRlistCSS["appltd"]}`}>{hrmemberlist.memCode}</td>
+                                                <td className={`${HRlistCSS["appltd"]}`}>{hrmemberlist.memName}</td>
+                                                <td className={`${HRlistCSS["appltd"]}`}>{hrmemberlist.department.departmentName}</td>
+                                                <td className={`${HRlistCSS["appltd"]}`}>{hrmemberlist.position.positionName}</td>
+                                                <td className={`${HRlistCSS["appltd"]}`}>{hrmemberlist.phone}</td>
+                                                <td className={`${HRlistCSS["appltd"]}`}>{hrmemberlist.email}</td>
+                                                <td className={`${HRlistCSS["appltd"]}`}>{hrmemberlist.address}</td>
                                             </tr>
                                         ))}
                             </tbody>
                         </table>
+                        {/* <div style={{ listStyleType: "none", display: "flex", justifyContent: "center" }}>
+            { Array.isArray(hrmemlist) &&
+            <button 
+                onClick={() => setCurrentPage(currentPage - 1)} 
+                disabled={currentPage === 1}
+                className={ HRlistCSS.pagingBtn }
+            >
+                &lt;
+            </button>
+            }
+            {pageNumber.map((num) => (
+            <li key={num} onClick={() => setCurrentPage(num)}>
+                <button
+                    style={ currentPage === num ? {backgroundColor : 'orange' } : null}
+                    className={ HRlistCSS.pagingBtn }
+                >
+                    {num}
+                </button>
+            </li>
+            ))}
+            { Array.isArray(hrmemlist) &&
+            <button 
+                className={ HRlistCSS.pagingBtn }
+                onClick={() => setCurrentPage(currentPage + 1)} 
+                disabled={currentPage === pageInfo.pageEnd || pageInfo.total == 0}
+            >
+                &gt;
+            </button>
+            }
+        </div> */}
                     </div>
                 </div>
             </div>
