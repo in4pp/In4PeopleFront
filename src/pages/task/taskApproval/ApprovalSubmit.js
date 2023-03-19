@@ -6,7 +6,7 @@ import { useEffect, useState, useRef } from 'react';
 import PlainStar from '../../../components/icon/PlainStar';
 import BlueStar from '../../../components/icon/BlueStar';
 import Pagination from '../components/Pagination';
-
+import ApprovalModal from '../components/ApprovalModal';
 import {
     callGetApprovalAPI, callGetSearchApprovalAPI,
     callPostBookmarkAPI, callDeleteBookmarkAPI
@@ -27,8 +27,8 @@ function ApprovalSubmit() {
     const token = decodeJwt(window.localStorage.getItem("accessToken"));
 
     const approvals = useSelector(state => state.approvalReducer);
-    const approvalList = approvals.data || approvals;
-    const pageInfo = approvals.pageInfo;
+    const approvalList = approvals.data || approvals; // 페이징처리의 경우 approvals.data / 검색의경우 바로 approvals로 값이 들어옴. 
+    const pageInfo = approvals.pageInfo; // 페이징의 경우에만 pageInfo를 값으로 사용.
 
     const [isBookmark, setIsBookmark] = useState();
     const [currentPage, setCurrentPage] = useState(1);
@@ -70,8 +70,7 @@ function ApprovalSubmit() {
         bookmark == null ? dispatch(callPostBookmarkAPI({ form: form })) : dispatch(callDeleteBookmarkAPI({ form: form }));
         setTimeout(() => {
             setIsBookmark(!isBookmark);
-
-        }, 50);
+        }, 50); //화면을 다시 그려주기 위한 state값 변경..
     }
 
 
@@ -136,9 +135,14 @@ function ApprovalSubmit() {
                                                 <option value="3">Three</option>
                                             </select>
                                         </div> */}
-
-                                        <div className={`${["display-flex"]}`}>
-                                            <button className={`${["btn"]} ${["btn-primary"]}`} style={{ alignSelf: "self-start" }}>결재 작성하기</button>
+                                        <div></div>
+                                        <div className={`${NavCSS["d-flex-space"]}`}>
+                                            <div className={`${["display-flex"]}`}>
+                                                <button className={`${["btn"]} ${["btn-primary"]}`} style={{ alignSelf: "self-start" }} data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                                    결재 작성하기
+                                                </button>
+                                                <ApprovalModal />
+                                            </div>
                                         </div>
                                     </div>
                                     <div className={`${NavCSS.iLLwYh}`}>

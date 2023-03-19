@@ -4,6 +4,7 @@ import personnelReducer from "./PersonnelModule";
 import approvalReducer from "./ApprovalModule";
 import dailyWorkerReducer from "./DWorkerModule";
 import workmanageReducer from "./WorkmanageModule";
+import modalReducer from "./ModalModule";
 import orderInfoReducer from '../modules/PersonnelModule';
 
 const rootReducer = combineReducers({
@@ -14,6 +15,7 @@ const rootReducer = combineReducers({
     
   personnelReducer,
   workmanageReducer,
+  modalReducer
 });
 
 export default rootReducer;

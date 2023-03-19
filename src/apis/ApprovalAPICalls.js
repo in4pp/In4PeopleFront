@@ -1,13 +1,14 @@
-import { GET_APPROVAL,
-         POST_APPROVAL_BOOKMARK,
-         DELETE_APPROVAL_BOOKMARK,
-         GET_APPROVAL_SEARCHINFO
- } from '../modules/ApprovalModule';
+import {
+    GET_APPROVAL,
+    POST_APPROVAL_BOOKMARK,
+    DELETE_APPROVAL_BOOKMARK,
+} from '../modules/ApprovalModule';
+import { GET_APPROVAL_SEARCHINFO } from '../modules/ModalModule';
 
 export const callGetApprovalAPI = ({ memCode, currentPage }) => {
     let requestURL;
 
-    if(currentPage !== undefined || currentPage !== null){
+    if (currentPage !== undefined || currentPage !== null) {
         requestURL = `http://${process.env.REACT_APP_RESTAPI_IP}:7777/api/v1/approval?memCode=${memCode}&offset=${currentPage}`;
     } else {
         requestURL = `http://${process.env.REACT_APP_RESTAPI_IP}:7777/api/v1/approval/?memCode=${memCode}`;
@@ -24,20 +25,26 @@ export const callGetApprovalAPI = ({ memCode, currentPage }) => {
             }
         })
             .then(response => response.json());
-        if(result.status === 200) {
+        if (result.status === 200) {
             console.log('[ApprovalAPICalls] callGetApprovalAPI RESULT : ', result);
             dispatch({ type: GET_APPROVAL, payload: result.data });
         }
     };
 }
 
-export const callGetSearchInfoAPI = ({nameOrPosition, inputValue}) => {
+export const callGetSearchInfoAPI = ({ nameOrPosition, inputValue }) => {
 
-    console.log(nameOrPosition);
-    console.log(inputValue);
+    console.log("nameOrPosition", nameOrPosition);
+    console.log("inputValue", inputValue);
+    if (nameOrPosition === "clear") {
+        return async (dispatch, getState) => {
+
+            dispatch({ type: GET_APPROVAL_SEARCHINFO, payload: {} });
+        }
+    };
 
     const requestURL = `http://${process.env.REACT_APP_RESTAPI_IP}:7777/api/v1/approval/searchInfo?nameOrPosition=${nameOrPosition}&inputValue=${inputValue}`;
-        //requestURl길다고 밑으로 내리면 글자 못읽어옴.
+    //requestURl길다고 밑으로 내리면 글자 못읽어옴.
     return async (dispatch, getState) => {
 
         const result = await fetch(requestURL, {
@@ -57,7 +64,7 @@ export const callGetSearchInfoAPI = ({nameOrPosition, inputValue}) => {
 
 export const callPostBookmarkAPI = ({ form }) => {
     const requestURL = `http://${process.env.REACT_APP_RESTAPI_IP}:7777/api/v1/approval/bookmark/post`;
-    
+
     return async (dispatch, getState) => {
 
         const result = await fetch(requestURL, {
@@ -75,9 +82,55 @@ export const callPostBookmarkAPI = ({ form }) => {
 
         console.log('[ApprovalAPICalls] callPostBookmarkAPI RESULT : ', result);
 
-        dispatch({ type: POST_APPROVAL_BOOKMARK , payload: result });
+        dispatch({ type: POST_APPROVAL_BOOKMARK, payload: result });
     };
 }
+export const callPostTest = () => {
+    const requestURL = `http://${process.env.REACT_APP_RESTAPI_IP}:7777/api/v1/approval/test`;
+
+    return async (dispatch, getState) => {
+
+        const result = await fetch(requestURL, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "*/*",
+            },
+            body: JSON.stringify({
+                approvalMem: {
+                    memCode: "200"
+                },
+                docType: "업무",
+                isApproved: "W",
+                content: "내용",
+                approverList: [
+                    {
+                        memCode: "100"
+                    },
+                    {
+                        memCode: "100"
+                    }
+                ],
+                refereeList: [
+                    {
+                        memCode: "300",
+                    },
+                    {
+                        memCode: "400",
+                    }
+
+
+                ]
+            })
+        })
+            .then(response => response.json());
+
+        console.log('[ApprovalAPICalls] callPostBookmarkAPI RESULT : ', result);
+
+        dispatch({ type: POST_APPROVAL_BOOKMARK, payload: result });
+    };
+}
+
 
 export const callDeleteBookmarkAPI = ({ form }) => {
     const requestURL = `http://${process.env.REACT_APP_RESTAPI_IP}:7777/api/v1/approval/bookmark/delete`;
@@ -101,11 +154,11 @@ export const callDeleteBookmarkAPI = ({ form }) => {
 
         console.log('[ApprovalAPICalls] callDeleteBookmarkAPI RESULT : ', result);
 
-        dispatch({ type: DELETE_APPROVAL_BOOKMARK , payload: result });
+        dispatch({ type: DELETE_APPROVAL_BOOKMARK, payload: result });
     };
 }
 
-export const callGetSearchApprovalAPI = ({ startDate, endDate, memCode }) =>{
+export const callGetSearchApprovalAPI = ({ startDate, endDate, memCode }) => {
     console.log(startDate);
     console.log(endDate);
     const requestURL = `http://${process.env.REACT_APP_RESTAPI_IP}:7777/api/v1/approval/search?memCode=${memCode}&startDate=${startDate}&endDate=${endDate}`;

@@ -97,8 +97,15 @@
     width: 50px;
 }
 .hMOodW:nth-child(2) {
+    width:  80px;
+}
+.hMOodW:nth-child(3) {
+    width:  50px;
+}
+.hMOodW:nth-child(4) {
     width:  100%;
 }
+
 .cWjmER {
     color: rgb(118, 118, 118);
     padding-left: 0px !important;
@@ -179,7 +186,7 @@ input[type="file" i] {
     overflow: hidden !important;
 }
 
-.approvers{
+.getInfo{
     font-size:15px;
     cursor: pointer;
 }
