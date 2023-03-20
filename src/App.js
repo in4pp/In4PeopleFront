@@ -10,17 +10,19 @@ import ApprovalBookmark from "./pages/task/taskApproval/ApprovalBookmark";
 import ApprovalNeed from "./pages/task/taskApproval/ApprovalNeed";
 import ApprovalCompleted from "./pages/task/taskApproval/ApprovalCompleted";
 import ApprovalRefered from "./pages/task/taskApproval/ApprovalRefered";
-import SettlementGeneration from "./pages/task/taskApproval/SettlementGeneration";
 import WorkManageSidebar from "./pages/workManagement/WorkManageSidebar";
 import PersonnelSidebar from "./pages/personnel/PersonnelSidebar";
 import DailyWorkerSidebar from "./pages/dailyWorker/DailyWorkerSidebar";
 import Login from "./pages/login/Login";
 import HRRegist from "./pages/personnel/HR/HRRegist";
 import Orgchart from "./pages/personnel/HR/Orgchart";
-import HRAuth from "./pages/personnel/HR/HRAuth";
-import HRlist from "./pages/personnel/HR/HRlist";
-import HRApplist from "./pages/personnel/HR/HRApplist";
-import HRApplication from "./pages/personnel/HR/HRApplication";
+import HRAuth from './pages/personnel/HR/HRAuth';
+import HRlist from './pages/personnel/HR/HRlist';
+import HRApplist from './pages/personnel/HR/HRApplist';
+import HRApplication from './pages/personnel/HR/HRApplication';
+import DWorkerInsert from './pages/dailyWorker/DWorker/DWorkerInsert';
+import DWorkerSelect from "./pages/dailyWorker/DWorker/DWorkerSelect";
+import DWorkerUpdate from "./pages/dailyWorker/DWorker/DWorkerUpdate";
 import WorkSetting from "./pages/workManagement/Schedule/WorkSetting";
 import SchedulManage from "./pages/workManagement/Schedule/ScheduleManage";
 import HRcerApp from "./pages/personnel/HR/HRcerApp";
@@ -68,7 +70,13 @@ function App() {
             <Route path="memberUpdate" element={<MemberUpdate />} />
           </Route>
 
-          <Route path="/dailyWorker" element={<DailyWorkerSidebar />}></Route>
+          <Route path="/dailyWorker" element={<DailyWorkerSidebar />}>
+          <Route index element={<DWorkerInsert />} />
+            <Route path="insert" element={<DWorkerInsert />} />
+            <Route path="update" element={<DWorkerUpdate />} />
+            <Route path="workers" element={<DWorkerSelect />} />
+          </Route>
+
         </Route>
 
         <Route path="/login" element={<Login />} />
