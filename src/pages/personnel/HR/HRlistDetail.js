@@ -8,7 +8,7 @@ import {
     callMemberDetailAPI } from '../../../apis/PersonnelAPICalls'
 // import LoginModal from '../../components/common/LoginModal';
 
-function HRlistDetail() {    
+function HRlistDetail() {
     
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -21,7 +21,7 @@ function HRlistDetail() {
     
     useEffect(
         () => {
-            dispatch(callMemberDetailAPI({	// 상품 상세 정보 조회
+            dispatch(callMemberDetailAPI({
                 memCode: params.memCode
             }));            
         }
@@ -65,6 +65,10 @@ function HRlistDetail() {
         <div>
             {/* { loginModal ? <LoginModal setLoginModal={ setLoginModal }/> : null} */}
                 <div className={`${HRRegistCSS["registone"]}`}>
+                <div className={`${HRRegistCSS['titlee']}`}>
+                    <h3>인사 정보</h3>
+                </div>
+                <div className={`${HRRegistCSS['box']}`}>
                     <table className={`${HRRegistCSS['ppinsa']}`}>
                         <tr>
                             <th className={`${HRRegistCSS["ppth"]}`}>사진</th>
@@ -116,6 +120,7 @@ function HRlistDetail() {
                         </tr>     
                 </table>
             </div>
+        </div>
         </div>
     );
 }

@@ -17,7 +17,7 @@ function SlideTog1() {
         {show && (
           <CSSTransition classNames="slide" timeout={200}>
             <div>
-              <div className="mt-2"><NavLink to="orgchart">인사 정보</NavLink></div>
+              <div className="mt-2"><NavLink to="memberUpdate">인사 정보</NavLink></div>
               <div className="mt-2"><NavLink to="memberRegist">인사 정보 등록</NavLink></div>
               <div className="mt-2"><NavLink to="member/list">사원 명부</NavLink></div>
               <div className="mt-2"><NavLink to="orderInfo/list">인사 발령</NavLink></div>

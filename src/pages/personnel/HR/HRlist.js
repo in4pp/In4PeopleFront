@@ -37,7 +37,6 @@ function HRlist() {
             }));
         },[currentPage]
     );
-
     
     const onClickTableTr = (memCode) => {
         navigate(`/personnel/memDetail/${memCode}`, { replace: false });

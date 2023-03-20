@@ -25,6 +25,8 @@ import WorkSetting from "./pages/workManagement/Schedule/WorkSetting";
 import SchedulManage from "./pages/workManagement/Schedule/ScheduleManage";
 import HRcerApp from "./pages/personnel/HR/HRcerApp";
 import HRlistDetail from "./pages/personnel/HR/HRlistDetail";
+import MemberUpdate from "./pages/personnel/HR/HRUpdate";
+
 
 function App() {
   return (
@@ -54,7 +56,7 @@ function App() {
           </Route>
 
           <Route path="/personnel" element={<PersonnelSidebar />}>
-            <Route index element={<HRRegist />}></Route>
+            <Route index element={<MemberUpdate />}></Route>
             <Route path="memberRegist" element={<HRRegist />} />
             <Route path="member/list" element={<HRlist />} />
             <Route path="memDetail/:memCode" element={ < HRlistDetail/> } /> 
@@ -63,6 +65,7 @@ function App() {
             <Route path="application" element={<HRApplication />} />
             <Route path="orgchart" element={<Orgchart />} />
             <Route path="cerApp" element={<HRcerApp />} />
+            <Route path="memberUpdate" element={<MemberUpdate />} />
           </Route>
 
           <Route path="/dailyWorker" element={<DailyWorkerSidebar />}></Route>
