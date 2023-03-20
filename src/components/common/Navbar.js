@@ -90,7 +90,9 @@ function Navbar() {
               </span>
             </div>
             <div className={NavCSS.lkOGXI}>
-              <span className={`${NavCSS.fEXmlR} ${NavCSS.kOVHNW} ${NavCSS.nav}`}>HOME</span>
+              <span className={`${NavCSS.fEXmlR} ${NavCSS.kOVHNW} ${NavCSS.nav}`}>
+              <NavLink to="/">HOME</NavLink>
+              </span>
               <span className={`${NavCSS.fEXmlR} ${NavCSS.kOVHNW} ${NavCSS.nav}`}>
                 <NavLink to="/personnel">인사</NavLink>
               </span>
