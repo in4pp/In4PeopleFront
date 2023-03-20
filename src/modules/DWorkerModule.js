@@ -10,12 +10,16 @@ export const GET_DWSEARCH = 'dailyWorker/GET_DWSEARCH';
 
 export const POST_DWINSERT = 'dailyWorker/POST_DWINSERT';
 
+export const GET_APPROVAL = 'approval/GET_APPROVAL';
+
+
 
 const actions = createActions({
     [GET_DWORKERINFO] : () => {},
     [GET_DWORKERINFOALL] : () => {},
     [POST_DWINSERT] : () => {},
-    [GET_DWSEARCH] : () => {}
+    [GET_DWSEARCH] : () => {},
+    [GET_APPROVAL]: () => {}
 })
 
 
@@ -35,6 +39,11 @@ const dailyWorkerReducer = handleActions(
         },
 
         [GET_DWSEARCH] : (state, {payload}) => {
+            return payload;
+        },
+
+        [GET_APPROVAL]: (state, { payload }) => {
+
             return payload;
         }
 

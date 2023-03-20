@@ -5,12 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1378704a-9ff1-4552-b10a-c0fa2d2f41ca" name="Changes" comment="feat : dailyworker insert">
-      <change afterPath="$PROJECT_DIR$/src/pages/dailyWorker/DWorker/dwApprovalWrite.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/dailyWorker/DWorker/DWApproval.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/dailyWorker/DWorker/DWApprovalCompleted.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/dailyWorker/DWorker/DWApprovalNeed.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/dailyWorker/DWorker/DWApprovalRefered.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apis/DailyWorkerAPICalls.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/apis/DailyWorkerAPICalls.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/DWorkerModule.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/DWorkerModule.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/dailyWorker/DWorker/DWorkerInsert.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dailyWorker/DWorker/DWorkerInsert.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/dailyWorker/components/SlideToggleApproval.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dailyWorker/components/SlideToggleApproval.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dailyWorker/DWorker/DWorkerSelect.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dailyWorker/DWorker/DWorkerSelect.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dailyWorker/DWorker/dwApprovalWrite.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dailyWorker/DWorker/DWApprovalWrite.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,7 +22,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="In4PeopleFront/master" />
+    <option name="BRANCH" value="origin/master" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -82,7 +86,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/DEV/04_project/In4People-back",
+    "last_opened_file_path": "C:/dev/04_project/finalProject/final4jo/In4PeopleFront/src/pages/dailyWorker/DWorker",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -167,5 +171,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat : dailyworker insert" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat : dailyworker insert" />
   </component>
 </project>

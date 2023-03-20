@@ -19,10 +19,13 @@ function DWorkerInsert(){
         workerPhone: '',
         workerAddress:'',
         workerEmail: '',
-        createAt: '',
-        updatedAt: ''
-    });
+        startDate: '',
+        endDate: '',
+        bank:'',
+        accountNumber:''
 
+    });
+    // bank, accountNumber
     useEffect(() => {
 
             /* 이미지 업로드시 미리보기 세팅 */
@@ -60,6 +63,11 @@ function DWorkerInsert(){
 
         console.log('[HRRegist] onClickMemberRegistHandler');
 
+        // const employeeSalarySetting = [];
+        // const bank = document.getElementById("bank").value;
+        // const accountNumber = document.getElementById("accountNumber").value;
+
+
 
         const formData = new FormData();
 
@@ -68,8 +76,11 @@ function DWorkerInsert(){
         formData.append("workerPhone", form.workerPhone);
         formData.append("workerAddress", form.workerAddress);
         formData.append("workerEmail", form.workerEmail);
-        formData.append("createAt", form.createAt);
-        formData.append("updatedAt", form.updatedAt);
+        formData.append("startDate", form.startDate);
+        formData.append("endDate", form.endDate);
+        // formData.append("employeeSalarySetting", employeeSalarySetting);
+        formData.append("bank", form.bank);
+        formData.append("accountNumber", form.accountNumber);
 
 
         if(image){
@@ -79,6 +90,7 @@ function DWorkerInsert(){
         }
 
         dispatch(dwInsertAPI({
+
             form: formData
 
         }));
@@ -99,7 +111,7 @@ function DWorkerInsert(){
             </div>
                 <div className={`${DWorkerStyle['box']}`}>
                     <div className={`${DWorkerStyle['commonInfo']}`}>
-                        <form>
+
                             <table className={`${DWorkerStyle['ppinsa']}`}>
                                 <tr>
                                     <th className={`${DWorkerStyle["ppth"]}`}>사진</th>
@@ -151,7 +163,7 @@ function DWorkerInsert(){
                                             id='daumAdd'
                                             type='text'
                                             readOnly={true}
-                                            placeholder="주소"
+                                            placeholder="주소 ->"
                                             onChange={ onChangeHandler }
                                         />
                                         <DaumAddress className="addBtn" />
@@ -160,24 +172,33 @@ function DWorkerInsert(){
                             </table>
 
                             <table className={`${DWorkerStyle["ppwork"]}`}>
-                             
                                 <tr>
-                                    <th className={`${DWorkerStyle["ppth"]}`}>입사일자</th>
+                                    <th className={`${DWorkerStyle["ppth"]}`}>근무시작일</th>
                                     <td className={`${DWorkerStyle["pptd"]}`}>
-                                    <input type="date" name="createAt" onChange={ onChangeHandler }/>
+                                    <input type="date" name="startDate" onChange={ onChangeHandler }/>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th className={`${DWorkerStyle["ppth"]}`}>퇴직일자</th>
+                                    <th className={`${DWorkerStyle["ppth"]}`}>근무종료일</th>
                                     <td className={`${DWorkerStyle["pptd"]}`}>
-                                    <input type="date" name="updatedAt"onChange={ onChangeHandler } />
+                                    <input type="date" name="endDate"onChange={ onChangeHandler } />
                                     </td>
                                 </tr>
-                       
+                                <tr>
+                                    <th className={`${DWorkerStyle["ppth"]}`}>은행명</th>
+                                    <td className={`${DWorkerStyle["pptd"]}`}>
+                                        <input type="text" id="bank" placeholder="" name="bank" onChange={ onChangeHandler }/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th className={`${DWorkerStyle["ppth"]}`}>계좌번호</th>
+                                    <td className={`${DWorkerStyle["pptd"]}`}>
+                                        <input type="text" id="accountNumber" name="accountNumber" onChange={ onChangeHandler }/>
+                                    </td>
+                                </tr>
 
-                           
                             </table>
-                        </form>
+
                     </div>
                 <div className={`${DWorkerStyle['ppbutton']}`}>
                     <button onClick={ onClickMemberRegistHandler }>저장</button>

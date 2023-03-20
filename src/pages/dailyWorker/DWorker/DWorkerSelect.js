@@ -75,8 +75,8 @@ function DWorkerlist() {
                                     <th className={`${DWorkerSelectCSS["applth"]}`}>주소</th>
                                     <th className={`${DWorkerSelectCSS["applth"]}`}>은행명</th>
                                     <th className={`${DWorkerSelectCSS["applth"]}`}>계좌번호</th>
-                                    <th className={`${DWorkerSelectCSS["applth"]}`}>등록일</th>
-                                    <th className={`${DWorkerSelectCSS["applth"]}`}>수정일</th>
+                                    <th className={`${DWorkerSelectCSS["applth"]}`}>근무시작일</th>
+                                    <th className={`${DWorkerSelectCSS["applth"]}`}>근무종료일</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -88,10 +88,10 @@ function DWorkerlist() {
                                             <td className={`${DWorkerSelectCSS["appltd"]}`}>{dwinfo.workerRegNumber}</td>
                                             <td className={`${DWorkerSelectCSS["appltd"]}`}>{dwinfo.workerPhone}</td>
                                             <td className={`${DWorkerSelectCSS["appltd"]}`}>{dwinfo.workerAddress}</td>
-                                            <td className={`${DWorkerSelectCSS["appltd"]}`}>{dwinfo.employeeSalarySetting.bank}</td>
-                                            <td className={`${DWorkerSelectCSS["appltd"]}`}>{dwinfo.employeeSalarySetting.accountNumber}</td>
-                                            <td className={`${DWorkerSelectCSS["appltd"]}`}>{dwinfo.createAt}</td>
-                                            <td className={`${DWorkerSelectCSS["appltd"]}`}>{dwinfo.updatedAt}</td>
+                                            <td className={`${DWorkerSelectCSS["appltd"]}`}>{dwinfo.bank}</td>
+                                            <td className={`${DWorkerSelectCSS["appltd"]}`}>{dwinfo.accountNumber}</td>
+                                            <td className={`${DWorkerSelectCSS["appltd"]}`}>{dwinfo.startDate}</td>
+                                            <td className={`${DWorkerSelectCSS["appltd"]}`}>{dwinfo.endDate}</td>
                                         </tr>
                                     )
                                 )}

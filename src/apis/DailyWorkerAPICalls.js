@@ -1,5 +1,10 @@
-import {GET_DWORKERINFO, GET_DWORKERINFOALL, GET_DWSEARCH, POST_DWINSERT}
+import {GET_DWORKERINFO,
+        GET_DWORKERINFOALL,
+        GET_DWSEARCH,
+        POST_DWINSERT,
+        GET_APPROVAL,}
     from "../modules/DWorkerModule";
+
 
 
 export const dworkerSearchAPI = ({workerName}) => {
@@ -75,8 +80,12 @@ export const dworkerInfoAllAPI = () => {
 }
 
 export const dwInsertAPI = ({form}) => {
-
+    console.log(`form======>`, form);
     const requestURL = `http://${process.env.REACT_APP_RESTAPI_IP}:7777/api/v1/dailyWorker/insert`;
+
+    for(const [key, value] of form.entries()){
+        console.log(key,value)
+    }
 
     return async (dispatch, getState) => {
 
@@ -84,7 +93,7 @@ export const dwInsertAPI = ({form}) => {
             method: "POST",
             headers: {
                 "Accept": "*/*",
-                "Authorization": "Bearer " + window.localStorage.getItem("accessToken")
+                // "Authorization": "Bearer " + window.localStorage.getItem("accessToken")
             },
             body : form
 
@@ -95,5 +104,32 @@ export const dwInsertAPI = ({form}) => {
 
         dispatch({type: POST_DWINSERT, payload: result});
 
+    };
+}
+
+export const callGetApprovalAPI = ({ memCode, currentPage }) => {
+    let requestURL;
+
+    if (currentPage !== undefined || currentPage !== null) {
+        requestURL = `http://${process.env.REACT_APP_RESTAPI_IP}:7777/api/v1/approval?memCode=${memCode}&offset=${currentPage}`;
+    } else {
+        requestURL = `http://${process.env.REACT_APP_RESTAPI_IP}:7777/api/v1/approval/?memCode=${memCode}`;
+    }
+
+    return async (dispatch, getState) => {
+
+        const result = await fetch(requestURL, {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "*/*"
+                // "Authorization": "Bearer " + window.localStorage.getItem("accessToken"),
+            }
+        })
+            .then(response => response.json());
+        if (result.status === 200) {
+            console.log('[ApprovalAPICalls] callGetApprovalAPI RESULT : ', result);
+            dispatch({ type: GET_APPROVAL, payload: result.data });
+        }
     };
 }
