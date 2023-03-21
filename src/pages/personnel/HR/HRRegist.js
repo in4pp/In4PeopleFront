@@ -6,7 +6,6 @@ import DaumAddress from './PopupPostCode';
 
 import { callMemberRegistAPI } from '../../../apis/PersonnelAPICalls';
 
-
     function HRRegist() {
 
         const dispatch = useDispatch();
@@ -14,20 +13,6 @@ import { callMemberRegistAPI } from '../../../apis/PersonnelAPICalls';
         const [image, setImage] = useState(null);
         const [imageUrl, setImageUrl] = useState();
         const imageInput = useRef();
-
-        // // 팝업창 상태 관리
-        // const [isPopupOpen, setIsPopupOpen] = useState(false)
-        
-        // // 팝업창 열기
-        // const openPostCode = () => {
-        //     setIsPopupOpen(true)
-        // }
-
-        // // 팝업창 닫기
-        // const closePostCode = () => {
-        //     setIsPopupOpen(false)
-        // }
-
 
         const [form, setForm] = useState({
             memCode: '',
@@ -77,11 +62,9 @@ import { callMemberRegistAPI } from '../../../apis/PersonnelAPICalls';
             });
         };
 
-
         const onClickMemberRegistHandler = () => {
 
             console.log('[HRRegist] onClickMemberRegistHandler');
-
 
             const formData = new FormData();
     
@@ -98,7 +81,6 @@ import { callMemberRegistAPI } from '../../../apis/PersonnelAPICalls';
             formData.append("positionCode", form.positionCode);
             formData.append("departmentCode", form.departmentCode);
             
-            
             if(image){
                 formData.append("memPicture", image);
             
@@ -114,7 +96,6 @@ import { callMemberRegistAPI } from '../../../apis/PersonnelAPICalls';
             alert('멤버 등록이 완료되었습니다.');
             window.location.reload();
         }
-
     
 
     return (

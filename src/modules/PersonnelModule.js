@@ -2,20 +2,45 @@ import { createActions, handleActions } from "redux-actions";
 
 const initialState = [];
 
-export const GET_PERSONNEL = 'orderInfo/GET_PERSONNEL';
+export const GET_ORDERINFO = 'personnel/GET_ORDERINFO';
 export const POST_MEMBER = 'memberRegist/POST_MEMBER';
+export const GET_MEMBER = 'personnel/GET_MEMBER';
+export const GET_MEMDETAIL = 'personnel/GET_MEMDETAIL';
+export const GET_MEMBER_UPDATE = 'personnel/GET_MEMBER_UPDATE';
+export const PUT_MEMBER_UPDATE = 'personnel/PUT_MEMBER_UPDATE';
+
 
 const actions = createActions({
-    [GET_PERSONNEL]: () => {},
-    [POST_MEMBER]: () => {}
+    [GET_ORDERINFO] : () => {},
+    [POST_MEMBER] : () => {},
+    [GET_MEMBER] : () => {},
+    [GET_MEMDETAIL] : () => {},
+    [GET_MEMBER_UPDATE] : () => {},
+    [PUT_MEMBER_UPDATE] : () => {}
 });
 
 const personnelReducer = handleActions({
-        [GET_PERSONNEL]: (state, {payload}) => {
+        [GET_ORDERINFO]: (state, {payload}) => {
 
             return payload;
         },
         [POST_MEMBER]: (state, {payload}) => {
+
+            return payload;
+        },
+        [GET_MEMBER]: (state, {payload}) => {
+
+            return payload;
+        },
+        [GET_MEMDETAIL]: (state, {payload}) => {
+
+            return payload;
+        },
+        [GET_MEMBER_UPDATE]: (state, {payload}) => {
+
+            return payload;
+        },
+        [PUT_MEMBER_UPDATE]: (state, {payload}) => {
 
             return payload;
         }

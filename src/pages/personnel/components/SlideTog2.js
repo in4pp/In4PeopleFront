@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import "../../task/taskCSS/SlideToggle.css";
 
@@ -16,7 +17,7 @@ function SlideTog2() {
         {show && (
           <CSSTransition classNames="slide" timeout={200}>
             <div>
-              <div className="mt-2">증명서 신청</div>
+              <div className="mt-2"><NavLink to="cerApp">증명서 신청</NavLink></div>
               <div className="mt-2">증명서 발급 대장</div>
               <div className="mt-2">증명서 결재 관리</div>
             </div>
