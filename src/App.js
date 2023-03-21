@@ -8,6 +8,7 @@ import SalaryInfo from './pages/salary/SalaryInformation';
 import SalarySettlement from './pages/salary/SalarySettlement';
 import HourlyWageSetting from './pages/salary/HourlyWageSetting';
 import WorkInquiry from './pages/salary/WorkInquiry';
+import MonthlySetting from './pages/salary/MonthlySetting';
 
 
 
@@ -28,6 +29,7 @@ function App() {
           <Route path="salset" element={<SalarySettlement />} />
           <Route path="hourlyset/:memCode" element={<HourlyWageSetting />} />
           <Route path="workInquiry" element={<WorkInquiry />} />
+          <Route path="monthlysetting" element={<MonthlySetting />} />
         </Route>
           
           

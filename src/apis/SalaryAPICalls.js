@@ -1,7 +1,8 @@
 import {
        GET_INCOMETAX,
        GET_SALINFO,
-       POST_SALINFO
+       POST_SALINFO,
+       GET_MONTHLYWAGE
 } from '../modules/SalaryModule';
 
 
@@ -106,6 +107,41 @@ export const callSalMemberListAPI = () => {
 
 
 }
+
+// 월급 계산을 위한 조회
+export const callMemberMonthlyAPI = () => {
+
+       console.log('[SalaryAPICalls] callSalMemberList Call')
+ 
+       const requestURL = `http://${process.env.REACT_APP_RESTAPI_IP}:7777/api/v1/salary/monthlySetting`;
+
+       return async (dispatch, getState) => {
+
+              const result = await fetch(requestURL, {
+                     method: "GET",
+                     headers: {
+                            "Content-Type": "application/json",
+                            "Accept": "*/*"
+                     }
+              })
+              .then(response => response.json());
+              if(result.status === 200){
+                     console.log('[SalaryAPICalls] callSalMemberList RESULT : ', result);
+                     dispatch({ type: GET_MONTHLYWAGE, payload: result.data });
+              }
+       };
+
+
+}
+
+
+
+
+
+
+
+
+
 
 export const callIncomeTaxListAPI = () => {
 
