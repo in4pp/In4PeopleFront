@@ -25,6 +25,10 @@ import DWorkerSelect from "./pages/dailyWorker/DWorker/DWorkerSelect";
 import DWorkerUpdate from "./pages/dailyWorker/DWorker/DWorkerUpdate";
 import WorkSetting from "./pages/workManagement/Schedule/WorkSetting";
 import SchedulManage from "./pages/workManagement/Schedule/ScheduleManage";
+import HRcerApp from "./pages/personnel/HR/HRcerApp";
+import HRlistDetail from "./pages/personnel/HR/HRlistDetail";
+import MemberUpdate from "./pages/personnel/HR/HRUpdate";
+
 
 function App() {
   return (
@@ -54,13 +58,16 @@ function App() {
           </Route>
 
           <Route path="/personnel" element={<PersonnelSidebar />}>
-            <Route index element={<HRRegist />}></Route>
+            <Route index element={<MemberUpdate />}></Route>
             <Route path="memberRegist" element={<HRRegist />} />
-            <Route path="list" element={<HRlist />} />
+            <Route path="member/list" element={<HRlist />} />
+            <Route path="memDetail/:memCode" element={ < HRlistDetail/> } /> 
             <Route path="auth" element={<HRAuth />} />
-            <Route path="orderInfo" element={<HRApplist />} />
+            <Route path="orderInfo/list" element={<HRApplist />} />
             <Route path="application" element={<HRApplication />} />
             <Route path="orgchart" element={<Orgchart />} />
+            <Route path="cerApp" element={<HRcerApp />} />
+            <Route path="memberUpdate" element={<MemberUpdate />} />
           </Route>
 
           <Route path="/dailyWorker" element={<DailyWorkerSidebar />}>
