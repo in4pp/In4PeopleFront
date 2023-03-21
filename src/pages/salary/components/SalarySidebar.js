@@ -1,5 +1,8 @@
 import { Outlet } from "react-router-dom";
-import Side from '../components/common/Navbar.module.css';
+import Side from '../../../components/common/Navbar.module.css';
+// import { NavLink } from "react-router-dom";
+
+
 function SalarySidebar() {
 
     return (

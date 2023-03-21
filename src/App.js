@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./layouts/Layout";
 import IncomeTax from "./pages/salary/IncomeTax";
-import SalarySidebar from "./sidebars/SalarySidebar";
+import SalarySidebar from './pages/salary/components/SalarySidebar';
 import SalaryInfo from "./pages/salary/SalaryInformation";
 import TaskSidebar from "./pages/task/TaskSidebar";
 import ApprovalSubmit from "./pages/task/taskApproval/ApprovalSubmit";
@@ -28,7 +28,12 @@ import SchedulManage from "./pages/workManagement/Schedule/ScheduleManage";
 import HRcerApp from "./pages/personnel/HR/HRcerApp";
 import HRlistDetail from "./pages/personnel/HR/HRlistDetail";
 import MemberUpdate from "./pages/personnel/HR/HRUpdate";
-import DWorkerDetail from "./pages/dailyWorker/DWorker/DWorkerDetail";
+import SalarySettlement from './pages/salary/SalarySettlement';
+import HourlyWageSetting from './pages/salary/HourlyWageSetting';
+import WorkInquiry from './pages/salary/WorkInquiry';
+import MonthlySetting from './pages/salary/MonthlySetting';
+
+
 
 
 function App() {
@@ -46,17 +51,7 @@ function App() {
             <Route path="refered" element={<ApprovalRefered />} />
           </Route>
 
-          <Route path="/salary" element={<SalarySidebar />}>
-            <Route index element={<SalaryInfo />} />
-          </Route>
-          <Route path="/incomeTax" element={<SalarySidebar />}>
-            <Route index element={<IncomeTax />} />
-          </Route>
-          <Route path="/workmanage" element={<WorkManageSidebar />}>
-            <Route index element={<ApprovalSubmit />} />
-            <Route path="setting" element={<WorkSetting />} />
-            <Route path="scheduleApprove" element={<SchedulManage />}></Route>
-          </Route>
+
 
           <Route path="/personnel" element={<PersonnelSidebar />}>
             <Route index element={<MemberUpdate />}></Route>
@@ -76,13 +71,19 @@ function App() {
             <Route path="insert" element={<DWorkerInsert />} />
             <Route path="update" element={<DWorkerUpdate />} />
             <Route path="workers" element={<DWorkerSelect />} />
-            <Route path="detail/:workerCode" element={<DWorkerDetail />} />
-
-
-
           </Route>
 
+          <Route path="salary" element={<SalarySidebar />}>
+          <Route path="salinfo" element={<SalaryInfo />} />
+          <Route path="incometax" element={<IncomeTax  />} />
+          <Route path="salset" element={<SalarySettlement />} />
+          <Route path="hourlyset/:memCode" element={<HourlyWageSetting />} />
+          <Route path="workInquiry" element={<WorkInquiry />} />
+          <Route path="monthlysetting" element={<MonthlySetting />} />
         </Route>
+
+        </Route>
+
 
         <Route path="/login" element={<Login />} />
       </Routes>
