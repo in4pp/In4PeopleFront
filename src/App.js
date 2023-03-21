@@ -28,6 +28,7 @@ import SchedulManage from "./pages/workManagement/Schedule/ScheduleManage";
 import HRcerApp from "./pages/personnel/HR/HRcerApp";
 import HRlistDetail from "./pages/personnel/HR/HRlistDetail";
 import MemberUpdate from "./pages/personnel/HR/HRUpdate";
+import DWorkerDetail from "./pages/dailyWorker/DWorker/DWorkerDetail";
 
 
 function App() {
@@ -75,6 +76,7 @@ function App() {
             <Route path="insert" element={<DWorkerInsert />} />
             <Route path="update" element={<DWorkerUpdate />} />
             <Route path="workers" element={<DWorkerSelect />} />
+            <Route path="detail/:workerCode" element={<DWorkerDetail />} />
 
 
 
