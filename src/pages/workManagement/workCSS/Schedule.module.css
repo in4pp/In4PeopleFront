@@ -7,6 +7,7 @@
   padding-top: 50px;
   margin-left: 23%;
   margin-right: 10%;
+  padding-left: 50px;
 }
 
 .scbox {
@@ -47,7 +48,7 @@
   margin-left: 10px;
 
   border: 1px solid #999;
-  background-color: #fdcfb1db;
+  background-color: #c3edbf82;
   border-radius: 5px;
   height: 30px;
 }
@@ -90,7 +91,7 @@
 
 .scpeople {
   border: 1px solid #999;
-  background-color: #fdcfb1db;
+  background-color: #c3edbf82;
   border-radius: 5px;
   height: 30px;
   width: 150px;
@@ -111,21 +112,60 @@
   padding-top: 40px;
   padding-left: 30px;
   padding-bottom: 50px;
-  width: 80%;
+
   height: auto;
   float: left;
 }
 
 .scapprove {
   border: 1px solid #999;
-  background-color: #fdcfb1db;
+  background-color: #fffec6;
   border-radius: 5px;
   height: 30px;
   width: 60px;
   display: inline-block;
+  margin-left: 10px;
 }
 
 .sclist {
   float: left;
-  margin-right: 550px;
+  margin-right: 700px;
+}
+
+.applthe {
+  background-color: #c3edbfa3;
+  padding: 15px 10px 15px 30px;
+}
+
+.appltablee {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 200px;
+}
+
+.appltableex {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.applthey {
+  background-color: white;
+  padding: 15px 10px 15px 30px;
+  text-align: center;
+  color: rgb(24, 93, 10);
+}
+
+.appltde {
+  padding: 15px 10px 15px 30px;
+  text-align: center;
+}
+
+.appltdex {
+  padding: 15px 10px 15px 30px;
+  text-align: center;
+  border-bottom: 1px solid #999;
+}
+
+.appltheady {
+  text-align: center;
 }
