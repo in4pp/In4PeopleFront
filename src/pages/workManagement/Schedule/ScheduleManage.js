@@ -91,19 +91,19 @@ function SchedulManage() {
             <tbody>
               {/* {Array.isArray(list) &&
                 list.map((workset) => (
-                  <tr className={`${HRApplistCSS["appltr"]}`}>
+                      <tr className={`${HRApplistCSS["appltr"]}`}>
                     <td className={`${HRApplistCSS["appltd"]}`}>1</td>
                     <td className={`${HRApplistCSS["appltd"]}`}>2023.x.xx</td>
                     <td className={`${HRApplistCSS["appltd"]}`}>김땡땡</td>
                     <td className={`${HRApplistCSS["appltd"]}`}>신청</td>
                     <td className={`${HRApplistCSS["appltd"]}`}>
                       시차 출퇴근제
-                    </td>
+                                    </td>
                     <td className={`${HRApplistCSS["appltd"]}`}>05:00~08:00</td>
                     <td className={`${HRApplistCSS["appltd"]}`}>
                       20xx.x.x~20xx.x.x
-                    </td>
-                  </tr>
+                                    </td>
+                                  </tr>
                 ))} */}
               <tr className={`${HRApplistCSS["appltr"]}`}>
                 <td className={`${HRApplistCSS["appltd"]}`}>1</td>
