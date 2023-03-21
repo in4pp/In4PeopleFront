@@ -15,10 +15,12 @@ function SalaryInfo() {
    
       const navigate = useNavigate();
 
+      const [salMember, setSalMember] = useState([]);
+
       const onClickMemberHourlSetHandler = (memCode) => {
         navigate(`/salary/hourlyset/${memCode}`, {replace: false});
       }
-
+ 
       const dispatch = useDispatch();
       const salMembers = useSelector(state => state.salaryReducer)
       // const salMemberList = salMembers.data;
@@ -92,13 +94,13 @@ function SalaryInfo() {
                   <div className={salaryStyle['czoAar']}> {Array.isArray(salMembers) && salMembers.map((salMember, index) => (
                   <div className={salaryStyle['bobEjr']}>
                      
-                    <div width={120} className={salaryStyle['cHyQCM']}><button onClick={ () => onClickMemberHourlSetHandler(salMember.memCode) }>보기</button></div>
-                    <div width={180} className={salaryStyle['jBNnBY']}>{salMember.memName}</div>
-                    <div width={110} className={salaryStyle['dDqPZt']}>{salMember.positionCode.positionName}</div>                  
-                    <div width={240} className={salaryStyle['dDqPZt']}>{salMember.departmentCode?.departmentName}</div>
-                    <div width={110} className={salaryStyle['dDqPZt']}>{salMember.teamCode?.teamName}</div>
+                    <div width={120} className={salaryStyle['cHyQCM']}><button onClick={ () => onClickMemberHourlSetHandler(salMember?.memCode) }>보기</button></div>
+                    <div width={180} className={salaryStyle['jBNnBY']}>{salMember?.memName}</div>
+                    <div width={110} className={salaryStyle['dDqPZt']}>{salMember?.positionCode?.positionName}</div>                  
+                    <div width={240} className={salaryStyle['dDqPZt']}>{salMember?.departmentCode?.departmentName}</div>
+                    <div width={110} className={salaryStyle['dDqPZt']}>{salMember?.teamCode?.teamName}</div>
                     {/* <div width={110} className={salaryStyle['dDqPZt']}>{salMember.isWorking.replace('1','재직중')}</div> */}
-                    <div width={110} className={salaryStyle['dDqPZt']}>{salMember.isWorking.replace('1','재직').replace('2','퇴사')}</div>
+                    <div width={110} className={salaryStyle['dDqPZt']}>{salMember?.isWorking.replace('1','재직').replace('2','퇴사')}</div>
                     
                   </div>
                  ))}
