@@ -3,7 +3,7 @@ import {
     POST_APPROVAL_BOOKMARK,
     DELETE_APPROVAL_BOOKMARK,
 } from '../modules/ApprovalModule';
-import { GET_APPROVAL_SEARCHINFO } from '../modules/ModalModule';
+import { GET_APPROVAL_SEARCHINFO, POST_APPROVAL_INSERT } from '../modules/ModalModule';
 
 export const callGetApprovalAPI = ({ memCode, currentPage }) => {
     let requestURL;
@@ -34,8 +34,6 @@ export const callGetApprovalAPI = ({ memCode, currentPage }) => {
 
 export const callGetSearchInfoAPI = ({ nameOrPosition, inputValue }) => {
 
-    console.log("nameOrPosition", nameOrPosition);
-    console.log("inputValue", inputValue);
     if (nameOrPosition === "clear") {
         return async (dispatch, getState) => {
 
@@ -85,8 +83,50 @@ export const callPostBookmarkAPI = ({ form }) => {
         dispatch({ type: POST_APPROVAL_BOOKMARK, payload: result });
     };
 }
-export const callPostTest = () => {
+
+export const callPostApprovalAPI = (form, formData) => {
+    const requestURL = `http://${process.env.REACT_APP_RESTAPI_IP}:7777/api/v1/approval/insert`;
+    const requestURL2 = `http://${process.env.REACT_APP_RESTAPI_IP}:7777/api/v1/approval/insertDoc`;
+    // console.log(form);
+    // for (const [key, value] of formData.entries()) {
+    //     console.log("포무데이타");
+    //     console.log(`${key}: ${value}`);
+    // }
+
+    return async (dispatch, getState) => {
+
+        const result = await fetch(requestURL, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "*/*",
+                // "Authorization": "Bearer " + window.localStorage.getItem("accessToken")
+            },
+            body: JSON.stringify(form)
+        })
+            .then(response => response.json())
+            .then(response => {
+                if (!!formData.entries().next().value) { // formData에 값이 있을때만 fetch
+                    formData.append("docCode", response.data);
+                    fetch(requestURL2, {
+                        method: "POST",
+                        headers: {
+                            "Accept": "*/*",
+                        },
+                        body: formData
+                    }).then(response => response.json());
+                } 
+                
+                
+            })
+            console.log("insert 성공...");
+            dispatch({ type: POST_APPROVAL_INSERT, payload : {} }); }
+
+}
+
+export const callPostTest = (form) => {
     const requestURL = `http://${process.env.REACT_APP_RESTAPI_IP}:7777/api/v1/approval/test`;
+    console.log(...form);
 
     return async (dispatch, getState) => {
 
@@ -96,32 +136,8 @@ export const callPostTest = () => {
                 "Content-Type": "application/json",
                 "Accept": "*/*",
             },
-            body: JSON.stringify({
-                approvalMem: {
-                    memCode: "200"
-                },
-                docType: "업무",
-                isApproved: "W",
-                content: "내용",
-                approverList: [
-                    {
-                        memCode: "100"
-                    },
-                    {
-                        memCode: "100"
-                    }
-                ],
-                refereeList: [
-                    {
-                        memCode: "300",
-                    },
-                    {
-                        memCode: "400",
-                    }
-
-
-                ]
-            })
+            body: JSON.stringify(...form
+            )
         })
             .then(response => response.json());
 

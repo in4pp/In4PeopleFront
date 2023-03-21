@@ -1,45 +1,52 @@
 import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import Ek from '../taskApproval/Ek';
-import { callGetSearchInfoAPI } from '../../../apis/ApprovalAPICalls';
+import { callGetSearchInfoAPI, callPostApprovalAPI } from '../../../apis/ApprovalAPICalls';
 import '../taskCSS/MakeApproval.css';
 import { useSelector } from 'react-redux';
 import { CLEAR_INFO } from '../../../modules/ModalModule';
 import Xmark from '../../../components/icon/Xmark';
+import { decodeJwt } from '../../../utils/tokenUtils';
+
 function ApprovalModal() {
 
-
-    /** EKEditor 환경설정 */
-    const editorConfiguration = {
-        toolbar: ['bold', 'italic'],
-    }
     const getInfo = useSelector(state => state.modalReducer);
     const dispatch = useDispatch();
+    const token = decodeJwt(window.localStorage.getItem("accessToken"));
 
-    const [approvers, setApprovers] = useState([]);
-    const [referees, setReferees] = useState([]);
-    const [fileNames, setFileNames] = useState([]);
-    const [noteValue, setNoteValue] = useState("");
-    const [noteEditor, setNoteEditor] = useState('');
 
-    /** xMark 용 */
+    const [form, setForm] = useState({
+        memCode : token.sub,
+        title: '',
+        content:'',
+        approverList: [],
+        refereeList: [],
+    })
+
     const [mouseOverIndex, setMouseOverIndex] = useState();
+    const [whereMouseAt, setWhereMouseAt] = useState('');
+    const [noteEditor, setNoteEditor] = useState('');
+    const [docAttachments, setDocAttachments] = useState('');
 
-    const onClickXmarkHandler = ({index}) => {
-        console.log("index", index);
-        const tempApprover = approvers;
-        tempApprover.splice(index, 1);
-        dispatch({ type : CLEAR_INFO });
+    const onClickXmarkHandler = ({ index, type }) => {
+
+        let temp = [];
+
+        type === "approver" ? temp = form.approverList : temp = form.refereeList;
+
+        temp.splice(index, 1);
+        dispatch({ type: CLEAR_INFO });
     }
 
-    const mouseOverHandler = ({index}) => {
+    const mouseOverHandler = ({ index, type }) => {
         setMouseOverIndex(index);
+        setWhereMouseAt(type);
     };
-  
+
     const mouseOutHandler = () => {
         setMouseOverIndex('');
     }
-    
+
 
     const onClickFileHandler = () => {
         document.querySelector('input[type=file]').click()
@@ -47,69 +54,107 @@ function ApprovalModal() {
 
     const fileUploadHandler = (e) => {
         const files = e.target.files;
-        const fileNameArray = [];
+        const fileArray = [];
 
         for (let i = 0; i < files.length; i++) {
-            fileNameArray.push(files[i].name);
+            fileArray.push(files[i]);
 
         }
-        setFileNames(fileNameArray);
+        setDocAttachments(fileArray);
     }
 
     const clearFilesHandler = () => {
+
         document.querySelector('input[type=file]').value = null;
-        setFileNames([]);
+        setDocAttachments([]);
     }
     const closeModalHandler = () => {
         document.querySelector('input[type=file]').value = null;
-        setFileNames([]);
-        setNoteValue('');
         document.querySelector('#title').value = null;
         if (noteEditor) {
             noteEditor.setData('');
         }
         document.querySelector('#searchInput').value = null;
-        dispatch({ type : CLEAR_INFO });
+        console.log("beforeClose", form);
 
-        setApprovers([]);
-        setReferees([]);
+        setForm({
+            memCode : token.sub,
+            title: '',
+            approverList: [],
+            refereeList: [],
+            content:''
+        })
+        setDocAttachments([]);
+        dispatch({ type: CLEAR_INFO });
     }
 
     const searchInfoHandler = (e) => {
         const nameOrPosition = document.querySelector('#searchValue1').value; //이름 or 직급
         const inputValue = e.target.value;
-        // const searchValue2 = document.querySelector('input[name="checkApprover"]:checked + label').textContent; //결재 or 참조
 
-        // console.log(searchValue2);
         if (inputValue.length >= 2) { // 2글자 이상 입력 시 api호출.
 
             dispatch(callGetSearchInfoAPI({ nameOrPosition, inputValue }));
         }
-
     }
 
-    const onClickApproversHandler = (a) => {
+    const onClickapproverListHandler = (a) => {
         const approverOrReferee = document.querySelector('input[name="checkApprover"]:checked + label').textContent; //결재자 or 참조
         if (approverOrReferee === "결재자") {
 
-            const approverList = approvers;
+            const approverList = form.approverList;
             approverList.push(a);
 
-            setApprovers(approverList);
+            setForm({
+                ...form,
+                approverList: approverList
+            });
         } else if (approverOrReferee === "참조") {
 
-            const refereeList = referees;
+            const refereeList = form.refereeList;
             refereeList.push(a);
 
-            setReferees(refereeList);
+            setForm({
+                ...form,
+                refereeList : refereeList
+            });
         }
 
-        // console.log("approvers", approvers); //잘들어옴.]
+        // console.log("approverList", approverList); //잘들어옴.]
         document.querySelector('#searchInput').value = null;
 
-        // dispatch(callGetSearchInfoAPI());
+        dispatch({ type: CLEAR_INFO, payload: [] });
+    }
+
+    const onClickSendFormHandler = () => {
+        if(form.refereeList.length){
+            let approverList = [];
+            form.approverList.map(approver => approverList.push({"memCode" : approver.memCode}));
+        }
         
-        dispatch({ type: CLEAR_INFO});
+        if(form.refereeList.length){
+            let refereeList = [];
+            form.refereeList.map(referee => refereeList.push({"memCode" : referee.memCode}));
+        }
+        const formData = new FormData();
+        if (docAttachments.length !== 0) {
+            for(let i=0 ; i < docAttachments.length; i++){
+
+            formData.append("file", docAttachments[i]);
+            }
+        }
+        // formData.append("docAttachments", docAttachments)
+
+        dispatch(callPostApprovalAPI(form, formData));
+    }
+
+    const onChangeHanlder = (e) => {
+
+        setForm({
+            ...form,
+            [e.target.name]: e.target.value
+        })
+
     }
 
     return (
@@ -128,30 +173,19 @@ function ApprovalModal() {
                                         <div className="form-group">
                                             <div className="position-relative">
                                                 <p className="micro">제목</p>
-                                                <input
-                                                    type="text"
-                                                    className="form-control bg-white"
-                                                    title=""
-                                                    placeholder="제목을 입력해주세요"
-                                                    name="title"
-                                                    maxLength={100}
-                                                    defaultValue=""
-                                                    id="title"
+                                                <input type="text" className="form-control bg-white" placeholder="제목을 입력해주세요"
+                                                    name="title" maxLength={100} id="title" onChange={onChangeHanlder}
                                                 />
                                             </div>
                                         </div>
                                         {/* 서머노트 자리 */}
                                         <div className="form-group">
                                             <span style={{ color: 'black' }}>
-                                                <Ek setNoteValue={setNoteValue} setNoteEditor={setNoteEditor} />
+                                                <Ek setNoteEditor={setNoteEditor} form={form} setForm={setForm} />
 
                                             </span>
                                         </div>
                                         <div className="form-group">
-                                            {/* {fileNames.length > 0 && fileNames.map((fileName) => (
-
-                                                <div key={fileName}>{fileName}</div>
-                                                ))} */}
                                             <p className="h6">파일첨부</p>
                                             <div className="position-relative">
                                                 <div className="d-flex-space">
@@ -172,9 +206,9 @@ function ApprovalModal() {
                                                     </div>
                                                 </div>
                                                 <div className="mt-1" >
-                                                    {fileNames.length > 0 && fileNames.map((fileName) => (
+                                                    {docAttachments.length > 0 && docAttachments.map((file) => (
 
-                                                        <div key={fileName}>{fileName}</div>
+                                                        <div key={file.name}>{file.name}</div>
                                                     ))}
                                                 </div>
                                             </div>
@@ -204,19 +238,18 @@ function ApprovalModal() {
                                                                     </tr>
                                                                 </thead>
                                                                 <thead>
-                                                                    {approvers.length === 0 &&
+                                                                    {form.approverList.length === 0 &&
                                                                         <tr>
                                                                             <td colSpan={12} className="sc-ZqFbI cWjmER" style={{ paddingBottom: 30 }}>
                                                                                 결재자가 없습니다.
                                                                             </td>
-                                                                        </tr> }
+                                                                        </tr>}
 
-                                                                    {approvers.length > 0 && approvers.map((a, index) => (
-                                                                        <tr key={index} className="sc-UpCWa kiPXzL no-select"onMouseOver={() =>mouseOverHandler({index})} onMouseOut={mouseOutHandler} >
+                                                                    {form.approverList.length > 0 && form.approverList.map((a, index) => (
+                                                                        <tr key={index} className="sc-UpCWa kiPXzL no-select" onMouseOver={() => mouseOverHandler({ index, type: 'approver' })} onMouseOut={mouseOutHandler} >
                                                                             <td className="sc-jIILKH gIRdvs">
                                                                                 <div>{index + 1}</div>
                                                                             </td>
-
                                                                             <td className="sc-jIILKH gIRdvs">
                                                                                 <div className="sc-gGvHcT gmJlZF">
                                                                                     <div className="sc-ckEbSK hTJZdZ">
@@ -238,11 +271,11 @@ function ApprovalModal() {
                                                                                     <div className="sc-ckEbSK hTJZdZ">
                                                                                         <div className="sc-GhhNo cMWDrM">{a.departmentCode.departmentName}</div>
                                                                                     </div>
-                                                                                    { mouseOverIndex === index && <div onClick={() => onClickXmarkHandler({index})}><Xmark size="xl"/>  </div>}
+                                                                                    {mouseOverIndex === index && whereMouseAt === 'approver' && <div onClick={() => onClickXmarkHandler({ index, type: 'approver' })}><Xmark size="xl" /></div>}
                                                                                 </div>
-                                                                                
+
                                                                             </td>
-                                                                           
+
                                                                         </tr>
                                                                     ))}
 
@@ -255,11 +288,15 @@ function ApprovalModal() {
                                                         <div className="cr-wrapper" style={{ paddingTop: 0 }}>
                                                             <div>참조</div>
                                                             <div className="sc-hlLBRy zApTA">
-                                                                {referees.length === 0 && 
-                                                                <div className="sc-ZqFbI cWjmER"> 참조자가 없습니다.</div>
-                                                                } 
-                                                                {referees.length > 0 && referees.map((r, index) => (
-                                                                    <span className="sc-jNJNQp bzwmyz mr-3" key={index}>{r.positionCode.positionName}: {r.memName}</span>
+                                                                {form.refereeList.length === 0 &&
+                                                                    <div className="sc-ZqFbI cWjmER"> 참조자가 없습니다.</div>
+                                                                }
+                                                                {form.refereeList.length > 0 && form.refereeList.map((r, index) => (
+                                                                    <div className="mr-3" key={index} onClick={() => onClickXmarkHandler({ index, type: 'referee' })}
+                                                                        onMouseOver={() => mouseOverHandler({ index, type: 'referee' })} onMouseOut={mouseOutHandler}>
+                                                                        <span className="sc-jNJNQp bzwmyz">{r.positionCode.positionName}: {r.memName}</span>
+                                                                        {mouseOverIndex === index && whereMouseAt === 'referee' && <Xmark />}
+                                                                    </div>
                                                                 ))}
                                                             </div>
                                                         </div>
@@ -287,7 +324,7 @@ function ApprovalModal() {
                                             </div>
                                             {getInfo.length > 0 && getInfo.map((a, index) => (
                                                 <div className="mt-2" key={index}>
-                                                    <span className="getInfo" onClick={() => onClickApproversHandler(a)}>{a.memName} | {a.departmentCode.departmentName} | {a.positionCode.positionName} </span>
+                                                    <span className="getInfo" onClick={() => onClickapproverListHandler(a)}>{a.memName} | {a.departmentCode.departmentName} | {a.positionCode.positionName} </span>
                                                 </div>
                                             ))}
                                         </div>
@@ -297,7 +334,7 @@ function ApprovalModal() {
                         </div>
                         <div className="modal-footer">
                             <button type="button" className="btn btn-secondary" data-bs-dismiss="modal" onClick={closeModalHandler}>취소</button>
-                            <button type="button" className="btn btn-primary">상신</button>
+                            <button type="button" className="btn btn-primary" onClick={onClickSendFormHandler}>상신</button>
                         </div>
                     </div>
                 </div>
