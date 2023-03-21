@@ -113,7 +113,7 @@ export const callMemberMonthlyAPI = () => {
 
        console.log('[SalaryAPICalls] callSalMemberList Call')
  
-       const requestURL = `http://${process.env.REACT_APP_RESTAPI_IP}:7777/api/v1/salary/monthlySetting`;
+       const requestURL = `http://${process.env.REACT_APP_RESTAPI_IP}:7777/api/v1/salary/monthlysetting`;
 
        return async (dispatch, getState) => {
 
