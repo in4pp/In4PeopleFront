@@ -76,6 +76,12 @@ function App() {
             <Route path="workInquiry" element={<WorkInquiry />} />
             <Route path="monthlysetting" element={<MonthlySetting />} />
           </Route>
+
+          <Route path="/workmanage" element={<WorkManageSidebar />}>
+            <Route index element={<ApprovalSubmit />} />
+            <Route path="setting" element={<WorkSetting />} />
+            <Route path="scheduleApprove" element={<SchedulManage />}></Route>
+          </Route>
         </Route>
 
         <Route path="/login" element={<Login />} />
