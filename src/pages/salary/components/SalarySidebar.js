@@ -11,13 +11,11 @@ function SalarySidebar() {
                 <div className={Side.iLkxeQ}>
                     <div className={Side.ecYrVX}>
                         <div className={Side.pbheK}>
-                            <h1>결재</h1>
+                            <h1>급여</h1>
                             <ul>
                                 <li className={Side.bEaXSR}><NavLink to="salinfo">직원별 급여정보</NavLink></li>
                                 <li className={Side.fcngae}><NavLink to="monthlysetting">월급 조회 및 입력</NavLink></li>
-                                <li className={Side.fcngae}><NavLink to="incometax">소득 세율 조회</NavLink></li>
-                                <li className={Side.fcngae}>템플릿</li>
-                                <li className={Side.fcngae}>임시 저장</li>
+                                <li className={Side.fcngae}><NavLink to="incometax">소득 세율 조회</NavLink></li>                  
                             </ul>
                         </div>
                         <div className={Side.pbheK}>
