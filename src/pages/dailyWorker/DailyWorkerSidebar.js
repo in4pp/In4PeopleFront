@@ -3,6 +3,7 @@ import Side from "../../components/common/Navbar.module.css";
 
 import SlideToggleWorker from "./components/SlideToggleWorker";
 import SlideTogglePay from "./components/SlideTogglePay";
+import SlideToggleApproval from "./components/SlideToggleApproval";
 
 
 function DailyWorkerSidebar() {
@@ -23,6 +24,9 @@ function DailyWorkerSidebar() {
                 </li>
                 <li className={Side.fcngae}>
                   <SlideTogglePay />
+                </li>
+                <li className={Side.fcngae}>
+                  <SlideToggleApproval />
                 </li>
               </ul>
             </div>

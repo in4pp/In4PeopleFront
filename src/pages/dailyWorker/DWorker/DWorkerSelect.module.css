@@ -1,25 +1,8 @@
-.pagingDiv{
-  height: 50px
-}
-
-.pagingBtn{
-  margin: 5px;
-  border-radius: 25px;
-  background-color: white;
-  font-weight: bold;
-}
-
-.pagingBtn:hover{
-  cursor: pointer;
-  background-color: burlywood;
-}
-
-
 .HRlistone
 {
   padding-top: 100px;
   padding-left: 250px;
-  margin-right: 10%;
+  margin-right: 5%;
 }
 
 .titlee{

@@ -56,15 +56,14 @@ a, label, .dropdown-menu, .nav-link {
 a, button, input, textarea {
   transition: border-color 0.15s ease-in-out, background 0.15s ease-in-out, color 0.15s ease-in-out, opacity 0.15s ease-in-out, transform 0.15s ease-in-out;
 }
-a {
+.nav{
   text-decoration: none;
   color: inherit;
-}
-a {
   color: #000000;
   text-decoration: none;
   background-color: transparent;
 }
+
 element.style {
   width: 128px;
   height: 28px;

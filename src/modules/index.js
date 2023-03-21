@@ -1,18 +1,26 @@
 import { combineReducers } from "redux";
 
 import memberReducer from "./MemberModule";
-import orderInfoReducer from "../modules/PersonnelModule";
+import personnelReducer from "./PersonnelModule";
 import approvalReducer from "./ApprovalModule";
+import dailyWorkerReducer from "./DWorkerModule";
 import workmanageReducer from "./WorkmanageModule";
 import salaryReducer from './SalaryModule';
+import modalReducer from "./ModalModule";
+import orderInfoReducer from '../modules/PersonnelModule';
+
 
 const rootReducer = combineReducers({
-  memberReducer,
-  orderInfoReducer,
-  approvalReducer,
+    memberReducer,
+    orderInfoReducer,
+    approvalReducer,
+    dailyWorkerReducer,
+    
+  personnelReducer,
   workmanageReducer,
-  salaryReducer
 
+  salaryReducer,
+  modalReducer
 
 });
 
