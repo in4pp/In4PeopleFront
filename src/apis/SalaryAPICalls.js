@@ -9,7 +9,7 @@ import {
 
 
 
-
+// 급여 환경 설정 입력
 export const callMemberSalinfoRegistAPI = ({form}) => {
        console.log('[SalaryAPICalls] callMemberSalinfoRegistAPI Call');
        console.log(form)

@@ -17,6 +17,11 @@ function HourlyWageSetting() {
     const params = useParams();
 
 
+    const onClickMonthlyWage = () => {
+      navigate("/salary/monthlysetting", { replace: false })
+
+    }
+
 
     const [form, setForm] = useState({
       memCode: '',
@@ -113,7 +118,7 @@ const onClickRegisterHandler = () => {
                     <h4>날짜</h4>
                     <div className={HourlySettingStyle['knYfag']}>
                       <div width={262} className={HourlySettingStyle['kfdWKD']}>
-                        <div className={HourlySettingStyle['kGCoAu']}>원</div><input name="settingDate" className={HourlySettingStyle['dzyuNL']} onChange={ onChangeHandler }/>
+                        <div className={HourlySettingStyle['kGCoAu']}></div><input name="settingDate" className={HourlySettingStyle['dzyuNL']} onChange={ onChangeHandler }/>
                       </div>
                     </div>
                   </div>
@@ -121,7 +126,7 @@ const onClickRegisterHandler = () => {
                     <h4>월 기본급</h4>
                     <div className={HourlySettingStyle['knYfag']}>
                       <div width={262} className={HourlySettingStyle['kfdWKD']}>
-                        <div className={HourlySettingStyle['kGCoAu']}>원</div><input className={HourlySettingStyle['dzyuNL']} name="basicMonthlySalary" onChange={ onChangeHandler } />
+                        <div className={HourlySettingStyle['kGCoAu']}></div><input className={HourlySettingStyle['dzyuNL']} name="basicMonthlySalary" onChange={ onChangeHandler } />
                       </div>
                     </div>
                   </div>
@@ -129,7 +134,7 @@ const onClickRegisterHandler = () => {
                     <h4>통상시급</h4>
                     <div className={HourlySettingStyle['knYfag']}>
                       <div width={262} className={HourlySettingStyle['kfdWKD']}>
-                        <div className={HourlySettingStyle['kGCoAu']}>원</div><input className={HourlySettingStyle['dzyuNL']} name="hourlyWage" onChange={ onChangeHandler } />
+                        <div className={HourlySettingStyle['kGCoAu']}></div><input className={HourlySettingStyle['dzyuNL']} name="hourlyWage" onChange={ onChangeHandler } />
                       </div>
                     </div>
                   </div>
@@ -143,6 +148,7 @@ const onClickRegisterHandler = () => {
                   </div> */}
                 </div>
               </div><button className={HourlySettingStyle['jlwMoN']} onClick={onClickRegisterHandler} >저장하기</button>
+              <button className={HourlySettingStyle['jlwMoN']} onClick={onClickMonthlyWage} >월급생성</button>
             </div>
           </div>
         </div>
