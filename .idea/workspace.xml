@@ -5,16 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1378704a-9ff1-4552-b10a-c0fa2d2f41ca" name="Changes" comment="feat : dailyworker insert">
-      <change afterPath="$PROJECT_DIR$/src/pages/dailyWorker/DWorker/DWApproval.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/dailyWorker/DWorker/DWApprovalCompleted.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/dailyWorker/DWorker/DWApprovalNeed.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/dailyWorker/DWorker/DWApprovalRefered.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/dailyWorker/DWorker/DWorkerDetail.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/dailyWorker/DWorker/DWorkerDetail.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/dailyWorker/DWorker/DWorkerModify.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/apis/DailyWorkerAPICalls.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/apis/DailyWorkerAPICalls.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/DWorkerModule.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/DWorkerModule.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/dailyWorker/DWorker/DWorkerInsert.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dailyWorker/DWorker/DWorkerInsert.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/dailyWorker/DWorker/DWorkerSelect.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dailyWorker/DWorker/DWorkerSelect.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/dailyWorker/DWorker/dwApprovalWrite.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dailyWorker/DWorker/DWApprovalWrite.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dailyWorker/components/SlideToggleWorker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dailyWorker/components/SlideToggleWorker.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,12 +43,12 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="성일" />
-                    <option name="lastUsedInstant" value="1678749640" />
+                    <option name="branchName" value="rami" />
+                    <option name="lastUsedInstant" value="1679312252" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="master" />
-                    <option name="lastUsedInstant" value="1678749555" />
+                    <option name="lastUsedInstant" value="1679312162" />
                   </RecentBranch>
                 </list>
               </option>
@@ -81,21 +77,21 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/dev/04_project/finalProject/final4jo/In4PeopleFront/src/pages/dailyWorker/DWorker",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "node",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/dev/04_project/finalProject/final4jo/In4PeopleFront/src/pages/dailyWorker/DWorker&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\dev\04_project\finalProject\final4jo\In4PeopleFront\src\pages\dailyWorker\DWorker" />
@@ -104,7 +100,7 @@
       <recent name="C:\DEV\04_project\In4PeopleFront--\src\pages\salary" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.npm start">
+  <component name="RunManager">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
     </configuration>
