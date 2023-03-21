@@ -130,6 +130,46 @@ function DWorkerDetail() {
                 {/*    <button onClick={onClickMemberRegistHandler}>수정</button>*/}
                 {/*</div>*/}
             </div>
+
+            {/*{ reviewDetail &&*/}
+            {/*    <div className={ DWorkerStyle.buttonDivCss }>*/}
+            {/*        <button*/}
+            {/*            className={ DWorkerStyle.backBtn }*/}
+            {/*            onClick={ () => navigate(-1) }*/}
+            {/*        >*/}
+            {/*            돌아가기*/}
+            {/*        </button>*/}
+
+            {/*        {*/}
+            {/*        //     token &&*/}
+            {/*        // (token.sub === reviewDetail.member?.memberId)*/}
+            {/*        //     ?*/}
+            {/*            <div>{!modifyMode &&*/}
+            {/*                <button*/}
+            {/*                    className={ DWorkerStyle.backBtn }*/}
+            {/*                    onClick={ onClickModifyModeHandler }*/}
+            {/*                >*/}
+            {/*                    수정모드*/}
+            {/*                </button>*/}
+            {/*            }*/}
+            {/*                {modifyMode &&*/}
+            {/*                    <button*/}
+            {/*                        className={ DWorkerStyle.backBtn }*/}
+            {/*                        onClick={ onClickReviewUpdateHandler }*/}
+            {/*                    >*/}
+            {/*                        리뷰 수정 저장하기*/}
+            {/*                    </button>*/}
+            {/*                }*/}
+            {/*            </div>*/}
+            {/*            : null*/}
+            {/*        }*/}
+
+            {/*    </div>*/}
+            {/*}*/}
+
+
+
+
         </div>
     );
 

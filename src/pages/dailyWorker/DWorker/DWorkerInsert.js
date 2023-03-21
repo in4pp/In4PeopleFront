@@ -100,14 +100,14 @@ function DWorkerInsert(){
         //   }
 
         alert('멤버 등록이 완료되었습니다.');
-        // window.location.reload();
+        window.location.reload();
     }
 
     return(
      <div>
         <div className={`${DWorkerStyle["registone"]}`}>
         <div className={`${DWorkerStyle['titlee']}`}>
-            <h3>일용직사원 정보 등록</h3>
+            <h3>일용직사원 등록</h3>
             </div>
                 <div className={`${DWorkerStyle['box']}`}>
                     <div className={`${DWorkerStyle['commonInfo']}`}>
