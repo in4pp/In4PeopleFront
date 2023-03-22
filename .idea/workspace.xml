@@ -4,16 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1378704a-9ff1-4552-b10a-c0fa2d2f41ca" name="Changes" comment="feat : dailyworker insert">
-      <change afterPath="$PROJECT_DIR$/dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nginx.conf" afterDir="false" />
+    <list default="true" id="1378704a-9ff1-4552-b10a-c0fa2d2f41ca" name="Changes" comment="feat : dailyworker detail">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/apis/DailyWorkerAPICalls.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/apis/DailyWorkerAPICalls.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/DWorkerModule.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/DWorkerModule.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/dailyWorker/DWorker/DWorkerDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dailyWorker/DWorker/DWorkerDetail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/dailyWorker/DWorker/DWorkerSelect.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dailyWorker/DWorker/DWorkerSelect.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/dailyWorker/DWorker/DWorkerUpdate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dailyWorker/DWorker/DWorkerUpdate.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,10 +25,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
-    &quot;lastFilter&quot;: {
+  &quot;lastFilter&quot;: {
     &quot;state&quot;: &quot;OPEN&quot;
-    }
-    }</component>
+  }
+}</component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="5" />
     <option name="recentBranches">
@@ -47,7 +40,7 @@
                 <list>
                   <RecentBranch>
                     <option name="branchName" value="rami" />
-                    <option name="lastUsedInstant" value="1679312252" />
+                    <option name="lastUsedInstant" value="1679456302" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="master" />
@@ -70,6 +63,9 @@
       </UrlAndAccount>
     </option>
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/App.js" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -85,7 +81,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/dev/04_project/finalProject/final4jo/In4PeopleFront/src/pages/dailyWorker/DWorker&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/dev/04_project/finalProject/final4jo/In4PeopleFront&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -154,6 +150,12 @@
       <workItem from="1678923246926" duration="732000" />
       <workItem from="1678924022380" duration="115000" />
       <workItem from="1678924167352" duration="415000" />
+      <workItem from="1679049600052" duration="185000" />
+      <workItem from="1679061076545" duration="30000" />
+      <workItem from="1679207365008" duration="187000" />
+      <workItem from="1679421600659" duration="94000" />
+      <workItem from="1679421711686" duration="388000" />
+      <workItem from="1679446196561" duration="2585000" />
     </task>
     <task id="LOCAL-00001" summary="feat : dailyworker insert">
       <created>1679358703887</created>
@@ -162,7 +164,21 @@
       <option name="project" value="LOCAL" />
       <updated>1679358703887</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feat : dailyworker detail">
+      <created>1679446577083</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1679446577083</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat : dailyworker detail">
+      <created>1679447876859</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1679447876859</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,6 +197,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat : dailyworker insert" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat : dailyworker insert" />
+    <MESSAGE value="feat : dailyworker detail" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat : dailyworker detail" />
   </component>
 </project>

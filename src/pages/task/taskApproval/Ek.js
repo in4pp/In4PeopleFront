@@ -2,7 +2,7 @@ import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import '../taskCSS/Ek.css'
 
-function Ek ( {setNoteValue, setNoteEditor} ){
+function Ek ( {form,setForm, setNoteEditor} ){
 
     const editorConfiguration = {
         toolbar : ['bold', 'italic'],
@@ -13,7 +13,10 @@ function Ek ( {setNoteValue, setNoteEditor} ){
             editor={ ClassicEditor }
             data=""
             onBlur={ ( event, editor ) => {
-                setNoteValue(editor.getData());
+                setForm({
+                    ...form,
+                    content : editor.getData()
+                });
                 setNoteEditor(editor);
             } }
             config={ editorConfiguration }

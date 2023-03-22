@@ -2,7 +2,7 @@ import HRlistCSS from './HRlist.module.css'
 import { useNavigate, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
-import {callMemberListAPI} from '../../../apis/PersonnelAPICalls';
+import {callMemberListAPI, callMemberSearchAPI} from '../../../apis/PersonnelAPICalls';
 
 function HRlist() {
 
@@ -12,18 +12,22 @@ function HRlist() {
     const dispatch = useDispatch();
     const hrmemlist = useSelector(state => state.personnelReducer); // modules/index.js 안에 선언한 store목록 중에서 personnelReducer 가져오겠다.
     const [currentPage, setCurrentPage] = useState(1);
+    const [search, setSearch] = useState("");
+
     // console.log('hrmemlist', hrmemlist);
     // 페이징이 필요한면 useState를 통해서 상태값을 추가 -> currentPage참조
 
-    // const pageInfo = hrmemlist.pageInfo;
+    // 페이징
+    const pageInfo = hrmemlist.pageInfo;
 
-    // const pageNumber = [];
-    // if(pageInfo){
-    //     for(let i = 1; i <= pageInfo.pageEnd ; i++){
-    //         pageNumber.push(i);
-    //     }
-    // }
+    const pageNumber = [];
+    if(pageInfo){
+        for(let i = 1; i <= pageInfo.pageEnd ; i++){
+            pageNumber.push(i);
+        }
+    }
 
+    
     // const hrlist = hrmemlist.data;
     if(hrmemlist != undefined){
 
@@ -38,8 +42,25 @@ function HRlist() {
         },[currentPage]
     );
     
+    // 멤버 상세페이지로 이동
     const onClickTableTr = (memCode) => {
         navigate(`/personnel/memDetail/${memCode}`, { replace: false });
+    }
+
+
+    const onSearchChangeHandler = (e) => {
+        setSearch(e.target.value);
+    }
+
+    // 엔터 쳤을 시 검색 기능 
+    const onEnterkeyHandler = (e) => {
+        if (e.key == 'Enter') {
+            console.log('Enter key', search);
+
+            dispatch(callMemberSearchAPI({
+                memName: search
+            }));
+        }
     }
 
 
@@ -52,14 +73,19 @@ function HRlist() {
                 <div className={`${HRlistCSS["box"]}`}>
                     <div className={`${HRlistCSS["content1"]}`}>
                         <h4>검색어</h4>
-                        <div className={`${HRlistCSS["content2"]}`}>
+                        <div className={`${HRlistCSS["content2"]}`} type="text"  onChange={ onSearchChangeHandler } value={ search }>
                             <select className={`${HRlistCSS["workType"]}`}>
                                 <option value="1">성명</option>
-                                <option value="2">사원번호</option>
-                                <option value="3">부서</option>
+                                {/* <option value="2">사원번호</option>
+                                <option value="3">부서</option> */}
                             </select>
                             <div className={`${HRlistCSS["content2"]}`}>
-                                <input type="text" />
+                            <input
+                                        type="text"
+                                        value={ search }
+                                        onKeyUp={ onEnterkeyHandler }
+                                        onChange={ onSearchChangeHandler }
+                                    />
                             </div>
                             <div className={`${HRlistCSS["applbutton"]}`}>
                                 <button>검색</button>
@@ -102,36 +128,36 @@ function HRlist() {
                                         ))}
                             </tbody>
                         </table>
-                        {/* <div style={{ listStyleType: "none", display: "flex", justifyContent: "center" }}>
-            { Array.isArray(hrmemlist) &&
-            <button 
-                onClick={() => setCurrentPage(currentPage - 1)} 
-                disabled={currentPage === 1}
-                className={ HRlistCSS.pagingBtn }
-            >
-                &lt;
-            </button>
-            }
-            {pageNumber.map((num) => (
-            <li key={num} onClick={() => setCurrentPage(num)}>
-                <button
-                    style={ currentPage === num ? {backgroundColor : 'orange' } : null}
-                    className={ HRlistCSS.pagingBtn }
-                >
-                    {num}
-                </button>
-            </li>
-            ))}
-            { Array.isArray(hrmemlist) &&
-            <button 
-                className={ HRlistCSS.pagingBtn }
-                onClick={() => setCurrentPage(currentPage + 1)} 
-                disabled={currentPage === pageInfo.pageEnd || pageInfo.total == 0}
-            >
-                &gt;
-            </button>
-            }
-        </div> */}
+                        <div style={{ listStyleType: "none", display: "flex", justifyContent: "center" }}>
+                            { Array.isArray(hrmemlist) &&
+                            <button 
+                                onClick={() => setCurrentPage(currentPage - 1)} 
+                                disabled={currentPage === 1}
+                                className={ HRlistCSS.pagingBtn }
+                            >
+                                &lt;
+                            </button>
+                            }
+                            {pageNumber.map((num) => (
+                            <li key={num} onClick={() => setCurrentPage(num)}>
+                                <button
+                                    style={ currentPage === num ? {backgroundColor : 'orange' } : null}
+                                    className={ HRlistCSS.pagingBtn }
+                                >
+                                    {num}
+                                </button>
+                            </li>
+                            ))}
+                            { Array.isArray(hrmemlist) &&
+                            <button 
+                                className={ HRlistCSS.pagingBtn }
+                                onClick={() => setCurrentPage(currentPage + 1)} 
+                                // disabled={currentPage === pageInfo.pageEnd || pageInfo.total == 0}
+                            >
+                                &gt;
+                            </button>
+                            }
+                        </div>
                     </div>
                 </div>
             </div>

@@ -4,6 +4,7 @@ import { GET_ORDERINFO
         , GET_MEMDETAIL
         , GET_MEMBER_UPDATE
         , PUT_MEMBER_UPDATE
+        , GET_SEARCH
 } from "../modules/PersonnelModule";
 
 // 인사발령 리스트 조회
@@ -40,7 +41,7 @@ export const callOrderInfoListAPI = ({currentPage}) => {
 // 멤버 등록 
 export const callMemberRegistAPI = ({form}) => {
     console.log('[PersonnelAPICalls] callMemberRegistAPI Call');
-    alert('form============', form);
+    // alert('form============', form);
     const requestURL = `http://${process.env.REACT_APP_RESTAPI_IP}:7777/api/v1/personnel/memberRegist`;
 
     return async (dispatch, getState) => {
@@ -168,4 +169,30 @@ export const callMemberUpdateAPI = ({form}) => {
         dispatch({ type: PUT_MEMBER_UPDATE,  payload: result });
         
     };    
+}
+
+
+// 사원 명부 검색 기능
+export const callMemberSearchAPI = ({memName}) => {
+
+    console.log("memName", memName);
+
+    const requestURL = `http://${process.env.REACT_APP_RESTAPI_IP}:7777/api/v1/personnel/search/${memName}`;
+
+    console.log(`[dworkerInfoAPI] requestURL : `, requestURL);
+
+    return async (dispatch, getState) => {
+        const result = await fetch(requestURL, {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "*/*",
+            }
+        })
+            .then(response => response.json());
+        if (result.status === 200) {
+            console.log(`[callMemberSearchAPI] callMemberSearchAPI : `, result);
+            dispatch({type: GET_SEARCH, payload: result.data});
+        }
+    };
 }

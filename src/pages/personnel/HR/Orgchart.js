@@ -51,6 +51,12 @@ function Orgchart(){
                 <div className={`${OrgCSS["ppemployee"]}`}>
                   <li>가나다</li>
                 </div>
+                <div className={`${OrgCSS["ppemployee"]}`}>
+                  <li>가나다</li>
+                </div>
+                <div className={`${OrgCSS["ppemployee"]}`}>
+                  <li>가나다</li>
+                </div>
               </div>
             </>
           );

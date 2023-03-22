@@ -106,7 +106,7 @@ function Navbar() {
                 </span>
 
               <span className={`${NavCSS.fEXmlR} ${NavCSS.kOVHNW} ${NavCSS.nav}`}>
-                일용직
+                 <NavLink to="/dailyWorker">일용직</NavLink>
               </span>
               <span className={`${NavCSS.fEXmlR} ${NavCSS.kOVHNW} ${NavCSS.nav}`}>
                 <NavLink to="/task">업무</NavLink>
