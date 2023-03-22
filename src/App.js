@@ -32,6 +32,7 @@ import SalarySettlement from "./pages/salary/SalarySettlement";
 import HourlyWageSetting from "./pages/salary/HourlyWageSetting";
 import WorkInquiry from "./pages/salary/WorkInquiry";
 import MonthlySetting from "./pages/salary/MonthlySetting";
+import DWorkerDetail from "./pages/dailyWorker/DWorker/DWorkerDetail";
 
 function App() {
   return (
@@ -68,6 +69,7 @@ function App() {
             <Route path="insert" element={<DWorkerInsert />} />
             <Route path="update" element={<DWorkerUpdate />} />
             <Route path="workers" element={<DWorkerSelect />} />
+            <Route path="detail/:workerCode" element={<DWorkerDetail />} />
           </Route>
 
           <Route path="salary" element={<SalarySidebar />}>
