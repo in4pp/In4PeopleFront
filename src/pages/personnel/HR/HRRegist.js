@@ -156,7 +156,7 @@ import { callMemberRegistAPI } from '../../../apis/PersonnelAPICalls';
                                                 id='daumAdd'
                                                 type='text'
                                                 readOnly={true}
-                                                placeholder="주소"
+                                                placeholder="주소를 검색해주세요"
                                                 onChange={ onChangeHandler }
                                             />
                                             <DaumAddress className="addBtn" />

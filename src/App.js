@@ -82,7 +82,7 @@ function App() {
           </Route>
 
           <Route path="/workmanage" element={<WorkManageSidebar />}>
-            <Route index element={<ApprovalSubmit />} />
+            <Route index element={<WorkSetting />} />
             <Route path="setting" element={<WorkSetting />} />
             <Route path="scheduleApprove" element={<SchedulManage />}></Route>
           </Route>
