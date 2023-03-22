@@ -31,6 +31,9 @@ import HourlyWageSetting from "./pages/salary/HourlyWageSetting";
 import WorkInquiry from "./pages/salary/WorkInquiry";
 import MonthlySetting from "./pages/salary/MonthlySetting";
 import DWorkerDetail from "./pages/dailyWorker/DWorker/DWorkerDetail";
+import WorkSetting from "./pages/workManagement/Schedule/WorkSetting";
+import SchedulManage from "./pages/workManagement/Schedule/ScheduleManage";
+
 
 function App() {
 
