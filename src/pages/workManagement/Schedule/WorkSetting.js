@@ -168,14 +168,16 @@ function WorkSetting() {
 
     console.log("time1 :" + time1);
 
-    const result1 = time1.split(":");
+    let result1 = "";
+    result1 = time1.split(":");
     console.log("result1 : " + result1);
 
     let h, m;
     [h, m] = result1;
     console.log("h :" + h + " m : " + m);
 
-    const result2 = time2.split(":");
+    let result2 = "";
+    result2 = time2.split(":");
     console.log("result2 : " + result2);
 
     let h1, m1;

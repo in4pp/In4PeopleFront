@@ -1,10 +1,12 @@
 import {useDispatch, useSelector} from 'react-redux';
 import DWorkerSelectCSS from './DWorkerSelect.module.css';
+import { useNavigate, useParams } from 'react-router-dom';
 import {useEffect, useState} from 'react';
 import {dworkerInfoAllAPI, dworkerInfoAPI, dworkerSearchAPI} from '../../../apis/DailyWorkerAPICalls';
+import HRlistCSS from "../../personnel/HR/HRlist.module.css";
 
 function DWorkerlist() {
-
+    const navigate = useNavigate();
     const dispatch = useDispatch();
     const dworkerlist = useSelector(state => state.dailyWorkerReducer); // modules/index.js 안에 선언한 store목록 중에서 dailyWorkerReducer 가져오겠다.
     const [search, setSearch] = useState('');
@@ -33,7 +35,9 @@ function DWorkerlist() {
             }));
         }
     }
-
+    const onClickTableTr = (workerCode) => {
+        navigate(`/dailyWorker/detail/${workerCode}`, { replace: false });
+    }
 
         return (
             <>
@@ -75,29 +79,34 @@ function DWorkerlist() {
                                     <th className={`${DWorkerSelectCSS["applth"]}`}>주소</th>
                                     <th className={`${DWorkerSelectCSS["applth"]}`}>은행명</th>
                                     <th className={`${DWorkerSelectCSS["applth"]}`}>계좌번호</th>
-                                    <th className={`${DWorkerSelectCSS["applth"]}`}>등록일</th>
-                                    <th className={`${DWorkerSelectCSS["applth"]}`}>수정일</th>
+                                    <th className={`${DWorkerSelectCSS["applth"]}`}>근무시작일</th>
+                                    <th className={`${DWorkerSelectCSS["applth"]}`}>근무종료일</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                {dworkerlist && dworkerlist.map(
-                                    (dwinfo, index) => (
-                                        <tr key={dwinfo.workerCode} className={`${DWorkerSelectCSS["appltr"]}`}>
-                                            <td className={`${DWorkerSelectCSS["appltd"]}`}>{dwinfo.workerCode}</td>
-                                            <td className={`${DWorkerSelectCSS["appltd"]}`}>{dwinfo.workerName}</td>
-                                            <td className={`${DWorkerSelectCSS["appltd"]}`}>{dwinfo.workerRegNumber}</td>
-                                            <td className={`${DWorkerSelectCSS["appltd"]}`}>{dwinfo.workerPhone}</td>
-                                            <td className={`${DWorkerSelectCSS["appltd"]}`}>{dwinfo.workerAddress}</td>
-                                            <td className={`${DWorkerSelectCSS["appltd"]}`}>{dwinfo.employeeSalarySetting.bank}</td>
-                                            <td className={`${DWorkerSelectCSS["appltd"]}`}>{dwinfo.employeeSalarySetting.accountNumber}</td>
-                                            <td className={`${DWorkerSelectCSS["appltd"]}`}>{dwinfo.createAt}</td>
-                                            <td className={`${DWorkerSelectCSS["appltd"]}`}>{dwinfo.updatedAt}</td>
+                                {Array.isArray(dworkerlist) && dworkerlist.map (
+                                    (dworkerlist, index) => (
+                                        <tr
+                                            key={dworkerlist.memCode}
+                                            onClick={ () => onClickTableTr(dworkerlist.memCode) }
+                                            className={`${DWorkerSelectCSS["appltr"]}`}>
+
+                                    {/*dworkerlist && dworkerlist.map(*/}
+                                    {/*(dwinfo, index) => (*/}
+                                    {/*    <tr key={dwinfo.workerCode} className={`${DWorkerSelectCSS["appltr"]}`}>*/}
+                                            <td className={`${DWorkerSelectCSS["appltd"]}`}>{dworkerlist.workerCode}</td>
+                                            <td className={`${DWorkerSelectCSS["appltd"]}`}>{dworkerlist.workerName}</td>
+                                            <td className={`${DWorkerSelectCSS["appltd"]}`}>{dworkerlist.workerRegNumber}</td>
+                                            <td className={`${DWorkerSelectCSS["appltd"]}`}>{dworkerlist.workerPhone}</td>
+                                            <td className={`${DWorkerSelectCSS["appltd"]}`}>{dworkerlist.workerAddress}</td>
+                                            <td className={`${DWorkerSelectCSS["appltd"]}`}>{dworkerlist.bank}</td>
+                                            <td className={`${DWorkerSelectCSS["appltd"]}`}>{dworkerlist.accountNumber}</td>
+                                            <td className={`${DWorkerSelectCSS["appltd"]}`}>{dworkerlist.startDate}</td>
+                                            <td className={`${DWorkerSelectCSS["appltd"]}`}>{dworkerlist.endDate}</td>
                                         </tr>
                                     )
                                 )}
-
                                 </tbody>
-
                             </table>
                         </div>
                     </div>
@@ -108,3 +117,4 @@ function DWorkerlist() {
     }
 
 export default DWorkerlist;
+
