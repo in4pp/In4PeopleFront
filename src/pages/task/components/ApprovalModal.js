@@ -75,7 +75,6 @@ function ApprovalModal() {
             noteEditor.setData('');
         }
         document.querySelector('#searchInput').value = null;
-        console.log("beforeClose", form);
 
         setForm({
             memCode : token.sub,
@@ -145,7 +144,8 @@ function ApprovalModal() {
         }
         // formData.append("docAttachments", docAttachments)
 
-        dispatch(callPostApprovalAPI(form, formData));
+        dispatch(callPostApprovalAPI(form, formData)).then(() => {document.querySelector('#closeModal').click()});
+        window.alert('등록 성공');
     }
 
     const onChangeHanlder = (e) => {
@@ -271,7 +271,8 @@ function ApprovalModal() {
                                                                                     <div className="sc-ckEbSK hTJZdZ">
                                                                                         <div className="sc-GhhNo cMWDrM">{a.departmentCode.departmentName}</div>
                                                                                     </div>
-                                                                                    {mouseOverIndex === index && whereMouseAt === 'approver' && <div onClick={() => onClickXmarkHandler({ index, type: 'approver' })}><Xmark size="xl" /></div>}
+                                                                                    {mouseOverIndex === index && whereMouseAt === 'approver' && 
+                                                                                    <div onClick={() => onClickXmarkHandler({ index, type: 'approver' })}><Xmark size="xl" /></div>}
                                                                                 </div>
 
                                                                             </td>
@@ -333,7 +334,7 @@ function ApprovalModal() {
                             </div>
                         </div>
                         <div className="modal-footer">
-                            <button type="button" className="btn btn-secondary" data-bs-dismiss="modal" onClick={closeModalHandler}>취소</button>
+                            <button id="closeModal" type="button" className="btn btn-secondary" data-bs-dismiss="modal" onClick={closeModalHandler}>취소</button>
                             <button type="button" className="btn btn-primary" onClick={onClickSendFormHandler}>상신</button>
                         </div>
                     </div>

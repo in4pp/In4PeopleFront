@@ -87,11 +87,6 @@ export const callPostBookmarkAPI = ({ form }) => {
 export const callPostApprovalAPI = (form, formData) => {
     const requestURL = `http://${process.env.REACT_APP_RESTAPI_IP}:7777/api/v1/approval/insert`;
     const requestURL2 = `http://${process.env.REACT_APP_RESTAPI_IP}:7777/api/v1/approval/insertDoc`;
-    // console.log(form);
-    // for (const [key, value] of formData.entries()) {
-    //     console.log("포무데이타");
-    //     console.log(`${key}: ${value}`);
-    // }
 
     return async (dispatch, getState) => {
 
