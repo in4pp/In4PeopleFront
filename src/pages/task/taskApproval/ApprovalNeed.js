@@ -10,8 +10,35 @@ function ApprovalNeed() {
 
 const dispatch = useDispatch();
 
+const [form, Setform] = useState({
+  approvalMem: {
+      memCode: "200"
+  },
+  docType: "업무",
+  isApproved: "W",
+  content: "내용",
+  approverList: [
+      {
+          memCode: "100"
+      },
+      {
+          memCode: "100"
+      }
+  ],
+  refereeList: [
+      {
+          memCode: "300",
+      },
+      {
+          memCode: "400",
+      }
+
+
+  ]
+})
+
 const testHandler = () => {
-  dispatch(callPostTest());
+  dispatch(callPostTest(form));
 }  
   return (
     <>

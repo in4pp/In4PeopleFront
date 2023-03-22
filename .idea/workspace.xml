@@ -25,10 +25,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
-    &quot;lastFilter&quot;: {
+  &quot;lastFilter&quot;: {
     &quot;state&quot;: &quot;OPEN&quot;
-    }
-    }</component>
+  }
+}</component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="5" />
     <option name="recentBranches">
@@ -147,6 +147,9 @@
       <workItem from="1678923246926" duration="732000" />
       <workItem from="1678924022380" duration="115000" />
       <workItem from="1678924167352" duration="415000" />
+      <workItem from="1679049600052" duration="185000" />
+      <workItem from="1679061076545" duration="30000" />
+      <workItem from="1679207365008" duration="187000" />
       <workItem from="1679421600659" duration="94000" />
       <workItem from="1679421711686" duration="388000" />
       <workItem from="1679446196561" duration="2585000" />

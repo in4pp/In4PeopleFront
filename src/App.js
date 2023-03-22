@@ -23,8 +23,6 @@ import HRApplication from "./pages/personnel/HR/HRApplication";
 import DWorkerInsert from "./pages/dailyWorker/DWorker/DWorkerInsert";
 import DWorkerSelect from "./pages/dailyWorker/DWorker/DWorkerSelect";
 import DWorkerUpdate from "./pages/dailyWorker/DWorker/DWorkerUpdate";
-import WorkSetting from "./pages/workManagement/Schedule/WorkSetting";
-import SchedulManage from "./pages/workManagement/Schedule/ScheduleManage";
 import HRcerApp from "./pages/personnel/HR/HRcerApp";
 import HRlistDetail from "./pages/personnel/HR/HRlistDetail";
 import MemberUpdate from "./pages/personnel/HR/HRUpdate";
@@ -35,6 +33,7 @@ import MonthlySetting from "./pages/salary/MonthlySetting";
 import DWorkerDetail from "./pages/dailyWorker/DWorker/DWorkerDetail";
 
 function App() {
+
   return (
     <BrowserRouter>
       <Routes>
@@ -82,7 +81,7 @@ function App() {
           </Route>
 
           <Route path="/workmanage" element={<WorkManageSidebar />}>
-            <Route index element={<ApprovalSubmit />} />
+            <Route index element={<WorkSetting />} />
             <Route path="setting" element={<WorkSetting />} />
             <Route path="scheduleApprove" element={<SchedulManage />}></Route>
           </Route>
