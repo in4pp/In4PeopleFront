@@ -1,6 +1,13 @@
+
 #root {
   width: 100%;
 }
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+
 
 div {
   display: block;
@@ -13,7 +20,7 @@ div {
   background-color: rgb(255, 255, 255);
 }
 .bwzYVU {
-  position: fixed;
+  /* position: fixed; */
   top: 0px;
   left: 0px;
   width: 100%;
@@ -42,19 +49,12 @@ div {
   align-items: center;
 }
 
-a,
-label,
-.dropdown-menu,
-.nav-link {
+
+a, label, .dropdown-menu, .nav-link {
   cursor: pointer;
 }
-a,
-button,
-input,
-textarea {
-  transition: border-color 0.15s ease-in-out, background 0.15s ease-in-out,
-    color 0.15s ease-in-out, opacity 0.15s ease-in-out,
-    transform 0.15s ease-in-out;
+a, button, input, textarea {
+  transition: border-color 0.15s ease-in-out, background 0.15s ease-in-out, color 0.15s ease-in-out, opacity 0.15s ease-in-out, transform 0.15s ease-in-out;
 }
 .nav{
   text-decoration: none;
@@ -94,6 +94,7 @@ img {
   display: flex;
 }
 
+
 .fcykKi {
   overflow: hidden;
   position: relative;
@@ -106,10 +107,7 @@ img {
   height: 40px;
 }
 
-[type="button"]:not(:disabled),
-[type="reset"]:not(:disabled),
-[type="submit"]:not(:disabled),
-button:not(:disabled) {
+[type='button']:not(:disabled), [type='reset']:not(:disabled), [type='submit']:not(:disabled), button:not(:disabled) {
   cursor: pointer;
 }
 
@@ -170,22 +168,26 @@ button {
 }
 
 .bfYjzh {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  padding: 9px 20px;
-  border: 1px solid transparent;
-  border-radius: 4px;
-  font-family: inherit;
-  font-weight: 400;
-  font-size: 25px;
-  line-height: 20px;
-  /* background-color: var(--colors-blue400); */
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: top;
-  cursor: pointer;
-  color: var(--colors-white);
+
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 9px 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 20px;
+    /* background-color: var(--colors-blue400); */
+    text-decoration: none;
+    white-space: nowrap;
+    vertical-align: top;
+    cursor: pointer;
+    color: var(--colors-white);
+
+
 }
 svg {
   overflow: hidden;
@@ -237,18 +239,7 @@ svg:not(:root) {
   font-size: 18px;
   font-weight: 600;
 }
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
   margin: 0;
   line-height: 1.33;
   font-weight: 600;
@@ -264,7 +255,9 @@ h6 {
   color: rgb(85, 94, 127);
   cursor: pointer;
 }
-
+li {
+  list-style: none;
+}
 li {
   display: list-item;
   text-align: -webkit-match-parent;
@@ -291,7 +284,7 @@ body {
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
 }
-=========>>>>>>>>>Temporary merge branch 2 .ebDIkT {
+.ebDIkT {
   display: flex;
   -webkit-box-align: center;
   align-items: center;
@@ -304,7 +297,7 @@ body {
 }
 
 .material-icons {
-  font-family: "Material Icons";
+  font-family: 'Material Icons';
   font-weight: normal;
   font-style: normal;
   font-size: 24px;
@@ -315,34 +308,11 @@ body {
   white-space: nowrap;
   word-wrap: normal;
   direction: ltr;
-  -webkit-font-feature-settings: "liga";
+  -webkit-font-feature-settings: 'liga';
   -webkit-font-smoothing: antialiased;
 }
 
-body,
-p,
-h1,
-h2,
-h3,
-span,
-h5,
-h6,
-ul,
-ol,
-li,
-dl,
-dt,
-dd,
-table,
-th,
-td,
-form,
-fieldset,
-legend,
-input,
-textarea,
-button,
-select {
+body, p, h1, h2, h3, span, h5, h6, ul, ol, li, dl, dt, dd, table, th, td, form, fieldset, legend, input, textarea, button, select {
   margin: 0;
   padding: 0;
 }
@@ -350,6 +320,7 @@ select {
 body {
   color: rgb(0, 0, 0);
 }
+
 
 .wrap {
   overflow: hidden;
@@ -378,7 +349,14 @@ body {
   margin-right: auto;
   margin-left: auto;
 }
->>>>>>>>>Temporary merge branch 2 .bread-title {
+
+
+
+
+
+
+.bread-title {
+
   display: flex;
   align-items: center;
   justify-content: space-between;
