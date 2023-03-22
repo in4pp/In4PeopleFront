@@ -8,12 +8,6 @@
       <change afterPath="$PROJECT_DIR$/dockerfile" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/nginx.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/apis/DailyWorkerAPICalls.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/apis/DailyWorkerAPICalls.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/DWorkerModule.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/DWorkerModule.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/dailyWorker/DWorker/DWorkerDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dailyWorker/DWorker/DWorkerDetail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/dailyWorker/DWorker/DWorkerSelect.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dailyWorker/DWorker/DWorkerSelect.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/dailyWorker/DWorker/DWorkerUpdate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dailyWorker/DWorker/DWorkerUpdate.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,10 +26,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
-    &quot;lastFilter&quot;: {
+  &quot;lastFilter&quot;: {
     &quot;state&quot;: &quot;OPEN&quot;
-    }
-    }</component>
+  }
+}</component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="5" />
     <option name="recentBranches">
@@ -154,13 +148,9 @@
       <workItem from="1678923246926" duration="732000" />
       <workItem from="1678924022380" duration="115000" />
       <workItem from="1678924167352" duration="415000" />
-    </task>
-    <task id="LOCAL-00001" summary="feat : dailyworker insert">
-      <created>1679358703887</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1679358703887</updated>
+      <workItem from="1679049600052" duration="185000" />
+      <workItem from="1679061076545" duration="30000" />
+      <workItem from="1679207365008" duration="187000" />
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
