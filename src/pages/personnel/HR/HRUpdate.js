@@ -1,19 +1,18 @@
 import HRRegistCSS from './HRRegist.module.css'
 import { useEffect, useRef, useState } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import DaumAddress from './PopupPostCode';
-import { decodeJwt } from '../../../utils/tokenUtils'
+import { decodeJwt } from '../../../utils/tokenUtils' // 로그인한 정보 불러오기
 
 import { 
-    callMemberDetailUpdateAPI,
-    callMemberUpdateAPI
+    callMemberDetailUpdateAPI, // 본인의 인사정보 상세 불러오기
+    callMemberUpdateAPI        // 본인의 인사정보 업데이트하기
 } from '../../../apis/PersonnelAPICalls';
 
 function MemberUpdate() {
 
     const dispatch = useDispatch();
-    const params = useParams();
     const memberDetail  = useSelector(state => state.personnelReducer);  
     const token = decodeJwt(window.localStorage.getItem("accessToken"));   
     
@@ -32,20 +31,12 @@ function MemberUpdate() {
                 dispatch(callMemberDetailUpdateAPI({	// 인사 정보
                     memCode: token.sub
                 }));            
+                console.log('memCode', token.sub);
             }
         }
         ,[]
     );
 
-    useEffect(        
-        () => {
-            console.log('[MemberUpdate] memCode : ', params.memCode);
-
-            dispatch(callMemberDetailUpdateAPI({	
-                memCode: params.memCode
-            }));                     
-        }
-    ,[]);
 
     useEffect(() => {
         
@@ -70,11 +61,11 @@ function MemberUpdate() {
         setImage(image);
     };
 
-    // const onClickImageUpload = () => {
-    //     if(modifyMode){
-    //         imageInput.current.click();
-    //     }
-    // }
+    const onClickImageUpload = () => {
+        if(modifyMode){
+            imageInput.current.click();
+        }
+    }
     
     const onClickModifyModeHandler = () => {    // 수정모드
         setModifyMode(true);
@@ -94,9 +85,12 @@ function MemberUpdate() {
 
     /* form 데이터 세팅 */  
     const onChangeHandler = (e) => {
+        const address = document.getElementById("daumAdd").value
+
         setForm({
             ...form,
-            [e.target.name]: e.target.value
+            [e.target.name]: e.target.value,
+            address : address
         });
     };
 
@@ -105,7 +99,8 @@ function MemberUpdate() {
         console.log('[MemberUpdate] onClickMemberUpdateHandler');
 
         const formData = new FormData();
-        formData.append("memCode", form.productCode);
+
+        formData.append("memCode", memberDetail.memCode);
         formData.append("password", form.password);
         formData.append("memName", form.memName);
         formData.append("regiNumber", form.regiNumber);
@@ -117,7 +112,7 @@ function MemberUpdate() {
         formData.append("address", form.address);
 
         if(image){
-            formData.append("memPic", image); // 이름이 memPicture인지 memPic인지....????
+            formData.append("memPicture", image); 
         }
 
         dispatch(callMemberUpdateAPI({	// 멤버 정보 업데이트
@@ -135,8 +130,8 @@ function MemberUpdate() {
                 <div className={`${HRRegistCSS['titlee']}`}>
                     <h3>인사 정보 수정</h3>
                 </div>
-                <div className={`${HRRegistCSS['box']}`}>
-                    <div className={`${HRRegistCSS['ppbutton']}`}>
+                <div className={`${HRRegistCSS['box']}`} >
+                    <div className={`${HRRegistCSS['ppbuttonModify']}`} >
                     {!modifyMode &&
                         <button 
                             onClick={ onClickModifyModeHandler }
@@ -160,13 +155,20 @@ function MemberUpdate() {
                                             src={ (imageUrl == null) ? memberDetail.memPic : imageUrl } 
                                             alt="preview"
                                         />}
-                                        <input                
+                                        <input
+                                            style={ { display: 'none' }}                
                                             type="file"
-                                            name='memPic' 
+                                            name='memPicture' 
                                             accept='image/*'
                                             onChange={ onChangeImageUpload }
-                                            ref={ imageInput }
-                                            />
+                                            ref={ imageInput }/>
+                                        <button 
+                                            className={ `${HRRegistCSS['ppbuttonModify']}` }
+                                            onClick={ onClickImageUpload }    
+                                            style={ !modifyMode ? { backgroundColor: 'whitesmoke'} : null}
+                                        >
+                                        이미지 업로드
+                                        </button>
                                     </td>
                                 </tr>
                                 <tr>
@@ -178,7 +180,7 @@ function MemberUpdate() {
                                             name='memCode' 
                                             onChange={ onChangeHandler } 
                                             value={(!modifyMode ? memberDetail.memCode : form.memCode) || '' }
-                                            readOnly={ modifyMode ? false : true }/>
+                                            readOnly={true}/>
                                     </td>
                                 </tr>
                                 <tr>
@@ -193,6 +195,17 @@ function MemberUpdate() {
                                     </td>
                                 </tr>
                                 <tr>
+                                    <th className={`${HRRegistCSS["ppth"]}`}>비밀번호</th>
+                                    <td className={`${HRRegistCSS["pptd"]}`}>
+                                        <input 
+                                            type="text" 
+                                            name='password' 
+                                            onChange={ onChangeHandler } 
+                                            value={(!modifyMode ? memberDetail.password : form.password) || '' }
+                                            readOnly={ modifyMode ? false : true }/>
+                                    </td>
+                                </tr>
+                                <tr>
                                     <th className={`${HRRegistCSS["ppth"]}`}>주민등록번호</th>
                                     <td className={`${HRRegistCSS["pptd"]}`}>
                                         <input 
@@ -201,7 +214,7 @@ function MemberUpdate() {
                                             name='regiNumber' 
                                             onChange={ onChangeHandler } 
                                             value={(!modifyMode ? memberDetail.regiNumber : form.regiNumber) || '' }
-                                            readOnly={ modifyMode ? false : true }/>
+                                            readOnly={true}/>
                                     </td>
                                 </tr>
                                 <tr>
@@ -223,7 +236,6 @@ function MemberUpdate() {
                                             name="address"
                                             id='daumAdd'
                                             type='text'
-                                            // readOnly={true}
                                             placeholder="주소"
                                             onChange={ onChangeHandler }
                                             value={(!modifyMode ? memberDetail.address : form.address) || '' }

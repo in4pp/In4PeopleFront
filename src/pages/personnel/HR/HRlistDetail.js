@@ -28,7 +28,7 @@ function HRlistDetail() {
         ,[]
     );
 
-    // 채팅거는 핸들러
+    // 채팅거는 핸들러 -- 여기에 경로 정하신 거 설정해주세요!
     // const onClickChattingHandler = () => {
     //     navigate(`/personnel/member/${params.memCode}`, { replace: false });
     // };
@@ -68,6 +68,7 @@ function HRlistDetail() {
                 <div className={`${HRRegistCSS['titlee']}`}>
                     <h3>인사 정보</h3>
                 </div>
+                
                 <div className={`${HRRegistCSS['box']}`}>
                     <table className={`${HRRegistCSS['ppinsa']}`}>
                         <tr>
@@ -78,12 +79,6 @@ function HRlistDetail() {
                                     src={ memDetail.memPic } 
                                     alt="preview"
                                 />
-                                {/* <button
-                                    className={ HRRegistCSS.///////// }
-                                    onClick={ onClickChattingHandler }
-                                >
-                                    채팅하기
-                                </button> */}
                             </td>
                         </tr>
                         <tr>
@@ -110,17 +105,23 @@ function HRlistDetail() {
                             <th className={`${HRRegistCSS["ppth"]}`}>성별</th>    
                             <td className={`${HRRegistCSS["pptd"]}`}>{ memDetail.gender || '' }</td>
                         </tr>
-                        <tr>
+                        {/* <tr>
                             <th className={`${HRRegistCSS["ppth"]}`}>직급</th>    
-                            <td className={`${HRRegistCSS["pptd"]}`}>{ memDetail.positionCode || '' }</td>
+                            <td className={`${HRRegistCSS["pptd"]}`}>{ memDetail.position.positionName || '' }</td>
                         </tr>    
                         <tr>
                             <th className={`${HRRegistCSS["ppth"]}`}>부서</th>    
-                            <td className={`${HRRegistCSS["pptd"]}`}>{ memDetail.departmentCode || '' }</td>
-                        </tr>     
+                            <td className={`${HRRegistCSS["pptd"]}`}>{ memDetail.department.departmentName || '' }</td>
+                        </tr>      */}
                 </table>
+                    {/* <div className={`${HRRegistCSS['ppbutton']}`}>
+                        <button      
+                            onClick={ onClickChattingHandler }
+                            >채팅하기
+                        </button>
+                    </div> */}
+                </div>
             </div>
-        </div>
         </div>
     );
 }
