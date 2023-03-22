@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eb5e74b7-47b9-4927-85f5-ec546fbe7dc7" name="Changes" comment="">
+    <list default="true" id="1378704a-9ff1-4552-b10a-c0fa2d2f41ca" name="Changes" comment="feat : dailyworker insert">
+      <change afterPath="$PROJECT_DIR$/dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nginx.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/apis/ApprovalAPICalls.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/apis/ApprovalAPICalls.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/task/components/ApprovalModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/task/components/ApprovalModal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/task/taskApproval/ApprovalSubmit.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/task/taskApproval/ApprovalSubmit.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,7 +15,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="In4PeopleFront/master" />
+    <option name="BRANCH" value="origin/master" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -42,12 +40,12 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="성일" />
-                    <option name="lastUsedInstant" value="1678749640" />
+                    <option name="branchName" value="rami" />
+                    <option name="lastUsedInstant" value="1679312252" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="master" />
-                    <option name="lastUsedInstant" value="1678749555" />
+                    <option name="lastUsedInstant" value="1679312162" />
                   </RecentBranch>
                 </list>
               </option>
@@ -76,22 +74,25 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/DEV/04_project/In4PeopleFront--",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "node",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/dev/04_project/finalProject/final4jo/In4PeopleFront/src/pages/dailyWorker/DWorker&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\dev\04_project\finalProject\final4jo\In4PeopleFront\src\pages\dailyWorker\DWorker" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\DEV\04_project\In4PeopleFront--\src\pages\salary" />
     </key>
@@ -114,7 +115,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="eb5e74b7-47b9-4927-85f5-ec546fbe7dc7" name="Changes" comment="" />
+      <changelist id="1378704a-9ff1-4552-b10a-c0fa2d2f41ca" name="Changes" comment="feat : dailyworker insert" />
       <created>1677024319403</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -144,10 +145,14 @@
       <workItem from="1678437456329" duration="746000" />
       <workItem from="1678602709353" duration="252000" />
       <workItem from="1678749420277" duration="258000" />
-      <workItem from="1679212114010" duration="66000" />
-      <workItem from="1679439301032" duration="289000" />
-      <workItem from="1679455049949" duration="9000" />
+      <workItem from="1678923246926" duration="732000" />
+      <workItem from="1678924022380" duration="115000" />
+      <workItem from="1678924167352" duration="415000" />
+      <workItem from="1679049600052" duration="185000" />
+      <workItem from="1679061076545" duration="30000" />
+      <workItem from="1679207365008" duration="187000" />
     </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,5 +168,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat : dailyworker insert" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat : dailyworker insert" />
   </component>
 </project>

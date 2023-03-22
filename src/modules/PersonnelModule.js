@@ -8,6 +8,7 @@ export const GET_MEMBER = 'personnel/GET_MEMBER';
 export const GET_MEMDETAIL = 'personnel/GET_MEMDETAIL';
 export const GET_MEMBER_UPDATE = 'personnel/GET_MEMBER_UPDATE';
 export const PUT_MEMBER_UPDATE = 'personnel/PUT_MEMBER_UPDATE';
+export const GET_SEARCH = 'personnel/GET_SEARCH';
 
 
 const actions = createActions({
@@ -16,7 +17,8 @@ const actions = createActions({
     [GET_MEMBER] : () => {},
     [GET_MEMDETAIL] : () => {},
     [GET_MEMBER_UPDATE] : () => {},
-    [PUT_MEMBER_UPDATE] : () => {}
+    [PUT_MEMBER_UPDATE] : () => {},
+    [GET_SEARCH] : () => {}
 });
 
 const personnelReducer = handleActions({
@@ -41,6 +43,10 @@ const personnelReducer = handleActions({
             return payload;
         },
         [PUT_MEMBER_UPDATE]: (state, {payload}) => {
+
+            return payload;
+        },
+        [GET_SEARCH]: (state, {payload}) => {
 
             return payload;
         }

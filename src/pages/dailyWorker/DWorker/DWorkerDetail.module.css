@@ -9,16 +9,14 @@
 .memPicImage{
     margin-top: 5px;
     width: 80%;
-    height: 90%;    
+    height: 90%;
 }
-
-
 
 .registone
 {
-  padding-top: 100px;
-  padding-left: 250px;
-  margin-right: 10%;
+    padding-top: 100px;
+    padding-left: 250px;
+    margin-right: 10%;
 }
 
 .titlee{
@@ -97,17 +95,7 @@
     border-style: hidden;
     border-radius: 5px;
 }
-.ppbuttonModify
-{
-    text-align: center;
-    margin-left: 5%;
-    margin-top: 2%;
-    width: 311px;
-    height: 30px;
-    background-color: #fbb9c528;
-    border-style: hidden;
-    border-radius: 5px;
-}
+
 .pppbutton
 {
     text-align: center;
