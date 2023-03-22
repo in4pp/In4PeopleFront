@@ -4,16 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1378704a-9ff1-4552-b10a-c0fa2d2f41ca" name="Changes" comment="feat : dailyworker insert">
-      <change afterPath="$PROJECT_DIR$/dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nginx.conf" afterDir="false" />
+    <list default="true" id="1378704a-9ff1-4552-b10a-c0fa2d2f41ca" name="Changes" comment="feat : dailyworker detail">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/apis/DailyWorkerAPICalls.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/apis/DailyWorkerAPICalls.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/DWorkerModule.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/DWorkerModule.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/dailyWorker/DWorker/DWorkerDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dailyWorker/DWorker/DWorkerDetail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/dailyWorker/DWorker/DWorkerSelect.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dailyWorker/DWorker/DWorkerSelect.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/dailyWorker/DWorker/DWorkerUpdate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dailyWorker/DWorker/DWorkerUpdate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Navbar.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +41,7 @@
                 <list>
                   <RecentBranch>
                     <option name="branchName" value="rami" />
-                    <option name="lastUsedInstant" value="1679312252" />
+                    <option name="lastUsedInstant" value="1679403780" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="master" />
@@ -85,7 +79,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/dev/04_project/finalProject/final4jo/In4PeopleFront/src/pages/dailyWorker/DWorker&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/dev/04_project/finalProject/final4jo/In4PeopleFront&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -154,6 +148,9 @@
       <workItem from="1678923246926" duration="732000" />
       <workItem from="1678924022380" duration="115000" />
       <workItem from="1678924167352" duration="415000" />
+      <workItem from="1679421600659" duration="94000" />
+      <workItem from="1679421711686" duration="388000" />
+      <workItem from="1679446196561" duration="347000" />
     </task>
     <task id="LOCAL-00001" summary="feat : dailyworker insert">
       <created>1679358703887</created>
