@@ -87,8 +87,8 @@ function DWorkerlist() {
                                 {Array.isArray(dworkerlist) && dworkerlist.map (
                                     (dworkerlist, index) => (
                                         <tr
-                                            key={dworkerlist.memCode}
-                                            onClick={ () => onClickTableTr(dworkerlist.memCode) }
+                                            key={dworkerlist.workerCode}
+                                            onClick={ () => onClickTableTr(dworkerlist.workerCode) }
                                             className={`${DWorkerSelectCSS["appltr"]}`}>
 
                                     {/*dworkerlist && dworkerlist.map(*/}
