@@ -121,7 +121,7 @@ function MemberUpdate() {
         console.log(form);
         alert('정보를 수정했습니다.');
         navigate('/personnel/memberUpdate', { replace: true});
-        // window.location.reload();
+        window.location.reload();
     }
     
     return (
