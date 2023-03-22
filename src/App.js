@@ -23,8 +23,6 @@ import HRApplication from "./pages/personnel/HR/HRApplication";
 import DWorkerInsert from "./pages/dailyWorker/DWorker/DWorkerInsert";
 import DWorkerSelect from "./pages/dailyWorker/DWorker/DWorkerSelect";
 import DWorkerUpdate from "./pages/dailyWorker/DWorker/DWorkerUpdate";
-import WorkSetting from "./pages/workManagement/Schedule/WorkSetting";
-import SchedulManage from "./pages/workManagement/Schedule/ScheduleManage";
 import HRcerApp from "./pages/personnel/HR/HRcerApp";
 import HRlistDetail from "./pages/personnel/HR/HRlistDetail";
 import MemberUpdate from "./pages/personnel/HR/HRUpdate";
@@ -33,8 +31,12 @@ import HourlyWageSetting from "./pages/salary/HourlyWageSetting";
 import WorkInquiry from "./pages/salary/WorkInquiry";
 import MonthlySetting from "./pages/salary/MonthlySetting";
 import DWorkerDetail from "./pages/dailyWorker/DWorker/DWorkerDetail";
+import WorkSetting from "./pages/workManagement/Schedule/WorkSetting";
+import SchedulManage from "./pages/workManagement/Schedule/ScheduleManage";
+
 
 function App() {
+
   return (
     <BrowserRouter>
       <Routes>

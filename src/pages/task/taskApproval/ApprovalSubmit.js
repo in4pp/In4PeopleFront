@@ -25,6 +25,7 @@ function ApprovalSubmit() {
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const token = decodeJwt(window.localStorage.getItem("accessToken"));
+    const auth = token.auth;
 
     const approvals = useSelector(state => state.approvalReducer);
     const approvalList = approvals.data || approvals; // 페이징처리의 경우 approvals.data / 검색의경우 바로 approvals로 값이 들어옴. 
@@ -67,10 +68,11 @@ function ApprovalSubmit() {
             "docCode": docCode
         }
 
-        bookmark == null ? dispatch(callPostBookmarkAPI({ form: form })) : dispatch(callDeleteBookmarkAPI({ form: form }));
-        setTimeout(() => {
-            setIsBookmark(!isBookmark);
-        }, 50); //화면을 다시 그려주기 위한 state값 변경..
+        bookmark == null ? dispatch(callPostBookmarkAPI({ form: form })).then(() => {setIsBookmark(!isBookmark)}) 
+        : dispatch(callDeleteBookmarkAPI({ form: form })).then(() => {setIsBookmark(!isBookmark)});
+        // setTimeout(() => {
+        //     setIsBookmark(!isBookmark);
+        // }, 50); //화면을 다시 그려주기 위한 state값 변경..
     }
 
 
@@ -80,6 +82,9 @@ function ApprovalSubmit() {
     useEffect(
         () => {
             console.log('token', token.sub);
+            console.log('auth', auth);
+            console.log();
+            // console.log(token.auth.include('ROLE_INSA1'));
             if (token !== null) {
                 dispatch(callGetApprovalAPI({
                     memCode: token.sub,
@@ -90,8 +95,11 @@ function ApprovalSubmit() {
         , [isBookmark, currentPage]
     );
 
-    return (
+    return  (
         <>
+        {!auth.includes('ROLE_PROGRAM1') ? <> {console.log("권한이없어요")} <div style={{paddingLeft:500}}>권한이 없어유 </div> </>
+          : <>
+          {console.log("권한이 있어유")}
             <div></div>
             <div>
                 <div className={NavCSS.wrap}>
@@ -205,6 +213,8 @@ function ApprovalSubmit() {
                     </div>
                 </div>
             </div>
+            </>
+}
         </>
     )
 }

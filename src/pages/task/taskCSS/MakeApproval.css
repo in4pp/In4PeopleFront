@@ -129,7 +129,7 @@
 .bzwmyz {
     background-color: rgb(245, 245, 245);
     padding: 5px;
-    display: flex;
+    /* display: flex; */
     -webkit-box-align: center;
     align-items: center;
     margin: 5px 0px;

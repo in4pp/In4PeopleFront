@@ -6,6 +6,7 @@ export const GET_APPROVAL = 'approval/GET_APPROVAL';
 export const POST_APPROVAL_BOOKMARK = 'approval/POST_APPROVAL_BOOKMARK';
 export const DELETE_APPROVAL_BOOKMARK = 'approval/DELETE_APPROVAL_BOOKMARK';
 
+
 const actions = createActions({
   [GET_APPROVAL]: () => {},
   [POST_APPROVAL_BOOKMARK]: () => {},
