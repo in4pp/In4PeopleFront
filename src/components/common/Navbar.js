@@ -96,12 +96,17 @@ function Navbar() {
               <span className={`${NavCSS.fEXmlR} ${NavCSS.kOVHNW} ${NavCSS.nav}`}>
                 <NavLink to="/personnel">인사</NavLink>
               </span>
+
               <span className={`${NavCSS.fEXmlR} ${NavCSS.kOVHNW} ${NavCSS.nav}`}>
                 <NavLink to="/workmanage">근무/휴가</NavLink>
               </span>
-              <span className={`${NavCSS.fEXmlR} ${NavCSS.kOVHNW} ${NavCSS.nav}`}>급여</span>
+
               <span className={`${NavCSS.fEXmlR} ${NavCSS.kOVHNW} ${NavCSS.nav}`}>
-                일용직
+              <NavLink to="/salary/salinfo">급여</NavLink>
+                </span>
+
+              <span className={`${NavCSS.fEXmlR} ${NavCSS.kOVHNW} ${NavCSS.nav}`}>
+                 <NavLink to="/dailyWorker">일용직</NavLink>
               </span>
               <span className={`${NavCSS.fEXmlR} ${NavCSS.kOVHNW} ${NavCSS.nav}`}>
                 <NavLink to="/task">업무</NavLink>

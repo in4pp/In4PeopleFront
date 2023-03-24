@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom/dist';
 import incomeStyle from '../IncomeTax.module.css';
 
@@ -7,6 +8,8 @@ function IncomeTaxList({ incomeTax: {incomeTaxCode, lowerTaxBaseLimit, upperTaxB
       console.log("dddd");
 
       const navigate = useNavigate();
+
+      const [incomeTax, setIncomeTax] = useState(null);
 
       // 필요없
       const onClickIncomeTaxList = (incomeTaxCode) => {
