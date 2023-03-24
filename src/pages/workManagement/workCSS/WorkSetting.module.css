@@ -215,8 +215,8 @@
 }
 
 .startAvail3 {
-  margin-top: 10px;
-  margin-left: 4px;
+  margin-top: 15px;
+
   float: left;
 }
 
@@ -238,8 +238,9 @@
 }
 
 .endAvail3 {
-  margin-left: 328px;
-  margin-top: 10px;
+  display: inline-block;
+  margin-top: 15px;
+  margin-left: 5%;
 }
 
 .selectDay1 {
@@ -254,7 +255,7 @@
   font-size: small;
   color: #999;
   padding-left: 96px;
-  padding-right: 220px;
+  padding-right: 10%;
   float: left;
   margin-left: 7px;
 }
